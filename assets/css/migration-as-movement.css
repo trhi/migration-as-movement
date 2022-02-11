@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'Lora';
+	src: url('../font/Lora-VF.woff2') format('woff2-variations'),
+  src: url('../font/Lora-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../font/Montserrat-VF.woff2') format('woff2-variations'),
+  src: url('../font/Montserrat-Regular.woff2') format('woff2-variations');
+  font-weight: 400;
+}
