@@ -11,3 +11,49 @@
   src: url('../font/Montserrat-Regular.woff2') format('woff2-variations');
   font-weight: 400;
 }
+
+body, html {
+  font-family: "Lora";
+}
+
+.button-download{
+  z-index: 10;
+  position: fixed;
+  font-family: inherit;
+  background: #FFF;
+  color: #000;
+  border-radius: 50px;
+  top: 45px;
+  right: 45px;
+  cursor: pointer;
+  border: 2px solid #000;
+  height: 45px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.ahref-button{
+  text-decoration: none;
+  display: inline-block;
+  line-height: 2.5;
+  z-index: 10;
+  position: fixed;
+  font-family: inherit;
+  background: #FFF;
+  color: #000;
+  border-radius: 50px;
+  top: 45px;
+  cursor: pointer;
+  border: 2px solid #000;
+  height: 45px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.videodocumentation{
+  margin-bottom:2cm;
+}
+
+#videodocumentation{
+text-align: center;
+}
