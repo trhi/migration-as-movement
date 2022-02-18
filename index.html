@@ -11,14 +11,22 @@
 
 </head>
 <body>
+
+<div id="buttonsDiv">
+  <button title="download dissertation as pdf (mais tarde: link para o repositório da UP)" class="button-download" type="submit" onclick="window.open('assets/docs/Marttila-2022-Migration-as-movement.pdf')"> ↡ pdf </button>
+  <button title="download dissertation as audiobook" class="button-download"> ↡ audio </button>
+  <a title="documentation of artworks" href="documentation.html" target="_blank" class="ahref-button"> &nbsp ↠ documentation &nbsp </a>
+</div>
+
+<div id="audioplayer">
+  <audio id="migrationAudio" src="assets/audio/Marttila-2022-migration-as-movement-Introduction.mp3" type="audio/mp3" controls preload="auto" controlsList="nodownload">
+  </audio>
+</div>
+
   <img src="assets/img/migration-as-movement-title-img.png" style="margin-top:5cm; margin-bottom:10cm; margin-left:200px;
   width:80%" alt="Migration as movement
    - repurposing the voice/interface to explore aspects of human migratory
     movement through artistic reserach">
-    <button title="download dissertation as pdf (mais tarde: link para o repositório da UP)" class="button-download" style="right:45px" type="submit" onclick="window.open('assets/docs/Marttila-2022-Migration-as-movement.pdf')"> ↡ pdf </button>
-    <button title="download dissertation as audiobook" class="button-download" style="right:130px"> ↡ audio </button>
-
-    <a href="documentation.html" style="top: 110px; right:45px;" class="ahref-button"> &nbsp ↠ documentation &nbsp </a>
 
   <p style="margin-bottom:3cm; text-indent: 50px; font-family:Montserrat;   font-variant-caps:
   small-caps; font-size:26px;">TERHI MARTTILA &nbsp &nbsp<span style="font-size:40px;">2022</span></p>
@@ -37,9 +45,89 @@
     width:100%" alt="Logos of: Universidade do Porto, Universidade Nova de Lisboa
     and NORTE2020, Portugal2020, União Europeia Fundo Social Europeu">
 
+<section id="contents" style="margin-top:10cm;">
+    <p style="margin-top:3cm; text-indent: 50px; font-family:Montserrat;   font-variant-caps:
+    small-caps; font-size:26px; text-align:left">Contents</p>
+    <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px; ">
+      Introduction <a href="#introduction" style="display: inline; text-decoration: none;"> 🔗 </a> <button class="seekInAudio" style="border:none;" onclick='setPositionInAudio(200);'> 🗣 </button></p>
+    <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px; text-decoration: none; ">
+        1&nbsp Artistic research through exploratory programming <a href="#1-artistic-research" style="display: inline; text-decoration: none;"> 🔗 </a> <button class="seekInAudio" style="border:none;" onclick='setPositionInAudio(800);'> 🗣 </button></p>
+    <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px; text-decoration: none; ">
+        2&nbsp We cannot take them all (2019) <a href="#2-wctta" style="display: inline; text-decoration: none;"> 🔗 </a> <button class="seekInAudio" style="border:none;" onclick='setPositionInAudio(1500);'> 🗣 </button></p>
+    <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
+        3&nbsp Speak Out (2020) <a href="#3-speak-out" style="display: inline; text-decoration: none;"> 🔗 </a> <button class="seekInAudio" style="border:none;" onclick='setPositionInAudio(2100);'> 🗣 </button></p>
+</section>
+
+<section id="introduction" class="thesis-body" style="margin-top:10cm;">
+  <p style="text-indent: 50px; margin-bottom:1cm; font-family:Montserrat;   font-variant-caps:
+  small-caps; font-size:26px; text-align:left">Introduction <a href="assets/audio/Marttila-2022-migration-as-movement-Introduction.mp3" style="display: inline; text-decoration: none;"> 🗣 </a></p>
+    <p class="lora-body">
+    When 2015 onwards various European countries saw an increase in the number
+    of asylum requests, public discourse around migration boiled over.
+    These discourses were in response to a tangible change in migration
+    patterns which was felt, heard and seen especially in “Germany”,
+    the physical perimeter of ground on planet earth [ or: “the place” ]
+    in which the currents of life had moved my body to
+    [ or: “the place or country I was living in at the time” ].
+    The discourse touched deep into my personal experiences,
+    instantiating an ongoing process of artistic research around the ancient
+    phenomenon of the migratory movement of the human species.
+</p>
+
+<p class="lora-body">
+A serial migrant myself, I have experienced both the ease of existence when our surroundings assume us to belong, as well as the friction, in at least some of its milder forms, of being where [ “in a place” ] one does not, so to speak, belong. Even the fact of having traversed a subset of this artistic research path, namely this dissertation, in Porto, is a further contribution to my personal and lived experience of being that foreigner. After five years here, I cringe when I hear myself speak [ == “communicate” ] in Portuguese.
+</p>
+
+<p class="lora-body">
+I write from a position of privilege, a white woman pursuing a doctorate who has lived in several countries and whose migrations have always been easy: my parents were highly skilled, wanted migrants, the right kind of migrants. My personal migrations have been either inside the European Union where borders (for all practical purposes) do not exist, or as a university student under bilateral agreements. In a 2017 doctoral symposium presentation, my presentation title read: “Migration is my right, borders an unnecessary obstacle”.
+</p>
+
+<p class="lora-body">
+It is from this privileged position that I have come to live a life (like many other privileged white European persons) defined by a kind of effortless migratory movement where it feels as though we are free to move wherever we want. This is a wonderful way to experience life on planet earth, as a human being.
+</p>
+<p class="lora-body">
+I wrote a poem about a moment which made an impression on me when I was volunteering with the refugees in Germany:
+</p>
+</section>
+
+<section id="1-artistic-research" class="thesis-body" style="margin-top:10cm;">
+</section>
+
+<section id="#2-wctta">
+  </section>
+
+  <section id="#3-speak-out">
+    </section>
 
 
   <script>
+    //let migrationAudio = new Audio('assets/audio/Marttila-2022-migration-as-movement-Introduction.mp3');
+    //migrationAudio.controls = true;
+    let migrationAudio = document.getElementById('migrationAudio');
+    migrationAudio.muted = true;
+    migrationAudio.play();
+    console.log("duration is:" + migrationAudio.duration);
+
+
+    migrationAudio.oncanplaythrough = (event) => {
+      console.log('I think I can play through the entire ' +
+      'audio without ever having to stop to buffer.');
+    };
+
+    function setPositionInAudio(time){
+      //migrationAudio.play();
+      //migrationAudio.fastSeek(460);
+      //migrationAudio.play();
+      console.log("setting time to:" + time + "seconds");
+      migrationAudio.currentTime = time;
+      //console.log(migrationAudio);
+      //console.log(migrationAudio.currentTime);
+      //document.getElementById('migrationAudio').play();
+      //setTimeout( () => {console.log(migrationAudio.currentTime)}, 500);
+      //setTimeout( () => {migrationAudio.currentTime = 500}, 500);
+      //setTimeout( () => {console.log(migrationAudio.currentTime)}, 1000);
+    }
+
   </script>
 </body>
 </html>
