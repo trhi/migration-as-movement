@@ -16,6 +16,7 @@
   <button title="download dissertation as pdf (mais tarde: link para o repositório da UP)" class="button-download" type="submit" onclick="window.open('assets/docs/Marttila-2022-Migration-as-movement.pdf')"> ↡ pdf </button>
   <button title="download dissertation as audiobook" class="button-download"> ↡ audio </button>
   <a title="documentation of artworks" href="documentation.html" target="_blank" class="ahref-button"> &nbsp ↠ documentation &nbsp </a>
+  <a title="defense" href="defense.html" target="_blank" class="ahref-button"> &nbsp ↠ defense &nbsp </a>
 </div>
 
 <div id="audioplayer">
@@ -104,10 +105,6 @@ I wrote a poem about a moment which made an impression on me when I was voluntee
     //let migrationAudio = new Audio('assets/audio/Marttila-2022-migration-as-movement-Introduction.mp3');
     //migrationAudio.controls = true;
     let migrationAudio = document.getElementById('migrationAudio');
-    migrationAudio.muted = true;
-    migrationAudio.play();
-    console.log("duration is:" + migrationAudio.duration);
-
 
     migrationAudio.oncanplaythrough = (event) => {
       console.log('I think I can play through the entire ' +
