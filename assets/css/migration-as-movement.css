@@ -3,6 +3,7 @@
 	src: url('../font/Lora-VF.woff2') format('woff2-variations'),
   src: url('../font/Lora-Regular.woff2') format('woff2');
   font-weight: 400;
+	line-height: 180%;
 }
 
 @font-face {
@@ -20,10 +21,13 @@ body {
   font-family: "Lora";
 }
 
+
 .montserrat-section{
 	font-family:"Montserrat";
 	font-variant-caps: small-caps;
 	font-size:26px;
+	margin-top: 1cm;
+	margin-bottom: 1cm;
 }
 
 .button-download{

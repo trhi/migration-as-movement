@@ -1,3 +1,26 @@
+#thesis-text{
+  width: 600px;
+  margin-left: 200px;
+  margin-right: 50px;
+  line-height: 180%;
+}
+
+blockquote{
+  margin-left: 60px;
+  font-size: 14px;
+  line-height: 160%;
+}
+
+.citation-name{
+  text-align: right;
+  margin-top: -20px;
+}
+
+section{
+  margin-bottom: 2cm;
+
+}
+
 p.p1 {
     margin: 0.0px 0.0px 12.0px 0.0px;
     text-align: justify;
@@ -85,7 +108,7 @@ p.p10 {
 
 p.p11 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff;
     min-height: 14.0px
@@ -93,28 +116,29 @@ p.p11 {
 
 p.p12 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
-    -webkit-text-stroke: #ffffff
+    -webkit-text-stroke: #ffffff;
+    line-height: 180%;
 }
 
 p.p13 {
     margin: 0.0px 0.0px 12.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
 
 p.p14 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 10.8px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
 
 p.p15 {
     margin: 0.0px 0.0px 12.0px 0.0px;
-    font: 10.8px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
@@ -122,7 +146,7 @@ p.p15 {
 p.p16 {
     margin: 0.0px 0.0px 6.0px 0.0px;
     text-align: justify;
-    font: 9.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
@@ -130,21 +154,21 @@ p.p16 {
 p.p17 {
     margin: 0.0px 0.0px 16.0px 0.0px;
     text-align: justify;
-    font: 9.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
 
 p.p18 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 9.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
 
 p.p19 {
     margin: 0.0px 0.0px 12.0px 0.0px;
-    font: 9.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
@@ -192,7 +216,7 @@ p.p24 {
 
 p.p25 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 8.0px Lora;
+    font: 12.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
@@ -222,14 +246,14 @@ p.p28 {
 
 p.p29 {
     margin: 0.0px 0.0px 0.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
 
 p.p30 {
     margin: 0.0px 0.0px 0.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff;
     min-height: 14.0px
@@ -252,7 +276,7 @@ p.p32 {
 
 p.p33 {
     margin: 0.0px 0.0px 12.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff;
     min-height: 14.0px
@@ -261,7 +285,7 @@ p.p33 {
 p.p34 {
     margin: 0.0px 0.0px 16.0px 0.0px;
     text-align: center;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
@@ -297,7 +321,7 @@ p.p37 {
 p.p38 {
     margin: 0.0px 0.0px 12.0px 0.0px;
     text-align: justify;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
@@ -305,7 +329,7 @@ p.p38 {
 p.p39 {
     margin: 0.0px 0.0px 16.0px 0.0px;
     text-align: justify;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
@@ -313,7 +337,7 @@ p.p39 {
 p.p40 {
     margin: 0.0px 0.0px 16.0px 0.0px;
     text-align: center;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff;
     min-height: 14.0px
@@ -338,7 +362,7 @@ p.p42 {
 p.p43 {
     margin: 0.0px 0.0px 12.0px 0.0px;
     text-align: center;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
@@ -353,7 +377,7 @@ p.p44 {
 
 p.p45 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #000000;
     min-height: 14.0px
@@ -369,7 +393,7 @@ p.p46 {
 
 p.p47 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #000000
 }
@@ -384,7 +408,7 @@ p.p48 {
 
 p.p49 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #212121;
     -webkit-text-stroke: #000000
 }
@@ -398,7 +422,7 @@ p.p50 {
 
 p.p51 {
     margin: 0.0px 0.0px 12.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #000000;
     min-height: 14.0px
@@ -414,7 +438,7 @@ p.p52 {
 
 p.p53 {
     margin: 0.0px 0.0px 12.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #000000
 }
@@ -462,21 +486,21 @@ p.p58 {
 
 p.p59 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #222222
 }
 
 p.p60 {
     margin: 0.0px 0.0px 12.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #222222
 }
 
 p.p61 {
     margin: 0.0px 0.0px 0.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #222222;
     -webkit-text-stroke: #222222;
     background-color: #ffffff
@@ -484,7 +508,7 @@ p.p61 {
 
 p.p62 {
     margin: 0.0px 0.0px 0.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #222222;
     -webkit-text-stroke: #222222;
     background-color: #ffffff;
@@ -493,7 +517,7 @@ p.p62 {
 
 p.p63 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #222222;
     -webkit-text-stroke: #222222;
     background-color: #ffffff
@@ -501,28 +525,28 @@ p.p63 {
 
 p.p64 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #333333
 }
 
 p.p65 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #034e71;
     -webkit-text-stroke: #333333
 }
 
 p.p66 {
     margin: 0.0px 0.0px 12.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #333333
 }
 
 p.p67 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #333333;
     min-height: 14.0px
@@ -565,7 +589,7 @@ p.p71 {
 p.p72 {
     margin: 0.0px 0.0px 12.0px 0.0px;
     text-align: justify;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #333333
 }
@@ -598,7 +622,7 @@ p.p75 {
 p.p76 {
     margin: 0.0px 0.0px 0.0px 0.0px;
     line-height: 14.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #333333
 }
@@ -606,7 +630,7 @@ p.p76 {
 p.p77 {
     margin: 0.0px 0.0px 16.0px 0.0px;
     text-align: justify;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #333333
 }
@@ -680,7 +704,7 @@ p.p85 {
 
 p.p86 {
     margin: 0.0px 0.0px 12.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #333333;
     min-height: 14.0px
@@ -744,20 +768,21 @@ p.p94 {
 
 li.li12 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #ffffff
 }
 
 li.li64 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #333333
 }
 
 span.s1 {
-    font-kerning: none
+    font-kerning: none;
+      line-height: 180%;
 }
 
 span.s2 {
@@ -785,13 +810,13 @@ span.s6 {
 }
 
 span.s7 {
-    font: 9.0px Lora;
+    font: 14.0px Lora;
     font-kerning: none;
     color: #034e71
 }
 
 span.s8 {
-    font: 9.0px Montserrat;
+    font: 14.0px Montserrat;
     font-kerning: none
 }
 
@@ -806,7 +831,7 @@ span.s10 {
 }
 
 span.s11 {
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     font-kerning: none;
     color: #034e71
 }
@@ -817,7 +842,7 @@ span.s12 {
 }
 
 span.s13 {
-    font: 11.0px Lora;
+    font: 14.0px Lora;
     font-kerning: none
 }
 
@@ -848,7 +873,7 @@ span.s18 {
 }
 
 span.s19 {
-    font: 9.0px Lora;
+    font: 14.0px Lora;
     font-kerning: none
 }
 
@@ -926,7 +951,7 @@ span.s33 {
 }
 
 span.s34 {
-    font: 19.0px Lora
+    font: 1font: 14.0px Lora
 }
 
 span.s35 {
