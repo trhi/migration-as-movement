@@ -30,6 +30,8 @@ body {
 
 video::cue{
 	font-family: "Poppins";
+	background-color: black;
+	opacity: 1;
 }
 
 .montserrat-section{
