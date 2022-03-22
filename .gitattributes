@@ -1,1 +1,4 @@
 assets/video/ filter=lfs diff=lfs merge=lfs -text
+assets/video/Marttila-2019-we-cannot-take-them-all.mov filter=lfs diff=lfs merge=lfs -text
+assets/video/Marttila-2020-speak-out-720p.mov filter=lfs diff=lfs merge=lfs -text
+assets/video/Marttila-2021-transplanted-FI.mov filter=lfs diff=lfs merge=lfs -text
