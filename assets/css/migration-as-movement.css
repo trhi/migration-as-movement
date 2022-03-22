@@ -13,6 +13,13 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/PoppinsLatin-Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
 
 }
@@ -21,6 +28,9 @@ body {
   font-family: "Lora";
 }
 
+video::cue{
+	font-family: "Poppins";
+}
 
 .montserrat-section{
 	font-family:"Montserrat";
