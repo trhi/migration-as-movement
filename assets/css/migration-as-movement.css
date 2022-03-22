@@ -28,6 +28,11 @@ body {
   font-family: "Lora";
 }
 
+#underConstruction{
+	font-family: "Lora";
+	font-size: 150px;
+}
+
 video::cue{
 	font-family: "Poppins";
 	background-color: black;
