@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/PoppinsLatin-Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
+  font-family: "Poppins";
+  width:100%;
+  height:100%;
+  padding:0;
+  margin:0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.hiddeninfo{
+  right:10px;
+  top:10px;
+}
+
+
+
+.buttonStyle {
+  background: #FFF;
+  color: #000;
+  border-radius: 50px;
+  border: 2px solid #000;
+  z-index: 10;
+  transition: color 0.2s, background 0.2s;
+  position: fixed;
+  height: 45px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.toggle:hover {
+  background: #000;
+  color:#FFF;
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+.info-toggle{
+  bottom: 30px;
+  right: 100px;
+  width: 45px;
+  height: 45px;
+}
+
+.speak-out-toggle {
+  cursor: pointer;
+  bottom: 30px;
+  right: 160px;
+  width: auto;
+}
+
+.speak-out-toggle:active {
+  background: #000;
+  color:#FFF;
+}
+
+.speak-out-toggle:disabled {
+  background: #dddddd;
+}
+
+.passports-toggle {
+  right: 40px;
+  width: 45px;
+  height: 45px;
+  transform: translate(150px);
+}
+
+.passports-toggle:active {
+  background: #000;
+  color:#FFF;
+}
+
+.passports-toggle:focus {
+  background: #3333cc;
+  color:#FFF;
+}
+
+.speak-out-box {
+position: absolute;
+width: 300px;
+max-height: 300px;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+z-index: 1000;
+background-color: #FFF;
+border-radius: 10px;
+border: 2px solid #000;
+padding:30px 20px;
+overflow: scroll;
+}
+
+.score-box {
+position: fixed;
+width: 100px;
+height: 30px;
+left: 80px;
+top: 40px;
+transform: translate(-50%,-50%);
+z-index: 1000;
+background-color: white;
+border-radius: 50px;
+border: 2px solid black;
+text-align: center;
+vertical-align:top;
+}
+
+.passportsDiv {
+position: fixed;
+right: 150px;
+top: 0px;
+width: 50px;
+height: 400px;
+z-index: 1000;
+}
+
+#score {
+font-size: 19px;
+-webkit-text-stroke: 0.5px black;
+position:relative;
+top:-18px;
+}
+
+#speak-out-text {
+font-family:"Poppins", Helvetica, Arial, sans-serif;
+font-size: 18px;
+line-height: 22px;
+color:#000;
+margin: 0;
+}

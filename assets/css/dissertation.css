@@ -18,7 +18,10 @@ blockquote{
 
 section{
   margin-bottom: 2cm;
+}
 
+.references{
+  line-height: 150%;
 }
 
 p.p1 {
@@ -561,8 +564,7 @@ p.p68 {
 
 p.p69 {
     margin: 0.0px 0.0px 10.0px 0.0px;
-    text-align: justify;
-    font: 12.0px Lora;
+    font: 14.0px Lora;
     color: #000000;
     -webkit-text-stroke: #333333
 }
@@ -719,49 +721,49 @@ p.p87 {
 
 p.p88 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 7.0px Courier;
+    font: 12.0px Courier;
     color: #484b54;
     -webkit-text-stroke: #333333
 }
 
 p.p89 {
     margin: 0.0px 0.0px 0.0px 0.0px;
-    font: 7.0px Courier;
+    font: 12.0px Courier;
     color: #60ae62;
     -webkit-text-stroke: #333333
 }
 
 p.p90 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 7.0px Courier;
+    font: 12.0px Courier;
     color: #60ae62;
     -webkit-text-stroke: #333333
 }
 
 p.p91 {
     margin: 0.0px 0.0px 0.0px 0.0px;
-    font: 7.0px Monaco;
+    font: 12.0px Monaco;
     color: #000000;
     -webkit-text-stroke: #333333
 }
 
 p.p92 {
     margin: 0.0px 0.0px 0.0px 0.0px;
-    font: 7.0px Monaco;
+    font: 12.0px Monaco;
     color: #a16c00;
     -webkit-text-stroke: #333333
 }
 
 p.p93 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 7.0px Monaco;
+    font: 12.0px Monaco;
     color: #a16c00;
     -webkit-text-stroke: #333333
 }
 
 p.p94 {
     margin: 0.0px 0.0px 16.0px 0.0px;
-    font: 7.0px Monaco;
+    font: 12.0px Monaco;
     color: #000000;
     -webkit-text-stroke: #333333
 }
