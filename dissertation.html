@@ -6,37 +6,37 @@
   <link rel="stylesheet" href="assets/css/dissertation.css">
   <link rel="stylesheet" href="assets/css/migration-as-movement.css">
 
-  <script>
-    //let migrationAudio = new Audio('assets/audio/Marttila-2022-migration-as-movement-Introduction.mp3');
-    //migrationAudio.controls = true;
-    let migrationAudio = document.getElementById('migrationAudio');
-
-    migrationAudio.oncanplaythrough = (event) => {
-      console.log('I think I can play through the entire ' +
-      'audio without ever having to stop to buffer.');
-    };
-
-    function setPositionInAudio(time){
-      //migrationAudio.play();
-      //migrationAudio.fastSeek(460);
-      //migrationAudio.play();
-      console.log("setting time to:" + time + "seconds");
-      migrationAudio.currentTime = time;
-      //console.log(migrationAudio);
-      //console.log(migrationAudio.currentTime);
-      //document.getElementById('migrationAudio').play();
-      //setTimeout( () => {console.log(migrationAudio.currentTime)}, 500);
-      //setTimeout( () => {migrationAudio.currentTime = 500}, 500);
-      //setTimeout( () => {console.log(migrationAudio.currentTime)}, 1000);
-    }
-
-  </script>
 </head>
 <body>
 
   <div id="audioplayer">
     <audio id="migrationAudio" src="https://github.com/trhi/migration-as-movement/blob/master/assets/audio/Marttila-2022-migration-as-movement.mp3?raw=true" type="audio/mp3" controls preload="auto" controlsList="nodownload">
     </audio>
+    <script>
+      //let migrationAudio = new Audio('assets/audio/Marttila-2022-migration-as-movement-Introduction.mp3');
+      //migrationAudio.controls = true;
+      let migrationAudio = document.getElementById('migrationAudio');
+
+      migrationAudio.oncanplaythrough = (event) => {
+        console.log('I think I can play through the entire ' +
+        'audio without ever having to stop to buffer.');
+      };
+
+      function setPositionInAudio(time){
+        //migrationAudio.play();
+        //migrationAudio.fastSeek(460);
+        //migrationAudio.play();
+        //console.log("setting time to:" + time + "seconds");
+        migrationAudio.currentTime = time;
+        //console.log(migrationAudio);
+        //console.log(migrationAudio.currentTime);
+        //document.getElementById('migrationAudio').play();
+        //setTimeout( () => {console.log(migrationAudio.currentTime)}, 500);
+        //setTimeout( () => {migrationAudio.currentTime = 500}, 500);
+        //setTimeout( () => {console.log(migrationAudio.currentTime)}, 1000);
+      }
+
+    </script>
   </div>
   <a href="index.html" style="left:45px;"  class="ahref-button"> &nbsp ↞ back &nbsp </a>
 
