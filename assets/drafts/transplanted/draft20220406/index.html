@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<title>Transplanted</title>
+<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+<meta charset="UTF-8">
+
+<script type="text/javascript" src="library/jquery-3.5.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="library/p5.min.js"></script>
+<script language="javascript" type="text/javascript" src="library/p5.sound.min.js"></script>
+
+<script language="javascript" type="text/javascript" src="transplanted.js"></script>
+<script language="javascript" type="text/javascript" src="interface.js"></script>
+<link rel="stylesheet" href="assets/css/transplanted.css">
+
+</head>
+<body>
+
+<div id="audio"></div>
+  <div id='container' style="visibility: visible; position:relative">
+    <div class="instructions" id='instructions-fi' style="display: none">
+      <p><b>sydän</b>: paina pohjaan (tietokone)</p>
+      <p>tai näpäytä (mobiili) ja puhu</p>
+      <p>laita äänet päälle</p>
+        <p>äänitys litteroidaan Googlen palvelimella</p>
+        <p>näet litteroidun puheen ruudulla</p>
+        <p><em>kuuntele(n)</em> ja puhu(n), ja <em>kuuntele(n)</em></p>
+      </p>
+    </div>
+
+    <div class='instructions' id='instructions-en' style="display: none">
+      <p><b>h-ear-t:</b> hold down (computer) </p>
+        <p>or tap (mobile) to talk</p>
+        <p>turn on your sound</p>
+        <p>recording transcribed on Googles server</p>
+        <p>transcript appears on the screen</p>
+        <p><em>Transplanted</em> will muse in Finnish only</p>
+      </p>
+    </div>
+
+    <div id="infinity-button-info-en" class='instructions' style="display: none">
+      <p>Listen to infinite musings
+      by <em>Transplanted</em> <br>[ ⧖ = loading]</p>
+    </div>
+
+    <div id="infinity-button-info-fi" class='instructions' style="display: none">
+      <p>Kuuntele loputonta tajunnanvirtaa <br>[⧖ = odota]</p>
+    </div>
+
+    <div id="finnish-button-info" class='instructions' style="display: none">
+      <p>puhu suomeksi</p>
+    </div>
+
+    <div id="subtitles-button-info" class='instructions' style="display: none">
+      <p>speak in English</p>
+      <p>subtitles in English</p>
+    </div>
+
+    <p id='prompts'></p>
+    <div id='heartDIV' style="visibility: visible"></div>
+    <div id='questions'></div>
+    <div id='answers' style="display: none"></div>
+  </div>
+</body>
+</html>

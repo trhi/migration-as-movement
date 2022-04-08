@@ -1,0 +1,380 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="information.js" ></script>
+  <script src="carens-generalisation.js" ></script>
+  <script src="me.js" ></script>
+  <script src="refugee.js" ></script>
+  <script src="languages.js" ></script>
+  <style>
+  button.roundButton {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 200px;
+    border: 0px;
+    }
+    </style>
+</head>
+<body>
+<div id="recogniserButtonDiv" style="display:none">
+      <button type="button" class="roundButton" id="startRecogniser" style="background-image: url(images/listen-to-me.png)" onclick="startRecogniser()" </button>
+</div>
+  <div id="recognitionDiv" style="border:1px dotted black; border-radius:8px; visibility:visible; width:250">
+    <p id="recognitionP" style="visibility:visible" color="gray" class="pulse"> ... </p>
+  </div>
+  <div id="synthSpeakingDiv">
+  </div>
+  <p id="p2"> </p>
+  <button type="button" style="font-size:10vw" id="activationButton" onclick="activate()">Make sure your sound is on. Then click me to begin.</button><br>
+  <div id="instructionsDiv">
+  </div>
+  <div id="refugeeSituationDiv">
+  </div>
+  <script>
+
+  //We Cannot Take Them All (2019-) by Terhi Marttila
+
+  //This text is a very slightly modified version of what appears in:
+  //Carens, Joseph (2015) The Ethics of Immigration. London: Oxford University Press.
+  //This excerpt is an imaginary list of reasons for why the general public
+  //in America may have been opposed to the idea of admitting Jewish refugees
+  //during World War Two. The idea is that these types of rationalisations
+  //may have surfaced during public discourse at the time, even by people who
+  //considered themselves only mildly opposed to the idea of admitting
+  //refugees. In all, these will seem like relatively sensible reasons.
+
+  //Carens' purpose with presenting these generalisations is to call our
+  //attention to how, in the light of what was revealed in the aftermath of the
+  //war of the full extent of the unacceptable and deadly conditions and
+  //discrimination to which Jews were subject under the Nazi regime,
+  //the concerns raised in these statements become blatantly disproportionate
+  //and meaningless in comparison to the suffering and true peril which the
+  //people fleeing Nazi persecution were facing at their origin countries.
+
+  //Carens presents us with these statements so that we may reflect on the one
+  //hand, on whether we can identify this very same type of reasoning emerging
+  //in public discourse related to contemporary "refugee situations", and
+  //furthermore, to play out the thought experiment of: what if we later come
+  //to understand a more full picture of the suffering of the people who have
+  //chosen to distance themselves physically from the situations that produced
+  //their misery? Will these arguments continue to hold even the slightest
+  //degree of reason or moral weight, all other aspects considered?
+
+  //The purpose of translating Carens' text into a generative piece which
+  //relies on speech interaction is twofold: On the one hand, we utilise
+  //synthetic speech to invoke the idea of various countries and nationalities:
+  //whether familiar to us or not, a foreign accent will invoke a sense of another
+  //country. Meanwhile, it is also humorous to be exposed to a synthetic voice
+  //speaking in a heavy accent, which in turn makes one more likely to engage
+  //further with the piece.
+
+  //Moreover, the user cannot simply click to interact,
+  //but must use their very voice to tell the system "I am from __country__".
+  //Most will begin by choosing their own country, as this is the most natural
+  //statement to make. However, in order to further engage with the piece,
+  //one will begin to say "I am from __another country__ " in order to hear
+  //what that accent sounds like. One will choose accents with which one is
+  //familiar, or perhaps "play through them all" just for the fun of it.
+  //Furthermore, by making the user repeatedly say "I am from some country",
+  //the piece forces us to slowly dismember any meaning that this sentence has.
+
+  //Meanwhile, amidst this play, the user inevitably is exposed to a mantra,
+  //which always ends with these two sentences:
+  //We cannot take them all. Not all of them.
+
+
+    var languagesCopy = [... LANGUAGES]; //working copy of the above reference
+    var languagesArray = []; //index matching existing languages with available voices
+    var languagesArrayCopy = []; //working copy of above index
+    //var information = "Let's listen to why we cannot take them all. " +
+    //"Now, choose a nationality by saying, for example, 'I am from America'.";
+
+    let voices; //to store all user synthetic voices
+    //var information = "Let's listen.";
+
+    var isSpeechRecognitionSupported = false;
+    try {
+      //disable all of this if window doesn't have webkitSpeechRecognition or SpeechRecognition
+      window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+      var listener = new SpeechRecognition;
+      isSpeechRecognitionSupported = true;
+    } catch (err) {
+      console.log("Speech recognition is not supported!!!");
+      window.alert("Please view this work in Chrome");
+      $("#activationButton").prop("disabled",true);
+      $("#activationButton").text("Please view this work in Chrome");
+    }
+
+/*
+    if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+      // Great, browser supports the Web Speech API - let's use it
+      console.log("Browser supports SpeechRecognition");
+    }else {
+      window.alert("Please view this work in Chrome");
+      $("#activationButton").prop("disabled",true);
+      $("#activationButton").text("Please view this work in Chrome");
+
+    }
+    */
+
+    function pulse(){
+      $(this).animate({opacity:0},1000,function(){
+        $(this).animate({opacity:1},1000,pulse)
+      })
+    }
+
+    function stop(){
+      $(this).stop(false,false).css({opacity:1})
+    }
+
+    //attributes methods pulse() and stop() to all elements in class "pulse"
+    $(function(){
+      $('.pulse').each(
+        function(){
+          var that=this;
+          setTimeout(
+            function() {pulse.call(that)},
+            Math.random()*1000);
+          }
+        )
+      })
+
+    function startRecogniser(){
+      if (synth.speaking) {
+        //console.log("Attempting to change background image");
+        $("#startRecogniser").css("background-image", "url(images/i-am-still-speaking.png)");
+        setTimeout(function () { $("#startRecogniser").css("background-image", "url(images/listen-to-me.png)"); }, 2000);
+      } else {
+        recognition.start();
+        $("#recognitionP").text(" ... I am listening ");
+        pulse.call($("#recognitionP"));
+      }
+    }
+
+    function speakOneSentence(sentence){
+      return new Promise(function(resolve, reject){
+        recognition.stop();
+        speakThis.text = sentence.replace( /(<([^>]+)>)/ig, '');
+        synth.speak(speakThis);
+        $("#synthSpeakingDiv").html(">> " + sentence);
+        speakThis.onend = function(event) {
+          //console.log(">> Stopped speaking" + event);
+          $("#synthSpeakingDiv").text("");
+          resolve();
+        };
+      });//end of return new Promise
+    }//end of speakOneSentence
+
+    function oppositionVoiced(language){
+      //replace with random concepts
+      //but this could also be the same, always:
+      recognition.stop();
+      var myFullandHonestOpinion = replaceGeneralisationWithRandom();
+      var myBriefOpinion = chooseSomeSentencesFrom(myFullandHonestOpinion);
+      speakMyOpinion(language, myBriefOpinion);
+
+      function replaceGeneralisationWithRandom() {
+        var myOpinion = [];
+        var themIndex = Math.floor(Math.random() * ME.howISeeThem.length);
+        for (var i = 0; i < CARENSGENERALISATION.length; i++) {
+          myOpinion[i] = CARENSGENERALISATION[i].replace("Jewish refugees", "them");
+          myOpinion[i] = myOpinion[i].replace(/Jew/g, ME.howISeeThem[themIndex]);
+          myOpinion[i] = myOpinion[i].replace("our border", ME.whatIDefineAsMineAndNotTheirs[Math.floor(Math.random() * ME.whatIDefineAsMineAndNotTheirs.length)]);
+          myOpinion[i] = myOpinion[i].replace("Atlantic", REFUGEE.obstacle[Math.floor(Math.random() * REFUGEE.obstacle.length)]);
+          myOpinion[i] = myOpinion[i].replace("communists", ME.isScaredOf[Math.floor(Math.random() * ME.isScaredOf.length)]);
+          myOpinion[i] = myOpinion[i].replace(/the problems they have at home/g, REFUGEE.problem[Math.floor(Math.random() * REFUGEE.problem.length)]);
+        }//end of for
+        //console.log(myOpinion);
+        return myOpinion;
+      }
+
+      function chooseSomeSentencesFrom(myFullandHonestOpinion){
+        var someSentences = [];
+        someSentences[0] = myFullandHonestOpinion[0];
+        var randomIndex = Math.floor(Math.random() * (myFullandHonestOpinion.length-1)) + 1;
+        someSentences[1] = myFullandHonestOpinion[randomIndex];
+        return someSentences;
+      }//end of chooseSomeSentencesFrom()
+
+      function speakMyOpinion(language, opinion){
+        speakThis.lang = language;
+        speakThis.rate = 1.2;
+        speakOneSentence(opinion[1])
+        .then(value => speakOneSentence(opinion[0]))
+        .then(value => {
+          $("#recognitionP").text(" ... Choose another nationality to play ↡");
+          //console.log(">> Spoke sentence, pulsing again:");
+          pulse.call($("#recognitionP"));
+          showRandomLanguages();
+        });
+      }//end of speakMyOpinion()
+
+    }//end of oppositionVoiced
+
+    function activate(){
+      var btn = document.getElementById("activationButton");
+      btn.remove();
+      var randomCountryID = Math.floor(Math.random() * LANGUAGES.length);
+      var information = "Let's listen to why we cannot take them all. " +
+      "Now, choose a nationality by saying, for example, 'I am from " + LANGUAGES[randomCountryID].country +"'.";
+      //console.log(voices);
+      $("#recogniserButtonDiv").css("display", "block");
+
+      speakThis.rate = 0.8;
+      speakOneSentence(information)
+      .then( () => {
+        $("#startRecogniser").css("visibility", "visible");
+        showRandomLanguages();
+        document.getElementById("refugeeSituationDiv").style.borderLeft = "2px dotted black";
+        $("#instructionsDiv").html("<p> Press <em>Listen to me</em> above ↟, then speak any of these: </p>");
+        $("#recognitionP").text(" ... I am listening");
+        recognition.start();
+      });
+    }//close activate()
+
+    function showRandomLanguages() {
+      $("#refugeeSituationDiv").empty();
+      var numberOfLanguages = 6;
+      var randomIndex;
+      var chosenOne;
+      var shorterLanguagesArray = [];
+      for ( var i = 0 ; i < numberOfLanguages ; i ++){
+        randomIndex = Math.floor( Math.random() * languagesArrayCopy.length );
+        chosenOne = languagesArrayCopy[ randomIndex ];
+        shorterLanguagesArray[i] = chosenOne;
+        languagesArrayCopy.splice(randomIndex, 1);
+        $("#refugeeSituationDiv").append(shorterLanguagesArray[i]);
+      }//close for
+      languagesArrayCopy = [...languagesArray];
+      if(Math.random() > 0.8){
+        $("#refugeeSituationDiv").prepend("__ what is this?");
+      }
+    }//close showRandomLanguages
+
+    function createLanguagesArray(){
+      for(var i = 0 ; i < voices.length ; i++){
+        for(var j = 0 ; j < languagesCopy.length ; j++){
+          if( voices[i].lang === languagesCopy[j].bcp ){
+            languagesArray[i] = "<p id=" + voices[i].name + " class=" + voices[i].lang + ">__ I am from " + languagesCopy[j].country + "</p>";
+            languagesCopy.splice(j, 1);
+            var filteredLanguagesCopy = languagesCopy.filter(function (el) {
+              return el != null;
+            });
+            languagesCopy = filteredLanguagesCopy;
+            j = languagesCopy.length+1;
+          }
+        }
+      }
+      var filteredLanguagesArray = languagesArray.filter(function (el) {
+        return el != null;
+      });
+      languagesArray = filteredLanguagesArray;
+      languagesArrayCopy = [...languagesArray];
+    }//close createLanguagesArray
+
+    var synth = window.speechSynthesis;
+    console.log(synth);
+    //synth.resume();
+    synth.onvoiceschanged = ((e) => {
+      voices = synth.getVoices();
+      //console.log(voices);
+      createLanguagesArray();
+    })
+    //problem here is that you need to wait until synth has "loaded" before getting voices:
+    //voices = synth.getVoices(); // cannot run this at this point
+    //need to implement a Promise here, ie. once
+    var speakThis = new SpeechSynthesisUtterance;
+    speakThis.text = '';
+
+  if (isSpeechRecognitionSupported){
+    window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+    var recognition = new SpeechRecognition;
+    recognition.lang = 'en-US';
+    recognition.interimResults = true;
+    var transcript = '';
+    var final_transcript = '';
+
+    recognition.onerror = function(event) {
+      recognition.stop();
+      console.log(event.error);
+      $("#recognitionP").text("... I cannot hear you");
+    };
+
+    /*
+    recognition.onspeechend = function() {
+    }
+    recognition.onsoundend = function() {
+    }
+    recognition.onsoundstart = function(){
+    }
+    recognition.onend = function () {
+    }
+    */
+    //speaking I am American etc -> goes into synth speaking
+    //error: no-speech -> reverts to blinking ...
+    //random words -> eventually reverts to blinking ...
+    //this does not work:
+    //some sound detected -> continues blinking "listening ..."" !!!!
+
+    recognition.onresult = (event) => {
+      //console.log(event);
+      stop.call($("#recognitionP"));
+      var speechToText = event.results[0][0].transcript;
+      $("#recognitionP").text(speechToText);
+      $("#recognitionP").css("color", "gray");
+
+      for(var i = 0 ; i < LANGUAGES.length ; i++){ //go through and see if they spoke one of the language names
+        if(speechToText.includes(LANGUAGES[i].country)){
+          var allInstancesOfThisLanguage = document.getElementById("refugeeSituationDiv").getElementsByClassName(LANGUAGES[i].bcp);
+          for (let j=0; j<allInstancesOfThisLanguage.length ;j++){
+            var boxChecked = allInstancesOfThisLanguage[j].textContent.replace("__", "_X_");
+            allInstancesOfThisLanguage[j].textContent = boxChecked;
+          }
+          if(event.results[0].isFinal){
+            oppositionVoiced(LANGUAGES[i].bcp);
+          }
+        } //end if
+      }// end for
+
+        //after having gone through all of the languages:
+        if (event.results[0].isFinal && speechToText.includes("what is this")){
+          recognition.stop();
+          speakThis.lang = "en-US";
+          speakThis.rate = 1.0;
+          speakOneSentence(INFO.rmation[0])
+          .then( () => speakOneSentence(INFO.rmation[1]) )
+          .then( () => speakOneSentence(INFO.rmation[2]) )
+          .then( () => speakOneSentence(INFO.rmation[3]) )
+          .then( () => speakOneSentence(INFO.rmation[4]) )
+          .then( () => speakOneSentence(INFO.rmation[5]) )
+          .then( () => speakOneSentence(INFO.rmation[6]) )
+          .then( () => speakOneSentence(INFO.rmation[7]) )
+          .then( () => {
+            //console.log("Stopped speaking the artist statement");
+            showRandomLanguages();
+            $("#recognitionP").text("... ");
+            pulse.call($("#recognitionP"));
+          });
+        } else if (!synth.speaking && event.results[0].isFinal){
+          setTimeout(function() {
+            //here: choose from a random one:
+            $("#recognitionP").text(" ... check your pronunciation");
+            pulse.call($("#recognitionP"));
+          }, 2000);
+        }
+
+  }//end recognition.onresult
+
+} //end if(isSpeechRecognitionSupported)
+
+  </script>
+</body>
+</html>
