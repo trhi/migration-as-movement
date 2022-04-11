@@ -5,6 +5,10 @@
   line-height: 180%;
 }
 
+.seekInAudio{
+  cursor:pointer;
+}
+
 blockquote{
   margin-left: 60px;
   font-size: 14px;
