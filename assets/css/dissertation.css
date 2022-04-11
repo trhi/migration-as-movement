@@ -5,6 +5,10 @@
   line-height: 180%;
 }
 
+.hidden{
+  display:none;
+}
+
 .seekInAudio{
   cursor:pointer;
 }
