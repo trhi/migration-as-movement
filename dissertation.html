@@ -6,37 +6,58 @@
   <link rel="stylesheet" href="assets/css/dissertation.css">
   <link rel="stylesheet" href="assets/css/migration-as-movement.css">
 
+  <script>
+    //let migrationAudio = new Audio('assets/audio/Marttila-2022-migration-as-movement-Introduction.mp3');
+    //migrationAudio.controls = true;
+
+    //preload all nine audio chapters
+
+    //then: create array with all nine audio elements
+    var audios = [];
+
+    //let migrationAudio = document.getElementById('migrationAudio');
+
+    /*
+    migrationAudio.oncanplaythrough = (event) => {
+      console.log('I think I can play through the entire ' +
+      'audio without ever having to stop to buffer.');
+      migrationAudio.play();
+      migrationAudio.pause();
+    };
+    */
+
+    function setPositionInAudio(chapter, time){
+      //migrationAudio.play();
+      //migrationAudio.fastSeek(460);
+      //migrationAudio.play();
+      //console.log("setting time to:" + time + "seconds");
+      let chapterAudio = document.getElementById(chapter);
+
+      if (audios){
+        //pause all other chapters:
+        for(i=0; i<audios.length; i++){
+          audios[i].pause();
+        }
+      }
+
+      chapterAudio.play();
+      chapterAudio.currentTime = time;
+      //console.log(migrationAudio);
+      //console.log(migrationAudio.currentTime);
+      //document.getElementById('migrationAudio').play();
+      //setTimeout( () => {console.log(migrationAudio.currentTime)}, 500);
+      //setTimeout( () => {migrationAudio.currentTime = 500}, 500);
+      //setTimeout( () => {console.log(migrationAudio.currentTime)}, 1000);
+    }
+
+  </script>
+
+
 </head>
 <body>
 
-  <div id="audioplayer">
-    <audio id="migrationAudio" src="https://github.com/trhi/migration-as-movement/blob/master/assets/audio/Marttila-2022-migration-as-movement.mp3?raw=true" type="audio/mp3" controls preload="auto" controlsList="nodownload">
-    </audio>
-    <script>
-      //let migrationAudio = new Audio('assets/audio/Marttila-2022-migration-as-movement-Introduction.mp3');
-      //migrationAudio.controls = true;
-      let migrationAudio = document.getElementById('migrationAudio');
+  <div>
 
-      migrationAudio.oncanplaythrough = (event) => {
-        console.log('I think I can play through the entire ' +
-        'audio without ever having to stop to buffer.');
-      };
-
-      function setPositionInAudio(time){
-        //migrationAudio.play();
-        //migrationAudio.fastSeek(460);
-        //migrationAudio.play();
-        //console.log("setting time to:" + time + "seconds");
-        migrationAudio.currentTime = time;
-        //console.log(migrationAudio);
-        //console.log(migrationAudio.currentTime);
-        //document.getElementById('migrationAudio').play();
-        //setTimeout( () => {console.log(migrationAudio.currentTime)}, 500);
-        //setTimeout( () => {migrationAudio.currentTime = 500}, 500);
-        //setTimeout( () => {console.log(migrationAudio.currentTime)}, 1000);
-      }
-
-    </script>
   </div>
   <a href="index.html" style="left:45px;"  class="ahref-button"> &nbsp ↞ back &nbsp </a>
 
@@ -66,6 +87,7 @@
     and NORTE2020, Portugal2020, União Europeia Fundo Social Europeu">
 
   <section id="contents" style="margin-top:3cm;">
+
     <p style="text-indent:50px;"></p>
       <p class="montserrat-section" style="margin-top:0cm; text-indent: 50px; text-align:left">Contents</p>
       <p style="text-indent: 100px;"><em>[press 🔗 to jump to chapter, press 🗣 to listen to chapter. Note that you can speed up the audio.]</em></p>
@@ -75,21 +97,21 @@
           Front matter <a href="#front-matter" style="display: inline; text-decoration: none;"> 🔗 </a><span> [ <a href="#abstract">abstract</a>, <a href="#resumo">resumo</a>, <a href="#acknowledgements">acknowledgements</a> ] </span></p>
 
       <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px; ">
-          Introduction <a title="Jump to introduction" href="#introduction" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to introduction" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(0);'> 🗣 </button></p>
+          Introduction <a title="Jump to introduction" href="#introduction" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to introduction" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter0, 0);'> 🗣 </button></p>
       <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px; text-decoration: none; ">
-          1&nbsp Artistic research through exploratory programming <a title="Jump to Chapter 1 - artistic research through exploratory programming" href="#1-artistic-research" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to chapter 1 - artistic research through exploratory programming" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(2913);'> 🗣 </button></p>
+          1&nbsp Artistic research through exploratory programming <a title="Jump to Chapter 1 - artistic research through exploratory programming" href="#1-artistic-research" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to chapter 1 - artistic research through exploratory programming" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter1, 0);'> 🗣 </button></p>
       <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px; text-decoration: none; ">
-          2&nbsp We cannot take them all (2019) <a title="jump to chapter 2 - We cannot take them all" href="#2-we-cannot-take-them-all" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to chapter 2 - We cannot take them all (2019)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(7964);'> 🗣 </button></p>
+          2&nbsp We cannot take them all (2019) <a title="jump to chapter 2 - We cannot take them all" href="#2-we-cannot-take-them-all" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to chapter 2 - We cannot take them all (2019)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter2, 0);'> 🗣 </button></p>
       <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
-          3&nbsp Speak Out (2020) <a title="jump to chapter 3 - Speak out" href="#3-speak-out" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="Listen to chapter 3 - Speak out (2020)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(13254);'> 🗣 </button></p>
+          3&nbsp Speak Out (2020) <a title="jump to chapter 3 - Speak out" href="#3-speak-out" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="Listen to chapter 3 - Speak out (2020)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter3, 0);'> 🗣 </button></p>
       <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
-          4&nbsp Transplanted (2021) <a title="jumpt to chapter 4 - Transplanted" href="#4-transplanted" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to chapter 4 - Transplanted (2021)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(23004);'> 🗣 </button></p>
+          4&nbsp Transplanted (2021) <a title="jumpt to chapter 4 - Transplanted" href="#4-transplanted" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to chapter 4 - Transplanted (2021)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter4, 0);'> 🗣 </button></p>
       <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
-          5&nbsp Discussion <a title="Jump to 5 - Discussion" href="#5-discussion" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="Listen to chapter 5 - discussion" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(25427);'> 🗣 </button></p>
+          5&nbsp Discussion <a title="Jump to 5 - Discussion" href="#5-discussion" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="Listen to chapter 5 - discussion" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter5, 0);'> 🗣 </button></p>
       <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
-          6&nbsp Limitations and future work <a title="Jump to 6 - Limitations and future work" href="#6-limitations-and-future-work" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to chapter 6 - limitations and future work" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(30151);'> 🗣 </button></p>
+          6&nbsp Limitations and future work <a title="Jump to 6 - Limitations and future work" href="#6-limitations-and-future-work" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to chapter 6 - limitations and future work" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter6, 0);'> 🗣 </button></p>
       <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
-          Conclusion <a title="Jump to conclusion" href="#conclusion" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to conclusion" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(31934);'> 🗣 </button></p>
+          Conclusion <a title="Jump to conclusion" href="#conclusion" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to conclusion" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter7, 0);'> 🗣 </button></p>
 
       <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
           End matter <a title="Jump to end matter" href="#end-matter" style="display: inline; text-decoration: none;"> 🔗 </a>
@@ -97,11 +119,10 @@
             <a href="#figures">figures</a>, appendices <a href="#appendix-a">A</a>,
             <a href="#appendix-b">B</a>, <a href="#appendix-c">C</a>,
             <a title="Appendix D - On voice interfaces" href="#appendix-d">D</a>
-            <button title="listen to appendix D - On voice interfaces" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(32483);'> 🗣 </button>
+            <button title="listen to appendix D - On voice interfaces" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter8, 0);'> 🗣 </button>
             and <a title="Appendix E - Critical analysis of source code" href="#appendix-e">E</a>
-            <button title="listen to appendix E - critical analysis of source code" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(34551);'> 🗣 </button> ] </span></p>
+            <button title="listen to appendix E - critical analysis of source code" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter9, 0);'> 🗣 </button> ] </span></p>
 
-  <section>
     <br>  <br>  <br>  <br>
   </section>
 
@@ -133,7 +154,8 @@
 </section>
 
   <section id="introduction">
-    <p class="montserrat-section">Introduction <button title="listen to chapter 1 - artistic research through exploratory programming" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(0);'> 🗣 </button></p>
+
+    <p class="montserrat-section">Introduction <button title="listen to chapter 1 - artistic research through exploratory programming" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter0, 0);'> 🗣 </button></p>
     <p class="p12"><span class="s1">When 2015 onwards various European countries saw an increase in the number of asylum requests, public discourse around migration boiled over. These discourses were in response to a tangible change in migration patterns which was felt, heard and seen especially in <q>Germany</q>, the physical perimeter of ground on planet earth [ or: <q>the place</q> ] in which the currents of life had moved my body to [ or: <q>the place or country I was living in at the time</q> ]. The discourse touched deep into my personal experiences, instantiating an ongoing process of artistic research around the ancient phenomenon of the migratory movement of the human species.</span></p>
     <p class="p12"><span class="s1">A serial migrant myself, I have experienced both the ease of existence when our surroundings <em>assume</em> us to belong, as well as the friction, in at least some of its milder forms, of being where [ <em><q>in a place</q></em> ] one does not, so to speak, belong. Even the fact of having traversed a subset of this artistic research path, namely <em>this</em> dissertation, in Porto, is a further contribution to my personal and lived experience of being that foreigner. After five years here, I cringe when I hear myself speak [ == <em><q>communicate</q></em> ] in <em>Portuguese</em>.</span></p>
     <p class="p12"><span class="s1">I write from a position of privilege, a white woman pursuing a doctorate who has lived in several countries and whose migrations have always been easy: my parents were highly skilled, <em>wanted</em> migrants, <em>the right kind of migrants</em>. My personal migrations have been either inside the European Union where borders (for all practical purposes) do not exist, or as a university student under bilateral agreements. In a 2017 doctoral symposium presentation, my presentation title read: <em><q>Migration is my right, borders an unnecessary obstacle</q></em>.</span></p>
@@ -266,10 +288,22 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   <img width="600" src="assets/img/marttila-2022-frontpoem.png" alt="a front poem">
   <br><br>
     <p class="p35"><span class="s12">☉</span></p>
+
+    <footer style="position:sticky; bottom:0;">
+        <audio  id="chapter0" class="audioplayer" src="assets/audio/0.mp3" type="audio/mp3" controls preload="auto">
+        </audio>
+    </footer>
+
   </section>
 
+
+
+
+
+
+
 <section id="1-artistic-research">
-  <p class="montserrat-section">1 &nbsp &nbsp &nbsp Artistic research through exploratory programming <button title="listen to chapter 1 - artistic research through exploratory programming" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(2913);'> 🗣 </button></p>
+  <p class="montserrat-section">1 &nbsp &nbsp &nbsp Artistic research through exploratory programming <button title="listen to chapter 1 - artistic research through exploratory programming" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter1, 0);'> 🗣 </button></p>
   <p class="p12"><span class="s1">One might ask, <q><em>why an entire chapter devoted to the methodology? Isn&rsquo;t it enough to describe it in a few paragraphs within the introduction?</em></q>. Indeed, it may not always be necessary to spend an entire chapter discussing what was done and why. However, I have struggled to clarify for myself, throughout my entire research process, <em>how it is</em> that what I ended up doing can be considered research. This is because <em>artistic research</em> or <em>practice-based research</em> is still not as established a paradigm of knowledge creation in comparison to other more evolved and senior forms of science. This has been an epistemological struggle and surely also a process of maturing towards the identity of an artist-researcher.</span></p>
   <p class="p12"><span class="s1">For the reader who is perhaps as bewildered as I was about how artistic practice <em>itself</em> can be research, and about how to approach the written dissertation which accompanies the practice, I invite you to follow my argumentation about how my chosen mix of methodologies and approaches is, I believe, valid as knowledge creation. My hope is that by articulating my own choices, others struggling with these issues as they search for their own unique approach may find yet another documented approach to artistic research.</span></p>
   <p class="p12"><span class="s1">After arguing for artistic research in a more general sense, I will position my work within the realm of procedural systems, language-based works and voice-based works, as well as position my practice in general as <em>exploratory</em> <em>programming</em>. Finally, I will devote some time to the notion of <em>evaluation</em> in the context of practice-based research in interactive arts and what this can mean from the perspective of knowledge creation.</span></p>
@@ -538,10 +572,22 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   <p class="p27"><span class="s1">☉</span></p>
   <p class="p12"><span class="s1">All of the aforementioned research approaches and methodologies accumulate to define my approach to artistic research, namely that of the exploratory programming of playful, language-based digital artefacts with voice/interaction as an approach to exploring aspects of human (migratory) movement. Throughout, I have engaged in mostly informal but also in some formal user research in order to enter into a dialogue with people about my work. These insights from others have helped me develop the works thematically or to improve the user interface.</span></p>
   <p class="p12"><span class="s1">In the next chapters, I will discuss the three artworks that emerged during this research process. I will begin with <em>We cannot take them all</em>, and then go on to discuss <em>Speak out</em> and <em>Transplanted</em>. In each chapter, I will introduce the reader to the work, then explain the process of artistic inquiry behind the work, after which I will narrate the artistic process. Finally, I will engage in a critical reflection of each work. After discussing all three works, I will discuss some of the overarching issues that emerged during the research process.</span></p>
+
+  <footer style="position:sticky; bottom:0;">
+      <audio  id="chapter1" class="audioplayer" src="assets/audio/1.mp3" type="audio/mp3" controls preload="auto">
+      </audio>
+  </footer>
+
 </section>
 
+
+
+
+
+
+
 <section id="2-we-cannot-take-them-all">
-  <p class="montserrat-section">2 &nbsp; &nbsp; &nbsp;  We cannot take them all (2019) <button title="listen to chapter 2 - We cannot take them all (2019)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(7964);'> 🗣 </button></p>
+  <p class="montserrat-section">2 &nbsp; &nbsp; &nbsp;  We cannot take them all (2019) <button title="listen to chapter 2 - We cannot take them all (2019)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter2, 0);'> 🗣 </button></p>
   <p class="p38"><span class="s1">Having illuminated my research methodology, I will now take the reader through each of the three artistic processes that structured this research trajectory as a whole. The first of these came to be called <em>We cannot take them all</em>. It can be accessed on my website <a href="http://terhimarttila.com"><span class="s11">terhimarttila.com</span></a> or at <a href="http://github.com/trhi"><span class="s11">github.com/trhi</span></a> or at <a href="http://terhimarttila.com/we-cannot-take-them-all"><span class="s11">terhimarttila.com/we-cannot-take-them-all</span></a> as either the interactive work itself or as a video documenting one interaction. It is optimised for Google Chrome desktop. <em>We cannot take them all</em> uses the Web Speech API which is currently (in 2021) classified as an experimental technology, meaning that works based on it may at some point become obsolete. It is a good idea to go experience the work before reading this chapter. Information about where to find the source code for <em>We cannot take them all</em> is available in appendix C. You can engage with the work (as on the 25th of January 2022 at the time of submission of this dissertation) below:</span></p>
 <iframe style="margin-left: 100px;" width="400" height="600" src="assets/drafts/we-cannot-take-them-all/draft20220125"></iframe>
   <p class="p39"><span class="s1"><em>We cannot take them all&nbsp;</em>(2019-) is a natural continuation of my prior work, and for this reason I will refer here to work which was completed before the PhD. It is in some ways a counterpart to (or the evil little sister of) my MA thesis project called <em>Give me a reason</em> (2016). While in <em>Give me a reason</em> I was exploring reasons for why people accept the presence of foreigners and seek contact with them (through volunteer work), in <em>We cannot take them all,</em> attention turns to why it is that people do not accept foreigners. What interests me in both projects are the concepts, the language and the logic of the arguments that are used to justify the position of either accepting foreigners or not accepting foreigners. It seems to me at times that <em>We cannot take them all</em> might better be called <em>Give me a (xenophobic) reason</em>, or something else that more directly alludes to the sarcastic tone of this work.</span></p>
@@ -815,10 +861,28 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   <p class="p39"><span class="s1">But is <em>We cannot take them all</em> successful in taking a critical angle on xenophobic attitudes? It seems that there are some critical steps missing, because the work mostly regurgitates xenophobic attitudes about migrants without very obviously framing them in a critical light. The fact of repeating the same text and speaking it through synthetic voices that invoke different countries through linguistic accents over English may not be enough to dilute the rhetorical power of the xenophobic ideas because my conceptual framing of the issue may not be obvious enough. For this reason, this work feels still as though in progress, and I am anxious for the epiphany that will eventually allow me to solve this artistic puzzle.</span></p>
   <p class="p38"><span class="s1">In the next chapter I will present the second work, <em>Speak out</em>.</span><p>
   <p class="p27"><span class="s1">☉</span></p>
+
+  <footer style="position:sticky; bottom:0;">
+      <audio  id="chapter2" class="audioplayer" src="assets/audio/2.mp3" type="audio/mp3" controls preload="auto">
+      </audio>
+  </footer>
+
 </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
 <section id="3-speak-out">
-  <p class="montserrat-section">3 &nbsp; &nbsp; &nbsp; <em>Speak Out</em> (2020) <button title="Listen to chapter 3 - Speak out (2020)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(13254);'> 🗣 </button></p>
+  <p class="montserrat-section">3 &nbsp; &nbsp; &nbsp; <em>Speak Out</em> (2020) <button title="Listen to chapter 3 - Speak out (2020)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter3, 0);'> 🗣 </button></p>
   <blockquote>
   <p class="p12"><span class="s1">All ideologies of progress proceed from the assumption that we are moving forward. This much is obvious: we have two eyes that point forward, and our legs take us in that same direction. We are beings that want to follow our noses. Put another way: we go to meet our death, and on the way we encounter obstacles that we either deal with, leap over, or avoid. This encounter between ourselves and things is what we call experience [Er-fahrung]. But anyone who takes a closer look will recognise that this conception is not correct and that progress is somehow lacking. If we were to record our steps on a flat surface, we would see that we are not moving forward so much as oscillating back and forth. That our path through life consists primarily of movement out the door and then a return home through the door. Put another way: we go out into the world to experience, and we lose ourselves in the process; we then return home to find ourselves again, and we lost the world that we experienced. In other words, we don&rsquo;t follow our noses but rather move in and out, and our path through life is not one of progress but one of swarming. The model we are patterned on is not so much the lone coyote who follows his prey to experience it but rather the anthill.</p>
 <p class="citation-name">(Flusser 2003/1991, 65)</p>
@@ -1334,10 +1398,25 @@ alt="">
   <p class="p12"><span class="s1">I envision scanning these and using them in <em>Speak out</em> instead of the coloured circles. I dream about using these as objects for time lapse, for evoking ideas of (migratory) movement. I envision installing these in a physical space, their configurations changing over time in meaningful ways. I am attracted to the idea of each one having their own smell. I have played with the idea of associating each circle to a migrant&rsquo;s story (voice only), and a scent they cherish. And so on. Making these has also been part of my methodology in the sense that I have processed my ideas and dilemmas while writing this dissertation by at times reverting to using my hands to make these, as a space of contemplation and calm. I recently introduced myself and this work on the <em>Knit&amp;Pearl</em> Discord community, which brings together people interested in code and craft practices (knitting, crochet, weaving, embroidery, quilting etc.).</span></p>
   <p class="p27"><span class="s1">☉</span></p>
   <p class="p13"><span class="s1">In the next section, I will introduce the third and final artwork called <em>Transplanted</em>.</span></p>
+
+  <footer style="position:sticky; bottom:0;">
+      <audio  id="chapter3" class="audioplayer" src="assets/audio/3.mp3" type="audio/mp3" controls preload="auto">
+      </audio>
+  </footer>
+
 </section>
 
+
+
+
+
+
+
+
+
+
 <section id="4-transplanted">
-  <p class="montserrat-section">4 &nbsp; &nbsp; &nbsp; Transplanted (2021) <button title="listen to chapter 4 - Transplanted (2021)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(23004);'> 🗣 </button></p>
+  <p class="montserrat-section">4 &nbsp; &nbsp; &nbsp; Transplanted (2021) <button title="listen to chapter 4 - Transplanted (2021)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter4, 0);'> 🗣 </button></p>
 <blockquote>
   <p class="p12"><span class="s1">The discovery that rootlessness is the condition of human dignity seems to encroach on the freedom to come and go, to reduce it to a whispering of the spirit.</p>
 <p class="citation-name">(Flusser 1984-85/2003, 85)</p>
@@ -1447,10 +1526,25 @@ alt="">
       <iframe width="600" height="400" src="https://nokturno.fi/files/terhi-marttila/transplanted/"></iframe>
     <p class="p27"><span class="s1">☉</span></p>
   <p class="p13"><span class="s1">Having now introduced all three works which comprise this dissertation, I will move on the discuss some of the overarching themes that emerged, and importantly, some of the limitations and future work which I have identified.</span></p>
+
+  <footer style="position:sticky; bottom:0;">
+      <audio  id="chapter4" class="audioplayer" src="assets/audio/4.mp3" type="audio/mp3" controls preload="auto">
+      </audio>
+  </footer>
+
 </section>
 
+
+
+
+
+
+
+
+
+
 <section id="5-discussion">
-  <p class="montserrat-section">5 &nbsp; &nbsp; &nbsp; Discussion <button title="Listen to chapter 5 - discussion" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(25427);'> 🗣 </button></p>
+  <p class="montserrat-section">5 &nbsp; &nbsp; &nbsp; Discussion <button title="Listen to chapter 5 - discussion" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter5, 0);'> 🗣 </button></p>
   <p class="p47"><span class="s1">Dear reader, assuming that you have traversed this work in a linear manner, it is safe to assume that we are now on the same page with respect the processes related to the artefacts which emerged through this research process. We also looked at some of the insights about how a small sample of human beings perceive, experience and interpret these artefacts.</span></p>
   <p class="p47"><span class="s1">Especially the process of artistic research, but also the documented and undocumented interactions with others about the pieces have throughout resulted in an overwhelming urge to discuss the many contexts that these works exist in. My mind has splayed into all kinds of tangents as I&rsquo;ve thought about migration, about programming as an artistic practice, and about the cultural context of the technologies I have worked with. Finally, in what to me feels like the meat of this <em>written</em> <em>dissertation</em>, I will finally let my discussion expand into all of these diverse nooks and crannies which feel relevant from the perspective of this artistic research.</span></p>
   <p class="p47"><span class="s1">Inevitably, this approach means that I will introduce plenty of new authors, thinkers, concepts and discourses at this point in my thesis. In fact, many will see this bulky discussion as something like a literature review or the research context chapter. Which it indeed is, also. You might think, <em>this should be at the beginning of the thesis</em>, to contextualise the research and the experimental work that was produced and the results. But this is where artistic research causes the deck of cards of this common research paradigm to tumble.</span></p>
@@ -1718,10 +1812,24 @@ alt="">
   <p class="p47"><span class="s1">The initiation into the profession of a researcher has made the unending well of academic knowledge accessible to me, and I cannot stress the importance of this skill enough. This is obvious to anyone who has completed a PhD degree. It may feel superfluous to write it in the evaluation section of a dissertation, but I do want to underscore the importance of these general researcher skills as one of the outcomes of my research process.</span></p>
   <p class="p47"><span class="s1">Where it was initially a major challenge to first find a relevant research paper and then to read through its 6-10 pages of text, this entire process is now a breeze. Where I struggled to find relevant readings given my research area, it is now easy to find works and evaluate the way they are positioned within broader debates. These skills (among many others) that characterise the profession of researcher have opened up entirely new possibilities for intellectual engagement with the ideas that circulate in this world. Were I to begin writing my dissertation today, it would for sure be much better than the one you are reading now.</span></p>
   <p class="p48"><span class="s1">☉</span></p>
+
+  <footer style="position:sticky; bottom:0;">
+      <audio  id="chapter5" class="audioplayer" src="assets/audio/5.mp3" type="audio/mp3" controls preload="auto">
+      </audio>
+  </footer>
+
 </section>
 
+
+
+
+
+
+
+
+
 <section id="6-limitations-and-future-work">
-  <p class="montserrat-section">6 &nbsp; &nbsp; &nbsp; Limitations and future work <button title="listen to chapter 6 - limitations and future work" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(30151);'> 🗣 </button></p>
+  <p class="montserrat-section">6 &nbsp; &nbsp; &nbsp; Limitations and future work <button title="listen to chapter 6 - limitations and future work" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter6, 0);'> 🗣 </button></p>
   <p class="p47"><span class="s1">After shifting my thesis structure around several times, I came to realise that my evaluation of the limitations of this research, as well as the subsequent avenues for future work which these limitations point towards, are in fact such a important outcome of my research process that they merit their own chapter. My reasoning is that these black holes of inquiry have been caused by the very nature of my methodological approach. I have not quite parted from research questions, but rather, have set out to explore migration through artistic research, while limiting my medium in particular to voice/interaction. So it is perhaps quite natural that as a result of this exploratory approach to my research, I now find myself decoupling my discussion on limitations and future work from the conclusion and into its own, dedicated chapter. This structure is a reflection of the importance of these realisations as part of the research approach.</span></p>
   <p class="p48"><span class="s1">☉</span></p>
   <p class="p47"><span class="s1">In this section I will highlight some of the main limitations of my research, which in many ways point towards possible trajectories for future work. A research process and approach needs to be delimited and contained in order for anything to emerge, since it is impossible to follow all the possible themes, trajectories, lines of thought and areas of discourse that a research task as broad as mine present. I have justified my choices regarding which issues to focus on in the bulk of this thesis. In what follows, I highlight some of the themes and discourses which I feel could have made sense to address. In a negative sense, the lack of these perspectives in my work can be seen as a limitation. In a positive sense, I see this map of trajectories as an initial effort to scout possible trajectories for future work. Each of these limitations feel very inspiring to me.</span></p>
@@ -1788,10 +1896,23 @@ alt="">
   <p class="p47"><span class="s1">The liberal western world scoffed at Trump for erecting a wall on the border to Mexico, but European Union&rsquo;s Frontex has also been quietly buffed up in budget and resources. Can the rich west, America and (fortress) Europe, continue to fortify their external borders, walls and physical barriers? Or does a tipping point exist, after which the damn breaks and we are forced to organise ourselves in a radically new manner? What happens when climate change further complicates global inequalities, inducing <em>movement</em>?</span></p>
   <p class="p47"><span class="s1">And moreover, how can we approach these issues especially through artistic research? I am humbled by the learning process which this research journey has been and with these questions and (to me) newfound ideas in hand, I look forward to taking the next steps on my trajectory as a researcher.</span></p>
   <p class="p48"><span class="s1">☉</span></p>
+
+  <footer style="position:sticky; bottom:0;">
+      <audio  id="chapter6" class="audioplayer" src="assets/audio/6.mp3" type="audio/mp3" controls preload="auto">
+      </audio>
+  </footer>
+
 </section>
 
+
+
+
+
+
+
+
 <section id="conclusion">
-  <p class="montserrat-section">Conclusion <button title="listen to conclusion" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(31934);'> 🗣 </button></p>
+  <p class="montserrat-section">Conclusion <button title="listen to conclusion" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter7, 0);'> 🗣 </button></p>
   <p class="p47"><span class="s1">What is certain is that the fact of having set some goals for myself that coincide with the formal requirements of a doctoral degree has caused both my physical me and my mental and intellectual me to roam broadly in the scope of some of the topics that came to be relevant as my artistic practice suggested new research questions. But has this roaming and intellectual movement resulted in a <em>trajectory</em>, a logical research story, a leitmotif, a common thread or perhaps a red thread that guides us through the labyrinth? What am I able to convey? Have I created knowledge? Have I had any <em>success</em>? Are my results valid? What are the possible future trajectories that this artistic research process suggests?</span></p>
   <p class="p47"><span class="s1">The three resulting artworks approached questions of movement, migration, identity, exclusion and that of being foreign. The devices used were mainly language, concepts, synthesised human voice and even the human voice of those who interact with the works. Access to both works was only attainable through the use of voice, through speaking, or rather, through reading, out loud. So where does this leave us?</span></p>
   <p class="p48"><span class="s1">☉</span></p>
@@ -1812,6 +1933,12 @@ alt="">
   <img width="600" src="assets/img/marttila-2022-endpoem.png" alt="an end poem">
   <br><br>
   <p class="p35"><span class="s12">☉</span></p>
+
+  <footer style="position:sticky; bottom:0;">
+      <audio  id="chapter7" class="audioplayer" src="assets/audio/7.mp3" type="audio/mp3" controls preload="auto">
+      </audio>
+  </footer>
+
 </section>
 
 <section id="end-matter">
@@ -2109,8 +2236,13 @@ alt="">
     <p class="p84"><span class="s1">☉</span></p>
 </section>
 
+
+
+
+
+
 <section id="appendix-d">
-  <p class="montserrat-section">Appendix D - On voice interfaces <button title="listen to appendix D - On voice interfaces" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(32483);'> 🗣 </button></p>
+  <p class="montserrat-section">Appendix D - On voice interfaces <button title="listen to appendix D - On voice interfaces" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter8, 0);'> 🗣 </button></p>
 
   <p class="p64"><span class="s1"><em>Dear reader,<br>&nbsp;&nbsp; &nbsp;as promised, I will in this essay deal with some of the issues in the ongoing debate around voice interfaces, voice data and privacy. I look specifically at the practices of Google, because it is one of the largest players in the domain of speech recognition, and because it is the company whose services my works rely on through the Web Speech API, at least for those who use Chrome (which is currently the recommended browser for my works).</em></span></p>
   <p class="p84"><span class="s1">☉</span></p>
@@ -2193,10 +2325,21 @@ alt="">
   <p class="p64"><span class="s1">On the other hand, a project in New Zealand which gathered hundreds of hours of Māori language data refused the addition of the audio and transcripts into the Common Voice database, not wanting to share their language data in an open source effort, because they know that in this way, the data will end up in the hands of the big technology corporations. Sharing it with the world, and especially the corporations, would imply losing control over as well as losing profits from any technology which is developed for the language group (Coffey 2021). In this way, the New Zealand Māori keep their data proprietary, because not doing so would imply yet more subservience to global capital.</span></p>
   <p class="p64"><span class="s1">The aspects discussed above relating to data, power and surveillance (capitalism) make it clear that voice interaction is a tricky technology to use from an ethical standpoint. Too much power over this technology is currently concentrated in the hands of a few large corporations, with open source approaches falling short with respect to quality. Nevertheless, these technologies are evolving and in the best case scenario, open source solutions will eventually become feasible.</span></p>
     <p class="p84"><span class="s1">☉</span></p>
+
+    <footer style="position:sticky; bottom:0;">
+        <audio  id="chapter8" class="audioplayer" src="assets/audio/8.mp3" type="audio/mp3" controls preload="auto">
+        </audio>
+    </footer>
+
 </section>
 
+
+
+
+
+
 <section id="appendix-e">
-  <p class="montserrat-section">Appendix E - Critical analysis of source code <button title="listen to appendix E - critical analysis of source code" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(34551);'> 🗣 </button></p>
+  <p class="montserrat-section">Appendix E - Critical analysis of source code <button title="listen to appendix E - critical analysis of source code" class="seekInAudio" style="border:none;" onclick='setPositionInAudio(chapter9, 0);'> 🗣 </button></p>
 
   <p class="p64"><span class="s1">In this appendix, I have included some observations on portions of the source code of the three works for those who might be interested in insights related to my code. This appendix thus includes my own commentary or justifications for certain decisions. Transplanted is so simple in terms of the code that I do not have any comments to make about it.</span></p>
   <p class="montserrat-section">We cannot take them all</p>
@@ -2250,7 +2393,14 @@ alt="">
   <p class="p94"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span>}</span></p>
   <p class="p66"><span class="s1">I am somewhat burdened by this approach to the code, because unlike the previous example, it does not accurately reflect a human beings relationship to places where one is not allowed to be and towards a border in particular. In fact, it would be more accurate to model the force acting on the particles as one exerted by the border. That is: <em>the border&nbsp;</em>would ask, at each encounter with a particle: <em>isThisParticleAllowedToCross()</em>. If yes, the border would let the particle pass, if the answer was no, it would not let the particle pass. This would be a more accurate procedural representation of the relationship between particles and borders.</span></p>
   <p class="p84"><span class="s1">☉</span></p>
+
+  <footer style="position:sticky; bottom:0;">
+      <audio  id="chapter9" class="audioplayer" src="assets/audio/9.mp3" type="audio/mp3" controls preload="auto">
+      </audio>
+  </footer>
+
 </section>
+
 </section> <!-- close section endmatter-->
 </div>
 
