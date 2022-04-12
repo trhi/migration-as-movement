@@ -1,8 +1,13 @@
 #thesis-text{
-  width: 600px;
-  margin-left: 200px;
+  width: 80vw;
+  max-width: 700px;
+  margin-left: 150px;
   margin-right: 50px;
   line-height: 180%;
+}
+
+img{
+  width: 700px;
 }
 
 .hidden{
@@ -47,6 +52,7 @@ section{
 
 iframe{
   border:0;
+  width: 700px;
   margin-top: 0.5cm;
   margin-bottom: 0.5cm;
 }
@@ -91,7 +97,7 @@ iframe{
 
 /* The sidebar links */
 .sidebar a {
-  padding: 8px 8px 8px 32px;
+  padding: 2px 8px 2px 32px;
   text-decoration: none;
   font-size: 16px;
   color: #818181;
