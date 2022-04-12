@@ -549,7 +549,7 @@ function particle(tempX, tempY) {
                 //console.log("There is an attractor match!");
                 //this.diameter += 1;
 
-                console.log("Going towards attractor....");
+                //console.log("Going towards attractor....");
 
                 this.towardsAttractor = p5.Vector.sub(attractors[attractorIndex].attractorPosition, this.positionVector);
                 this.towardsAttractor.normalize();

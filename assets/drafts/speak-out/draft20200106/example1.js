@@ -75,8 +75,8 @@ function setup() {
   theWorld = voronoiGetDiagram();
 
   //printing the voronoi diagram generated(full detailed diagram):
-  console.log("This is the world: ");
-  console.log(theWorld);
+  //console.log("This is the world: ");
+  //console.log(theWorld);
 
   //implementing a for loop which initialises by generating
   //a new particle at each voronoicell site):
@@ -170,7 +170,7 @@ function attractor(quality, attractorX, attractorY, lifespan) {
   this.attractorPosition = new p5.Vector(this.x, this.y);
   this.lifespan = lifespan;
   this.gravityOfAttractor = random(20,50);
-  console.log("My lifespan is:" + this.lifespan);
+  //console.log("My lifespan is:" + this.lifespan);
 
   this.existsIn = voronoiGetSite(this.x, this.y, true);
   //console.log("A new attractor was created. This attractor is for: " + this.quality +
@@ -189,11 +189,11 @@ function attractor(quality, attractorX, attractorY, lifespan) {
 
   this.remove = function(){
     var myIndex = attractors.indexOf(this);
-    console.log(myIndex);
+    //console.log(myIndex);
     attractors.splice(myIndex,1);
-    console.log("Removed me! At index:" + myIndex);
-    console.log("Attractors array now looks like this:");
-    console.log(attractors);
+    //console.log("Removed me! At index:" + myIndex);
+    //console.log("Attractors array now looks like this:");
+    //console.log(attractors);
 
   }//close this.remove
 
@@ -368,8 +368,8 @@ function particle(tempX, tempY, tempDiameter) {
   this.thereIsAMatch = function() {
     for (i = 0; i < attractors.length; i++) {
         //console.log(attractors[i].quality);
-        console.log("Printing the quality of this attractor:" + attractors[i].quality);
-        console.log("Printing what I am attracted to:" + this.isAttractedTo);
+        //console.log("Printing the quality of this attractor:" + attractors[i].quality);
+        //console.log("Printing what I am attracted to:" + this.isAttractedTo);
         if (attractors[i].quality === this.isAttractedTo) {
             return i;
         }//end if
@@ -404,7 +404,7 @@ function particle(tempX, tempY, tempDiameter) {
           //console.log("There is an attractor match!");
           //this.diameter += 1;
 
-          console.log("Going towards attractor....");
+          //console.log("Going towards attractor....");
 
           this.towardsAttractor = p5.Vector.sub(attractors[attractorIndex].attractorPosition, this.positionVector);
           this.towardsAttractor.normalize();

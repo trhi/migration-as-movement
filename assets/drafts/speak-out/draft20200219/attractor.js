@@ -40,7 +40,7 @@ function attractor(quality, attractorX, attractorY, lifespan) {
         //as the mouse hovers over the attractor, it displays its quality
         //in white:
         this.giveInformation = function () {
-            console.log("My quality is: " + this.quality);
+            //console.log("My quality is: " + this.quality);
             textSize(20);
             fill("white");
             text(this.quality, this.attractorPosition.x, this.attractorPosition.y + 5);
@@ -177,12 +177,12 @@ function attractor(quality, attractorX, attractorY, lifespan) {
         this.remove = function(){
 
               var myIndex = attractors.indexOf(this);
-              console.log("My index is:" + myIndex);
+              //console.log("My index is:" + myIndex);
               attractors.splice(myIndex,1);
-              console.log("Removed me! At index:" + myIndex);
-              console.log("Attractors array now looks like this:" + attractors);
-              console.log("attractor at i is:" + attractors[i]);
-              console.log("length of attractors is: " + attractors.length);
+              //console.log("Removed me! At index:" + myIndex);
+              //console.log("Attractors array now looks like this:" + attractors);
+              //console.log("attractor at i is:" + attractors[i]);
+              //console.log("length of attractors is: " + attractors.length);
 
 
               /*

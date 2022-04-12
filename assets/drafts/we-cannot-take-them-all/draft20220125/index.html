@@ -107,7 +107,7 @@
       var listener = new SpeechRecognition;
       isSpeechRecognitionSupported = true;
     } catch (err) {
-      console.log("Speech recognition is not supported!!!");
+      //console.log("Speech recognition is not supported!!!");
       window.alert("Please view this work in Chrome");
       $("#activationButton").prop("disabled",true);
       $("#activationButton").text("Please view this work in Chrome");
@@ -281,7 +281,7 @@
     }//close createLanguagesArray
 
     var synth = window.speechSynthesis;
-    console.log(synth);
+    //console.log(synth);
     //synth.resume();
     synth.onvoiceschanged = ((e) => {
       voices = synth.getVoices();
@@ -304,7 +304,7 @@
 
     recognition.onerror = function(event) {
       recognition.stop();
-      console.log(event.error);
+      //console.log(event.error);
       $("#recognitionP").text("... I cannot hear you");
     };
 

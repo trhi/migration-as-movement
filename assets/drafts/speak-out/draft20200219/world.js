@@ -73,7 +73,7 @@ function world(numberOfSites){
       //Draw diagram in coordinates 0, 0,
       //filled (true), without jitter (false)
       voronoiDraw(this.drawingBorderX, this.drawingBorderY, true, false);
-      console.log("Attempting to draw!");
+      //console.log("Attempting to draw!");
 
   }
 
@@ -81,7 +81,7 @@ function world(numberOfSites){
   this.createRandomSites = function() {
       for (i = 0; i < this.numberOfSites; i++) {
         this.randomSites.push([random(this.drawingBorderX, this.canvasX), random(this.drawingBorderY, this.canvasY), [random(0, 255), random(0, 255), random(0, 255)]]);
-        print(this.randomSites);
+        //print(this.randomSites);
       } //close for
 
   } //close this.createRandomSites

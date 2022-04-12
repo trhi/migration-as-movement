@@ -49,11 +49,15 @@
 
     function setPositionInAudio(chapter, time){
       let chapterAudio = document.getElementById(chapter);
-      if (chapters){
+      if (chapters || chaptersHTML){
         //pause all other chapters:
+        for(i=0; i<chaptersHTML.length; i++){
+          chaptersHTML[i].pause();
+        }
         for(i=0; i<chapters.length; i++){
           chapters[i].pause();
         }
+
       }
       chapterAudio.play();
       chapterAudio.currentTime = time;
@@ -66,7 +70,7 @@
 <body>
 
   <a href="index.html" style="left:45px;"  class="ahref-button"> &nbsp ↞ back &nbsp </a>
-  <a href="#contents" class="ahref-button" style="position:sticky; top:15px; right:15px; float:right;"> &nbsp ↟ contents &nbsp </a>
+    <!--<a href="#contents" class="ahref-button" style="position:sticky; top:15px; right:15px; float:right;"> &nbsp ↟ contents &nbsp </a>-->
 
   <img src="assets/img/migration-as-movement-title-img.png" style="margin-top:5cm; margin-bottom:10cm; margin-left:200px;
   width:80%" alt="Migration as movement
@@ -95,42 +99,138 @@
 
 <section class="hidden" id="full-dissertation">
 -->
-  <section id="contents" style="margin-top:3cm;">
 
-    <p style="text-indent:50px;"></p>
-      <p class="montserrat-section" style="margin-top:0cm; text-indent: 50px; text-align:left">Contents</p>
-      <p style="text-indent: 100px;"><em>[press 🔗 to jump to chapter, press 🗣 to listen to chapter. Note that you can speed up the audio.]</em></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="margin-left: 100px; margin-right: 100px"><em>[ Note that the main body of this dissertation exists as an audiobook (excluding front- and (most) endmatter). The audiofile appears at the bottom of the page for each chapter. You can speed up and/or download the audiofiles. press 🗣 to jump to that part of text in audiobook. ]</em></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<button style="margin-top: 3cm;" title="click to navigate the document" class="openbtn" onclick="openNav()">↡ Contents</button>
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#div-contents">Contents</a>
+      <a href="#front-matter">Frontmatter</a>
+      <a href="#introduction">Introduction</a>
+      <a href="#1-artistic-research">1 &nbsp Artistic research</a>
+      <a href="#2-we-cannot-take-them-all">2 &nbsp We cannot take them all</a>
+      <a href="#3-speak-out">3 &nbsp Speak out</a>
+      <a href="#4-transplanted">4 &nbsp Transplanted</a>
+      <a href="#5-discussion">5 &nbsp Discussion</a>
+      <a href="#6-limitations-and-future-work">6 &nbsp Limitations and future work</a>
+      <a href="#conclusion">Conclusion</a>
+      <a href="#references">References</a>
+      <a href="#figures">(other  Endmatter)</a>
+      <a href="#appendix-d">Appendix D - on voice interfaces</a>
+      <a href="#appendix-e">Appendix E - critical analysis of code</a>
+    </div>
+
+    <div id="main">
+    </div>
+
+
+<script>
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+</script>
+
+<section id="contents" style="margin-top:3cm;">
+
+
+      <!--<p class="montserrat-section" style="margin-top:0cm; text-indent: 50px; text-align:left">Contents</p>-->
+      <!--<p style="text-indent: 100px;"><em>[press 🔗 to jump to chapter, press 🗣 to listen to chapter. Note that you can speed up the audio.]</em></p>-->
       <br>
-
-      <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
-          Front matter <a href="#front-matter" style="display: inline; text-decoration: none;"> 🔗 </a><span> [ <a href="#abstract">abstract</a>, <a href="#resumo">resumo</a>, <a href="#acknowledgements">acknowledgements</a> ] </span></p>
-
-      <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px; ">
-          Introduction <a title="Jump to introduction" href="#introduction" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to introduction" class="seekInAudio" style="border:none;" onclick='setPositionInAudio("chapter0", 0);'> 🗣 </button></p>
-      <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px; text-decoration: none; ">
-          1&nbsp Artistic research through exploratory programming <a title="Jump to Chapter 1 - artistic research through exploratory programming" href="#1-artistic-research" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to chapter 1 - artistic research through exploratory programming" class="seekInAudio" style="border:none;" onclick='setPositionInAudio("chapter1", 0);'> 🗣 </button></p>
-      <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px; text-decoration: none; ">
-          2&nbsp We cannot take them all (2019) <a title="jump to chapter 2 - We cannot take them all" href="#2-we-cannot-take-them-all" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to chapter 2 - We cannot take them all (2019)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio("chapter2", 0);'> 🗣 </button></p>
-      <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
-          3&nbsp Speak Out (2020) <a title="jump to chapter 3 - Speak out" href="#3-speak-out" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="Listen to chapter 3 - Speak out (2020)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio("chapter3", 0);'> 🗣 </button></p>
-      <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
-          4&nbsp Transplanted (2021) <a title="jumpt to chapter 4 - Transplanted" href="#4-transplanted" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to chapter 4 - Transplanted (2021)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio("chapter4", 0);'> 🗣 </button></p>
-      <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
-          5&nbsp Discussion <a title="Jump to 5 - Discussion" href="#5-discussion" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="Listen to chapter 5 - discussion" class="seekInAudio" style="border:none;" onclick='setPositionInAudio("chapter5", 0);'> 🗣 </button></p>
-      <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
-          6&nbsp Limitations and future work <a title="Jump to 6 - Limitations and future work" href="#6-limitations-and-future-work" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to chapter 6 - limitations and future work" class="seekInAudio" style="border:none;" onclick='setPositionInAudio("chapter6", 0);'> 🗣 </button></p>
-      <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
-          Conclusion <a title="Jump to conclusion" href="#conclusion" style="display: inline; text-decoration: none;"> 🔗 </a> <button title="listen to conclusion" class="seekInAudio" style="border:none;" onclick='setPositionInAudio("chapter7", 0);'> 🗣 </button></p>
-
-      <p style="text-align:left; text-indent: 100px; font-family:Lora; font-size:20px;">
-          End matter <a title="Jump to end matter" href="#end-matter" style="display: inline; text-decoration: none;"> 🔗 </a>
-          <span> [ <a href="#references">References</a>, <a href="#projects-cited">projects cited</a>,
-            <a href="#figures">figures</a>, appendices <a href="#appendix-a">A</a>,
-            <a href="#appendix-b">B</a>, <a href="#appendix-c">C</a>,
-            <a title="Appendix D - On voice interfaces" href="#appendix-d">D</a>
-            <button title="listen to appendix D - On voice interfaces" class="seekInAudio" style="border:none;" onclick='setPositionInAudio("chapter8", 0);'> 🗣 </button>
-            and <a title="Appendix E - Critical analysis of source code" href="#appendix-e">E</a>
-            <button title="listen to appendix E - critical analysis of source code" class="seekInAudio" style="border:none;" onclick='setPositionInAudio("chapter9", 0);'> 🗣 </button> ] </span></p>
+<div id="div-contents" style="margin-left: 200px;">
+      <p class="p-contents"><em>[ ↞ click on Contents (on the left) to navigate the document ]</em></p>
+      <br>
+      <br>
+      <p class="p-contents">Front matter: </p>
+      <div style="margin-left: 50px;">
+        <p class="p-contents">abstract (en)</p>
+        <p class="p-contents">resumo (pt)</p>
+        <p class="p-contents">acknowledgements</p>
+      </div>
+      <p class="p-contents">Introduction</p>
+      <div style="margin-left: 50px;">
+        <p class="p-contents">Motivation</p>
+        <p class="p-contents">Relevance and context</p>
+        <p class="p-contents">Aims and objectives</p>
+        <p class="p-contents">Dissertation outline</p>
+      </div>
+      <p class="p-contents">1 &nbsp Artistic research through exploratory programming</p>
+      <div style="margin-left: 50px;">
+        <p class="p-contents">1.1 &nbsp Notions of artistic research</p>
+        <p class="p-contents">1.2 &nbsp Writing code as artistic practice</p>
+        <p class="p-contents">1.3 &nbsp Procedural systems and experience through play</p>
+        <p class="p-contents">1.4 &nbsp The voice / interface</p>
+        <p class="p-contents">1.5 &nbsp User research: video-cued recall and interviews</p>
+      </div>
+      <p class="p-contents">2 &nbsp We cannot take them all (2019)</p>
+      <div style="margin-left: 50px;">
+        <p class="p-contents">2.1 &nbsp Artistic inquiry</p>
+        <p class="p-contents">2.2 &nbsp Artistic process</p>
+        <p class="p-contents">2.3 &nbsp Critical reflection</p>
+        <p class="p-contents">2.4 &nbsp Concluding remarks</p>
+      </div>
+      <p class="p-contents">3 &nbsp Speak Out (2020)</p>
+      <div style="margin-left: 50px;">
+        <p class="p-contents">3.1 &nbsp Artistic inquiry</p>
+        <p class="p-contents">3.2 &nbsp Artistic process</p>
+        <p class="p-contents">3.3 &nbsp Critical reflection</p>
+        <p class="p-contents">3.4 &nbsp Concluding remarks</p>
+      </div>
+      <p class="p-contents">4 &nbsp Transplanted (2021)</p>
+      <div style="margin-left: 50px;">
+        <p class="p-contents">4.1 &nbsp Artistic inquiry</p>
+        <p class="p-contents">4.2 &nbsp Artistic process</p>
+        <p class="p-contents">4.3 &nbsp Critical reflection</p>
+        <p class="p-contents">4.4 &nbsp Concluding remarks</p>
+      </div>
+      <p class="p-contents">5 &nbsp Discussion</p>
+      <div style="margin-left: 50px;">
+        <p class="p-contents">5.1 &nbsp Designing voice interaction</p>
+        <p class="p-contents">5.2 &nbsp Reading out loud</p>
+        <p class="p-contents">5.3 &nbsp Speaking (out loud) as performance</p>
+        <p class="p-contents">5.4 &nbsp Playing as a form of reading</p>
+        <p class="p-contents">5.5 &nbsp Evaluating my methodological approach</p>
+      </div>
+      <p class="p-contents">6 &nbsp Limitations and future work</p>
+      <p class="p-contents">Conclusion</p>
+      <p class="p-contents">End matter: <p>
+        <div style="margin-left: 50px;">
+          <p class="p-contents">References</p>
+          <p class="p-contents">Projects cited</p>
+          <p class="p-contents">Figures</p>
+          <p class="p-contents">Appendix A - Dissemination and publications </p>
+          <p class="p-contents">Appendix B - Research participation consent form</p>
+          <p class="p-contents">Appendix C - source code of works</p>
+          <p class="p-contents">Appendix D - On voice interfaces</p>
+          <p class="p-contents">Appendix E - critical analysis of source code</p>
+        </div>
+    </div>
 
     <br>  <br>  <br>  <br>
   </section>
@@ -598,7 +698,17 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
 <section id="2-we-cannot-take-them-all">
   <p class="montserrat-section">2 &nbsp; &nbsp; &nbsp;  We cannot take them all (2019) <button title="listen to chapter 2 - We cannot take them all (2019)" class="seekInAudio" style="border:none;" onclick='setPositionInAudio("chapter2", 0);'> 🗣 </button></p>
   <p class="p38"><span class="s1">Having illuminated my research methodology, I will now take the reader through each of the three artistic processes that structured this research trajectory as a whole. The first of these came to be called <em>We cannot take them all</em>. It can be accessed on my website <a href="http://terhimarttila.com"><span class="s11">terhimarttila.com</span></a> or at <a href="http://github.com/trhi"><span class="s11">github.com/trhi</span></a> or at <a href="http://terhimarttila.com/we-cannot-take-them-all"><span class="s11">terhimarttila.com/we-cannot-take-them-all</span></a> as either the interactive work itself or as a video documenting one interaction. It is optimised for Google Chrome desktop. <em>We cannot take them all</em> uses the Web Speech API which is currently (in 2021) classified as an experimental technology, meaning that works based on it may at some point become obsolete. It is a good idea to go experience the work before reading this chapter. Information about where to find the source code for <em>We cannot take them all</em> is available in appendix C. You can engage with the work (as on the 25th of January 2022 at the time of submission of this dissertation) below:</span></p>
-<iframe style="margin-left: 100px;" width="400" height="600" src="assets/drafts/we-cannot-take-them-all/draft20220125"></iframe>
+
+  <button id="iframe-11" class="iframe-load-button">Click here to explore <em>We cannot take them all</em> below ↡</button>
+  <script>
+    $("#iframe-11").click(function(){
+    var iframe = $("#if11");
+    iframe.attr("src", iframe.data("src"));
+    });
+  </script>
+
+<iframe id="if11" style="margin-left: 100px;" width="400" height="600" src="about:blank" data-src="assets/drafts/we-cannot-take-them-all/draft20220125"></iframe>
+
   <p class="p39"><span class="s1"><em>We cannot take them all&nbsp;</em>(2019-) is a natural continuation of my prior work, and for this reason I will refer here to work which was completed before the PhD. It is in some ways a counterpart to (or the evil little sister of) my MA thesis project called <em>Give me a reason</em> (2016). While in <em>Give me a reason</em> I was exploring reasons for why people accept the presence of foreigners and seek contact with them (through volunteer work), in <em>We cannot take them all,</em> attention turns to why it is that people do not accept foreigners. What interests me in both projects are the concepts, the language and the logic of the arguments that are used to justify the position of either accepting foreigners or not accepting foreigners. It seems to me at times that <em>We cannot take them all</em> might better be called <em>Give me a (xenophobic) reason</em>, or something else that more directly alludes to the sarcastic tone of this work.</span></p>
   <p class="p39"><span class="s1">Where <em>Give me a reason</em> is based on real peoples&rsquo; actual reasons for helping refugees, <em>We cannot take them all</em> is based on a list of imaginary reasons proposed by professor of political philosophy Joseph Carens (Carens 2015, 193). These reasons have been augmented by my own poetic take on some of the key concepts. Visually, <em>We cannot take them all&nbsp;</em>makes reference to <em>Give me a reason</em> through both the layout of the work as well as through using the exact same button design.</span></p>
   <img id="figure6" style="margin-left: 50px" width="300px" src="assets/img/figure-6-We-cannot-take-them-all-main-view.png"
@@ -899,8 +1009,16 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   <p class="p12"><span class="s1">The second artwork that emerged during this research process is perhaps the central and largest, most complex of the three works. It is an ongoing work into which I have invested lots of effort, whose central ideas date to late 2018 and which I have continued to modify and increment in 2021. It&rsquo;s working title is <em>particles moving / moving particles</em>, because the role of <em>movement</em> and the notion of a <em>particle</em> continue to be important in my ongoing artistic-intellectual process. Like Flusser observes in the quote above, <q>our path through life is not one of progress but one of swarming</q> (Flusser 2003/1991, 65).</span></p>
   <p class="p12"><span class="s1">So also in <em>Speak out</em>, particles swarm over a multicolored space in the pursuit of their life objectives. This pursuit is either complicated or facilitated by borders, which the interactor can influence by reading out loud lines of poetry. In the summer of 2020, I created a small mantra that says: <q>if you want something to change you have to speak out</q>, which then became the title of the web page (ie. what you see as the name of the tab in the browser). During an online residency at <a href="http://raum.pt"><span class="s11">raum.pt</span></a>, the curator of the residency and my thesis supervisor Patricia Gouveia suggested I distil the name of the piece simply to the elegant form: <em>Speak out</em>, which is also what is written on a button in the interface.</span></p>
   <p class="p12"><span class="s1">Thus the work came to be called <em>Speak Out</em> and was initially completed in late 2020 during the residency. This initial version is available at <a href="http://raum.pt/en/terhi-marttila"><span class="s11">raum.pt/en/terhi-marttila</span></a>. The most recent iteration of the work can be accessed on my website <a href="http://terhimarttila.com">terhimarttila.com</a> or at <a href="http://github.com/trhi">github.com/trhi</a> or at <a href="https://terhimarttila.com/speak-out">https://terhimarttila.com/speak-out</a> as either the interactive work itself or as a video documenting one interaction. This work may also come to be published on the nokturno.fi platform in late 2022. It is optimised for Google Chrome desktop. <em>Speak out</em> uses the Web Speech API which is currently (in 2022) classified as an experimental technology, meaning that works based on it may at some point become obsolete. It is a good idea to go experience the work before reading this chapter. Information about where to find the source code for <em>Speak out</em> is available in appendix C. You can engage with the work (as on the 25th of January 2022 at the time of submission of this dissertation) below:</span></p>
-<br>
-  <iframe height="400" width="700" allow="microphone" scrolling="no" src="assets/drafts/speak-out/draft20220125"></iframe>
+<button id="iframe-12" class="iframe-load-button">Click here to explore <em>Speak out</em> below ↡</button>
+<script>
+  $("#iframe-12").click(function(){
+  var iframe = $("#if12");
+  iframe.attr("src", iframe.data("src"));
+  });
+</script>
+
+  <iframe id="if12" class="iframe-wide" height="400" width="700" allow="microphone" scrolling="no" src="about:blank" data-src="assets/drafts/speak-out/draft20220125"></iframe>
+
   <p class="p27"><span class="s1">☉</span></p>
   <p class="p12"><span class="s1">My philosophical aspiration and thematic starting point is outlined in figure 26 below which is a screenshot of my presentation slides from the Consciousness Reframed conference. It was for this conference presentation that I first formulated the idea of likening humans to particles of some sort in an organic system, and by consequence, of migratory movement as particle motion governed by natural forces. </span></p>
   <img id="figure26" width="600px" src="assets/img/figure-26-Marttila-2019-presentation-at-consciousness-reframed.png"
@@ -1028,31 +1146,61 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   <!--<img id="figure31" width="600px" src="assets/img/figure-31-US-population-density-1790-2020.png" alt="">-->
   <p class="p32"><span class="s1">Figure 31: gif animation titled <em>Animated map of population density in the U.S. (1790 &ndash; 2010)</em> credited to Ben Schmidt of (<a href="http://creatingdata.us"><span class="s17">creatingdata.us</span></a>), and available through the vividmaps website at https://vividmaps.com/us-map-population-density/</span></p>
   <p class="p12"><span class="s1">What is also striking in this animation is that when gold is discovered in California in the late 1800s, population density increases very quickly in that area. This made me think that the geographical location where some form of interesting opportunity is present becomes like a magnet that attracts humans.</span></p>
-  <p class="p13"><span class="s1">I was also inspired by a data visualisation of UN migration data created by Max Galka (see figure 32 below). What I found attractive about this data visualisation is the idea that if we observe human movement from far above the surface of the planet, then single humans and groups of humans and migratory pathways begin to look like tiny dots that move on specific axes (see figure 32 below). The screenshot below does not do any justice to the actual data visualisation. The animation conveys the visual idea of migration as the motion of particles, which I found very inspiring:</span></p>
-  <script src="http://metrocosm.com/metrocosm-migration-embed.js"></script>
-  <div id="iembed" style="position: relative;width:100%;height:0;padding-bottom:58%;overflow-y:hidden;">
-  <iframe id="iembedframe" src="http://metrocosm.com/world-migration.html" width=1200 height=700 scrolling="no" style="position:absolute;left:0;top:0;transform-origin:top left;overflow-y:hidden;"></iframe>
-  </div>
-  <!--<img id="figure31" width="600px" src="assets/img/figure-32-world-migration-2010-2015-visualised.png" alt="">-->
+  <p class="p13"><span class="s1">I was also inspired by a data visualisation of UN migration data created by Max Galka (see figure 32 below):
+  <img id="figure32" width="600px" src="assets/img/figure-32-world-migration-2010-2015-visualised.png" alt="">
   <p class="p32"><span class="s1">Figure 32: <em>All the Worlds Immigration Visualised in 1 Map,</em> animation by Max Galka, available at http://metrocosm.com/global-immigration-map/</span></p>
+  <p class="p12"> What I found attractive about this data visualisation is the idea that if we observe human movement from far above the surface of the planet, then single humans and groups of humans and migratory pathways begin to look like tiny dots that move on specific axes (see video of animation below). The animation conveys the visual idea of migration as the motion of particles, which I found very inspiring. <button id='iframe-button-migration-map' class="iframe-load-button">Click me to load video below ↡</button></span></p>
+  <!--<script src="http://metrocosm.com/metrocosm-migration-embed.js"></script>-->
+  <script>        $("#iframe-button-migration-map").click(function(){
+    var iframe = $("#migration-animation");
+    iframe.attr("src", iframe.data("src"));
+  });
+  </script>
+  <iframe id="migration-animation" width="560" height="315" src="about:blank" data-src="https://www.youtube.com/embed/uSM74Pqi288" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
   <p class="p12"><span class="s1">Equipped with this idea of migration as movement within in a natural system that seeks to find balance through the poetics of osmosis and diffusion, and the idea of humans as particles or as small components of a larger natural system that move due to these natural forces, I nevertheless struggled to find a way to express these ideas in ways other than through text. It was initially not at all evident to me how to put these ideas into something interactive, and even less evident how to include voice / interaction. I was very attracted to the idea of making something visual in the spirit of the images of particles and movement which I showed above, but did not have the skillset in programming to do so. But slowly and with determination and commitment to these ideas, the pieces began to come together. In the next sections, I will outline how my artistic idea began to take shape through my discovery of p5.js.</span></p>
   <p class="p27"><span class="s1">☉</span></p>
   <p class="p12"><span class="s1">Having thus far only worked with pure html, css and javascript, I was completely at loss how to transform any of these very visual ideas into a code-based work. I even considered presenting these ideas in the form of writing, but then again, that would have been out of line with my artistic research problematic of incorporating voice/interaction. In late October of 2019, I presented my work <em>We cannot take them all&nbsp;</em>at our PhD doctoral symposium, and a minor audience response had a huge impact on my artistic practice. Gilberto Bernardes engaged with me after my presentation and expressed how intrigued he was by my work. In the flow of the conversation, he asked me whether I was using p5.js to implement my work. p5.js is an opensource javascript framework created by Lauren McCarthy that rethinks the processing programming language for the web. I had come across p5.js, but had not really looked into it in detail. After the doctoral symposium I started exploring p5.js in November of 2019, the library and its logics, and realised that I could easily use the library to create particles that would move around, much like in the vision I had inside my head. I studied the library by working through <em>Getting Started with p5.js</em> (McCarthy, Reas &amp; Fry 2016) and by watching Daniel Shiffmans wonderful The Coding Train -videos and by experimenting with sketches by community members available through the web editor.</span></p>
   <p class="p13"><span class="s1">While working through the book and tutorials, I came upon some code to make a <q>JitterBug</q> (starting in Example 10-1 in McCarthy, Reas &amp; Fry 2016),<span class="Apple-converted-space">&nbsp;&nbsp;</span>a small circle that would move randomly or <q>jitter</q> on the screen (see figure 33 below): </span></p>
-  <iframe width="600" height="400" src="https://editor.p5js.org/defneone/sketches/8mAVnNgxY"></iframe>
-  <!--<img id="figure33" width="600px" src="assets/img/figure-33-jitter-bug.png" alt="">-->
-  <p class="p32"><span class="s1">Figure 33: [press ▶ above to view] defneones implementation of the chapter 9 jitter bug functions, available at: https://editor.p5js.org/defneone/sketches/8mAVnNgxY</span></p>
-  <p class="p12"><span class="s1">I began to play with this piece of code, and the bug.move(), bug.display() -logic became the foundation for how I programmed my moving particles in <em>Speak out</em>. I was not happy with the jittery motion that was brought about by the totally random selection of numbers that determined the next x and y coordinates of the particle, and soon changed the random movement to be determined using Perlin noise because it resulted in a more smooth random trajectory.</span></p>
+  <img id="figure33" width="600px" src="assets/img/figure-33-jitter-bug.png" alt="">
+  <p class="p32"><span class="s1">Figure 33: defneones implementation of the chapter 9 jitter bug functions, available at: https://editor.p5js.org/defneone/sketches/8mAVnNgxY</span></p>
+
+  <button id='iframe-button-jitterbug' class="iframe-load-button">Click me to see the jitterbug moving in the p5.js online editor below ↡ <br>(press ▶ in the editor to play the sketch)</button></span></p>
+  <script>        $("#iframe-button-jitterbug").click(function(){
+    var iframe = $("#jitterbug");
+    iframe.attr("src", iframe.data("src"));
+  });
+  </script>
+  <iframe id="jitterbug" width="600" height="400" src="about:blank" data-src="https://editor.p5js.org/defneone/sketches/8mAVnNgxY"></iframe>
+
+<p class="p12"><span class="s1">I began to play with this piece of code, and the bug.move(), bug.display() -logic became the foundation for how I programmed my moving particles in <em>Speak out</em>. I was not happy with the jittery motion that was brought about by the totally random selection of numbers that determined the next x and y coordinates of the particle, and soon changed the random movement to be determined using Perlin noise because it resulted in a more smooth random trajectory.</span></p>
   <p class="p12"><span class="s1">I left the movement at that albeit I am still attracted by the idea of programming different types of movement for the particles, so that it would make it look like different particles had different <q>character</q> based on their movement. I have scoped this part out of the work because it is not essential for conveying my core ideas, but, I would still like to play with this idea in a future iteration because I think it might make the work more interesting to look at.</span></p>
   <p class="p13"><span class="s1">I then discovered a library on the p5.js website called p5.voronoi (created by Francisco Moreira), which immediately attracted me with its multicoloured polygons that to me looked like an abstract representation of a map (see figure 34 below): </span></p>
   <img id="figure34" width="600px" src="assets/img/figure-34-Dozed-p5.voronoi.png" alt="">
   <p class="p32"><span class="s1">Figure 34: p5.voronoi, a library by Dozed12 (Francisco Moreira)<br> <a href="https://github.com/Dozed12/p5.voronoi"><span class="s17">https://github.com/Dozed12/p5.voronoi</span></a></span></p>
   <p class="p12"><span class="s1">In early December of 2019, I created a sketch in the p5.js online editor called <q>Voronoi particle generator cells</q>, which was based on Moreiras p5.voronoi library combined with the JitterBug code example. Unfortunately, the p5 web editor does not support version control, so my early trajectory towards <em>Speak out</em> is only documented in two .js files.</p>
-    <p class="p12">One of the files is a single .js file which I downloaded from the online editor on December 19th, and which was probably more or less the state of the project in early December of 2019. Here we see a rudimentary combination of the jitterbug code jittering around on the voronoi diagram:</p>
-  <iframe width="550" height="350" src=assets/drafts/speak-out/draft20191204></iframe>
-    <p style="margin-top:1cm;" class="p12">The other early documentation constists of a set of files represented by the last save I made on the web editor, which dates to January 6th of 2020. At this stage the work looked like this:</p>
-      <iframe width="600" height="400" src=assets/drafts/speak-out/draft20200106></iframe>
-    <p style="margin-top:1cm;" class="p12"> On January 6th I initialised a GitHub repository and started working in the Atom editor instead of the p5 online editor in order to keep track of the evolution of the project through version control. On the one hand I regret not having saved my early progress, but on the other hand, the ease of using the web editor in the early phase was crucial for learning to work with p5.js.</span></p>
+    <p class="p12">One of the files is a single .js file which I downloaded from the online editor on December 19th, and which was probably more or less the state of the project in early December of 2019. <button id="button-speak-out-1" class="iframe-load-button">Click here to see this first draft in action below ↡ </button>. Here we see a rudimentary combination of the jitterbug code jittering around on the voronoi diagram:</p>
+
+    <script>
+      $("#button-speak-out-1").click(function(){
+      var iframe = $("#iframe-speak-out-1");
+      iframe.attr("src", iframe.data("src"));
+      });
+    </script>
+  <iframe id="iframe-speak-out-1" width="550" height="350" src="about:blank" data-src="assets/drafts/speak-out/draft20191204"></iframe>
+
+    <p class="p12">The other early documentation constists of a set of files represented by the last save I made on the web editor, which dates to January 6th of 2020. <button id="iframe-3" class="iframe-load-button">Click here to see this early version in action below  ↡ </button></p>
+
+    <script>
+      $("#iframe-3").click(function(){
+      var iframe = $("#if3");
+      iframe.attr("src", iframe.data("src"));
+      });
+    </script>
+      <iframe id="if3" width="600" height="400" src="about:blank" data-src=assets/drafts/speak-out/draft20200106></iframe>
+
+    <p class="p12"> On January 6th I initialised a GitHub repository and started working in the Atom editor instead of the p5 online editor in order to keep track of the evolution of the project through version control. On the one hand I regret not having saved my early progress, but on the other hand, the ease of using the web editor in the early phase was crucial for learning to work with p5.js.</span></p>
   <p class="p13"><span class="s1">Although the early code is lost, I have some screenshots from along the process, and the first one is from December 4th, 2019 (see figure 35 below). In many ways, the central visual idea has not changed much along the course of the artistic process.</span></p>
   <img id="figure35" width="600px" src="assets/img/figure-35-2019-12-04-early-version-of-particles-moving.png" alt="">
   <p class="p32"><span class="s1">Figure 35: early screenshot of <em>particles moving // moving particles</em>, December 4th 2019</span></p>
@@ -1069,10 +1217,18 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   <img id="figure38" width="600px" src="assets/img/figure-38-Marttila-2020-02-19-evolution-of-speak-out.png"
   alt="">
   <p class="p32"><span class="s1">Figure 38: screenshot of the alpha version of <em>Speak out&nbsp;</em>on 19th of February 2020, and clicking to create new attractors (large circles)</span></p>
-  <p class="p12"><span class="s1">This idea was fun because the user would then see particles swarming towards the attractors. My child said <q>look, they are all coming to eat from the plate</q>, which I thought was an interesting metaphor for a life opportunity. Try this iteration of the work (February 19th 2020) and click to create attractors:</span></p>
-  <iframe width="615" height="415" scrolling="no" src=assets/drafts/speak-out/draft20200219></iframe>
+  <p class="p12"><span class="s1">This idea was fun because the user would then see particles swarming towards the attractors. My child said <q>look, they are all coming to eat from the plate</q>, which I thought was an interesting metaphor for a life opportunity. <button id="iframe-4" class="iframe-load-button">Click to see the work below ↡ and then try clicking to make attractors </button></p>
 
-  <p style="margin-top:1cm;" class="p13"><span class="s1">Also in late February of 2020, I played with the idea of a repulsor (see figure 39 below as well as the early part of the demo above), a black circle that would appear and make life in that zone hostile, pushing all particles out of that zone, effectively making the zone uninhabitable. I think this is an interesting aspect to model about our relationship with movement, however, I decided to remove it on September 13th.</span></p>
+  <script>
+    $("#iframe-4").click(function(){
+    var iframe = $("#if4");
+    iframe.attr("src", iframe.data("src"));
+    });
+  </script>
+
+  <iframe id="if4" width="615" height="415" scrolling="no" src="about:blank" data-src=assets/drafts/speak-out/draft20200219></iframe>
+
+  <p class="p13"><span class="s1">Also in late February of 2020, I played with the idea of a repulsor (see figure 39 below as well as the early part of the demo above), a black circle that would appear and make life in that zone hostile, pushing all particles out of that zone, effectively making the zone uninhabitable. I think this is an interesting aspect to model about our relationship with movement, however, I decided to remove it on September 13th.</span></p>
   <img id="figure39" width="600px" src="assets/img/figure-39-Marttila-2020-02-19-early-version.png"
   alt="">
   <p class="p32"><span class="s1">Figure 39: screenshot of <em>Speak out</em> in late February 2020 featuring the repulser (bottom right hand corner)</span></p>
@@ -1102,9 +1258,17 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   <img id="figure42" width="600px" src="assets/img/figure-42-Marttila-2020-10-30-pre-residency-version.png"
   alt="">
   <p class="p32"><span class="s1">Figure 42: screenshot of pre-residency version of <em>Speak out</em></span></p>
-  <p class="p12"><span class="s1">I also added a <em>You</em> -label onto one of the particles (see figure 42 above, centre of screen), with the intention that this would catch the persons eye and be the persons&rsquo; avatar of sorts. I also added arrow controls to this <em>You</em> -particle, ie. made it possible for the user to control the movement of this particle by using the arrow keys. I added a second functionality to the &quot;i&quot; button, which was that when the user hovered their mouse over it, it would display a flickering text instruction to use the arrow keys to move the <em>You</em>-particle. You can try this iteration (October 30th 2020) below:</span></p>
-  <iframe width="615" height="415" scrolling="no" src="assets/drafts/speak-out/draft20201030"></iframe>
-  <p style="margin-top:1cm;" class="p12"><span class="s1">Prior to the beginning of the residency, I also reprogrammed the logic behind how particles calculated what cell they are in. Previously, I had been checking the particles own color against the background colour (ie. color of the zone) to see if they were in their own cell, but because I was using a transparent palette, this logic no longer worked. In any case, I knew that in order to implement the passport modes, I would need to handle this logic in a different way in order to allow for more flexibility. In this new (and improved) approach, particles checked what zone they were in by checking the cellID of the point at its current coordinates against its own birthplace coordinates. This was an important change in preparation for implementing the passport modes.</span></p>
+  <p class="p12"><span class="s1">I also added a <em>You</em> -label onto one of the particles (see figure 42 above, centre of screen), with the intention that this would catch the persons eye and be the persons&rsquo; avatar of sorts. I also added arrow controls to this <em>You</em> -particle, ie. made it possible for the user to control the movement of this particle by using the arrow keys. I added a second functionality to the &quot;i&quot; button, which was that when the user hovered their mouse over it, it would display a flickering text instruction to use the arrow keys to move the <em>You</em>-particle.  <button id="iframe-5" class="iframe-load-button">Click to play with the work below ↡ </button></p>
+
+  <script>
+    $("#iframe-5").click(function(){
+    var iframe = $("#if5");
+    iframe.attr("src", iframe.data("src"));
+    });
+  </script>
+  <iframe id="if5" width="615" height="415" scrolling="no" src="about:blank" data-src="assets/drafts/speak-out/draft20201030"></iframe>
+
+  <p class="p12"><span class="s1">Prior to the beginning of the residency, I also reprogrammed the logic behind how particles calculated what cell they are in. Previously, I had been checking the particles own color against the background colour (ie. color of the zone) to see if they were in their own cell, but because I was using a transparent palette, this logic no longer worked. In any case, I knew that in order to implement the passport modes, I would need to handle this logic in a different way in order to allow for more flexibility. In this new (and improved) approach, particles checked what zone they were in by checking the cellID of the point at its current coordinates against its own birthplace coordinates. This was an important change in preparation for implementing the passport modes.</span></p>
   <p class="p12"><span class="s1">Going into the residency, I made a dev demo which would allow me to communicate all the central ideas and functionality I wanted to implement during the residency (see figure 43 below, next page), with the <q>i</q> button that would cause the <em>Speak out&nbsp;</em>mantra to play and the speak out -button to appear. In this version, particle movement was limited to all the cells with a number lower than the particles own cellID, which allowed for getting some idea of how the passport modes would later work to limit movement beyond specific zones.</span></p>
     <img id="figure43" width="600px" src="assets/img/figure-43-Marttila-2020-11-04-dev-version.png"
     alt="">
@@ -1120,9 +1284,16 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   <img id="figure45" width="600px" src="assets/img/figure-45-Speak-out-2020-11-25-with-initial-voice-interface.png" alt="">
   <p class="p32"><span class="s1">Figure 45: screenshot of <em>Speak out,</em> first version of the voice interface</span></p>
 <br>
-<p class="p13">You can try this version from the 25th of November of 2020 here:</p>
-  <iframe height="400" width="600" allow="microphone" src="assets/drafts/speak-out/draft20201124"></iframe>
-  <br>
+
+<button id="iframe-6" class="iframe-load-button">Click to try this version from the 25th of November of 2020 below ↡</button>
+<script>
+  $("#iframe-6").click(function(){
+  var iframe = $("#if6");
+  iframe.attr("src", iframe.data("src"));
+  });
+</script>
+  <iframe id="if6" height="400" width="600" allow="microphone" src="about:blank" data-src="assets/drafts/speak-out/draft20201124"></iframe>
+
   <br>
   <p class="p27"><span class="s1">☉</span></p>
   <p class="p12"><span class="s1">Now that I had met all my programming objectives and the work was doing what it needed to do, an entire other process began to unfold which unfolded over a period of three weeks. The curator of the residency and my supervisor Patr&iacute;cia Gouveia had composed a concise two page text tying the themes of my work elegantly in with notions of decolonisation quoting Mbembe and diversity, with reference to hooks. This text also included reference to some of my early artistic research questions that set the process in motion, including the references to the notions of osmosis and diffusion, explanations about the different passport modes as well as my instructions about what the user/player could do in the work: move <em>You</em> with the arrow keys, click to create attractive place, press continuously to record your voice (to <q>speak out</q>), etc.</span></p>
@@ -1149,7 +1320,18 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   <p class="p12"><span class="s1">The purpose of these poems is to incite critical reflection about our relationship to place, to movement, to restrictions to movement vs. the freedom to move, but also about how we relate with other people and other places, asking questions like &quot;what is the difference between exploration and colonization?&quot; or &quot;who are the others?</q>. I purposefully will not print these poems here in this static pdf/printed document, because that type of presentation might suggest some kind of order for these lines, where in reality there is no notion of order related to the poems.</span></p>
   <p class="p27"><span class="s1">☉</span></p>
   <p class="p12"><span class="s1">What I have described up until now is the version of the work which was published on raum.pt on December 27th 2020 and will be there forever archived. You can play with it below or at <a href="https://raum.pt/en/terhi-marttila">raum.pt/en/terhi-marttila</a>:</p>
-  <iframe height="500" width="600" allow="microphone" src="https://raum.pt/en/terhi-marttila"></iframe>
+
+
+    <button id="iframe-7" class="iframe-load-button">Click to view the work as published on raum.pt below ↡</button>
+    <script>
+      $("#iframe-7").click(function(){
+      var iframe = $("#if7");
+      iframe.attr("src", iframe.data("src"));
+      });
+    </script>
+
+  <iframe id="if7" height="500" width="600" allow="microphone" src="about:blank" data-src="https://raum.pt/en/terhi-marttila"></iframe>
+
   <br>
   <br>
   <p class="p27"><span class="s1">☉</span></p>
@@ -1434,7 +1616,16 @@ alt="">
 alt="">
 <p class="p32"><span class="s1">Figure 58: screenshot of a detail of <em>Transplanted</em> (2021)</span></p>
   <p class="p13"><span class="s1">The third artwork that comprises this research process is called <em>Transplanted</em> (see figure 58 above) and was initially completed in late 2021 for a group exhibition at Galleria H&auml;m&auml;r&auml;, 8. - 25.11.2021, at the University of Lapland in Rovaniemi, Finland. The work is available either at <a href="http://terhimarttila.com"><span class="s11">terhimarttila.com</span></a> as the interactive work itself or as a video documentation of one interaction. It can also be found at github.com/trhi. A post dissertation iteration, <b>with english subtitles</b> of <em>Transplanted</em> was published on nokturno.fi in March 2022 <a href="https://nokturno.fi/en/digital-histories-of-literature/">(volume 1-2022)</a>. Nokturno is a platform for digital and experimental poetry. Information about where to find the source code for <em>Transplanted</em> is available in appendix C. You can engage with the work (as on the 25th of January 2022 at the time of submission of this dissertation) below:</span></p>
-  <iframe width="600" height="400" src="assets/drafts/transplanted/draft20211125"></iframe>
+
+  <button id="iframe-8" class="iframe-load-button">Click to explore <em>Transplanted</em> below ↡</button>
+  <script>
+    $("#iframe-8").click(function(){
+    var iframe = $("#if8");
+    iframe.attr("src", iframe.data("src"));
+    });
+  </script>
+
+  <iframe id="if8" class="iframe-wide" width="600" height="500" src="about:blank" data-src="assets/drafts/transplanted/draft20211125"></iframe>
 
   <p class="p27"><span class="s1">☉</span></p>
   <p class="p12"><span class="s1">In early 2021 I was asked to participate in a group exhibition with faculty from my alma mater, the University of Lapland, in an exhibition combining bio art and technology, which is part of the new bio art and tech laboratory at the art faculty. I was invited to be the tech component. It was a wonderful experience in the midst of the January - March 2021 lockdown, because the collaboration took place over a WhatsApp group. The group of participating artists actively shared ideas, images, videos, sculptures, thoughts, drafts and all kinds of work in progress, which meant that instead of working on my contribution in isolation, I was actually embedded in a very rich substrate of ideas which ended up having an enormous impact on the work that I made. It was very enriching to be exposed so closely to the artistic processes of the other participants.</span></p>
@@ -1454,7 +1645,17 @@ alt="">
   <p class="p32"><span class="s1">Figure 59: alpha version of <em>Transplanted</em>, February 9th 2021</span></p>
   <p class="p12"><span class="s1">However, I quickly realised that I would need to write a huge amount of poetry if I wanted the recombined and mixed productions generated by the Markov chains to produce a reasonable amount of variation. This is because Markov chains are based on the idea that, in this case, text is recombined according to structures and patterns that exist in the source material. This is why text generated by a markov chain tends to seem to make a lot of sense, because it borrows from the patterns in (in this case) human-written text. I also realised that my poetry would need to have lots of repetitive structures so that the Markov chain could recombine these in multiple ways. I enjoyed the results, however, I did not feel as though the work was going in the direction I had hoped for.</span></p>
   <p class="p12"><span class="s1">On the 18th of February 2021 I had a moment of inspiration at my partner&rsquo;s new loopstation. I was playing around and recording all kinds of things, until I realised that I could use the loop station to layer my own voice and my poetry. I began by speaking some of the fragments and words that I had been working with in the alpha version of <em>Transplanted</em>. I kept adding layers to the loop and enjoyed very much the way that the spoken concepts began to interact with each other. This experiment made me realise that I wanted to work with recordings of my own voice. Below is this initial draft of Transplanted from February of 2021, which generates new lines of poetry using Markov chains. The aforementioned audio loop can be toggled on and off by clicking on the speaker button:</p>
-  <iframe width="515" height="215" src="assets/drafts/transplanted/draft20210218"></iframe>
+
+    <button id="iframe-9" class="iframe-load-button">Click here to explore the first draft of <em>Transplanted</em> below ↡</button>
+    <script>
+      $("#iframe-9").click(function(){
+      var iframe = $("#if9");
+      iframe.attr("src", iframe.data("src"));
+      });
+    </script>
+
+  <iframe id="if9" width="515" height="215" src="about:blank" data-src="assets/drafts/transplanted/draft20210218"></iframe>
+
   <p class="p27"><span class="s1">☉</span></p>
   <p class="p12"><span class="s1">I was not yet sure about what to record or what to have the person say, but in another moment of inspiration I conceived of how I wanted the voice interface to be. I created a heart using a mirrored image of my own ear. The idea was that once the person pushed-to-talk on this heart, it would start beating. I called it the h-ear-t (see figure 58, 5 pages prior).</span></p>
   <p class="p12"><span class="s1">I programmed this interface element and committed it on the 28th of October of 2021 to the project repository in GitHub. This was again a push-to-talk type button, as in <em>Speak out</em>, and my attempt was to communicate that the audio capture and microphone were active by the beating of the h-ear-t. The h-ear-t is thus an allusion to listening (the ear), to active listening (beating) but also to the idea of conversation or dialogue, speaking and listening as a <em>heart-to-heart</em>, of the sharing of personal sentiments, feelings and experiences.</span></p>
@@ -1532,7 +1733,17 @@ alt="">
 
     <p class="p12"><b>NOTE: Following the submission of this dissertation in January of 2022, <em>Transplanted</em> was published in nokturno.fi, a Finnish platform for digital and experimental poetry. It was published on on the 6th of April of 2022 (<a target="_blank" href="https://nokturno.fi/en/digital-histories-of-literature/">see the full Issue 1-2022 and the editorial written by Miikka Laihinen here</a>). This iteration includes subtitles in English and the possiblity of speaking to <em>Transplanted</em> in English. You can explore it below on nokturno.fi:</b></p>
     <br>
-      <iframe width="600" height="400" src="https://nokturno.fi/files/terhi-marttila/transplanted/"></iframe>
+
+    <button id="iframe-10" class="iframe-load-button">Click here to explore <em>Transplanted</em> on nokturno.fi below ↡</button>
+    <script>
+      $("#iframe-10").click(function(){
+      var iframe = $("#if10");
+      iframe.attr("src", iframe.data("src"));
+      });
+    </script>
+
+      <iframe id="if10" class="iframe-wide" width="600" height="500" src="about:blank" data-src="https://nokturno.fi/files/terhi-marttila/transplanted/"></iframe>
+
     <p class="p27"><span class="s1">☉</span></p>
   <p class="p13"><span class="s1">Having now introduced all three works which comprise this dissertation, I will move on the discuss some of the overarching themes that emerged, and importantly, some of the limitations and future work which I have identified.</span></p>
 

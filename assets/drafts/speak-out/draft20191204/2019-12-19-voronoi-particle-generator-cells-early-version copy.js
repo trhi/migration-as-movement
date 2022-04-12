@@ -58,24 +58,24 @@ function setup() {
 
     bugDiameter = 10;
 
-    print("This is the length of the voronoi cells array:" + voronoiGetCells().length);
+    //print("This is the length of the voronoi cells array:" + voronoiGetCells().length);
 
     theWorld = voronoiGetDiagram();
 
-    print(theWorld);
+    //print(theWorld);
 
-    print(theWorld.cells[0].site);
+    //print(theWorld.cells[0].site);
 
-    print(theWorld.cells[1].site);
+    //print(theWorld.cells[1].site);
 
-    print(voronoiNeighbors(3));
+    //print(voronoiNeighbors(3));
 
     //implementing a for loop which initialises by generating
     //a new jitterbug at each voronoicell site):
 
     particles = [];
 
-    print(particles);
+    //print(particles);
 
 
     for(i=0; i < voronoiGetCells().length; i++){
@@ -207,8 +207,8 @@ function jitterbug(tempX,tempY,tempDiameter){
 	var cellId = voronoiGetSite(tempX, tempY, false);
   var particleBirthColor = voronoiGetColor(cellId);
 
-  print("Color at birth:" + particleBirthColor);
-	
+  //print("Color at birth:" + particleBirthColor);
+
 
   this.move = function(){
     //this.x += random(-this.speed,this.speed)*this.factor;

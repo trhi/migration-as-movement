@@ -66,7 +66,7 @@ function setup() {
   //at a higher frame rate: does it get smoother?
   frameRate(30);
 
-  console.log("These are the types of attractors that exist in the world:" + attractorQualities);
+  //console.log("These are the types of attractors that exist in the world:" + attractorQualities);
 
   //outsourced to its own function for sake of code simplicity
   doVoronoiSetupStuff();
@@ -74,8 +74,8 @@ function setup() {
   var audioElement = createAudio('sound/iywstc-XX.mp3');
   //audioElement.autoplay(true);
 
-  console.log("Created audioElement. It is:");
-  console.log(audioElement);
+  //console.log("Created audioElement. It is:");
+  //console.log(audioElement);
 
   var speak;
 
@@ -88,7 +88,7 @@ function setup() {
   button.style("cursor", "pointer");
 
   button.mouseMoved( () => {
-      console.log("Went into button.mouseOver()");
+      //console.log("Went into button.mouseOver()");
       textSize(15);
       fill("black");
       var position = random()
@@ -97,7 +97,7 @@ function setup() {
 
 
   function infobuttonPressed(){
-    console.log("infobutton pressed!");
+    //console.log("infobutton pressed!");
     audioElement.volume(0.02);
     audioElement.loop = false;
     audioElement.play();
@@ -107,7 +107,7 @@ function setup() {
 
 
     setTimeout( () => {
-      console.log("making other button!");
+      //console.log("making other button!");
       speak = createButton("speak out");
       speak.position(canvasX-100, 30);
       speak.style("cursor", "pointer");
@@ -125,7 +125,7 @@ function setup() {
         intervalId = setInterval(do_something, 30);
       }).mouseReleased( () => {
         clearInterval(intervalId);
-        console.log("Mouse was released");
+      //  console.log("Mouse was released");
         speak.style("background-color", "pink");
 
       });
@@ -144,7 +144,7 @@ function setup() {
     //foo.start(); // start listening
 
     function do_something() {
-      console.log("Mouse is pressed down continually");
+    //  console.log("Mouse is pressed down continually");
 
       //speak.class("active");
 
@@ -157,7 +157,7 @@ function setup() {
     }
 
     function speakButtonPressed(){
-      console.log("Speak out button pressed!");
+      //console.log("Speak out button pressed!");
         //foo.start();
 
     }
@@ -198,7 +198,7 @@ function setup() {
 
   function createParticleAttractorIndex() {
     for (let i=0; i < attractorQualities.length; i++){
-      console.log("This is the attractor quality at i: " + attractorQualities[i]);
+      //console.log("This is the attractor quality at i: " + attractorQualities[i]);
       //let obj = {};
       //obj[]
       let keyName = attractorQualities[i];
@@ -207,15 +207,15 @@ function setup() {
   }
 
   //the difference between .forEach() and .map() is that map returns an []
-  console.table(particleAttractorIndex);
+//console.table(particleAttractorIndex);
 
   //console.log("This is particleAttractorIndex: " + particleAttractorIndex);
   //console.log(particleAttractorIndex);
 
   //let qualityKey = "quality";
-  console.log("This is what we have at index 0, behind the quality key: " + particleAttractorIndex[0].quality);
-  console.log("This is the valueOf the object at that position in the array: " + particleAttractorIndex[0].valueOf());
-  console.log(particleAttractorIndex[0].valueOf());
+  //console.log("This is what we have at index 0, behind the quality key: " + particleAttractorIndex[0].quality);
+//  console.log("This is the valueOf the object at that position in the array: " + particleAttractorIndex[0].valueOf());
+//  console.log(particleAttractorIndex[0].valueOf());
 
 
   //  console.log("This is the first particle at the index for love:" + particleAttractorIndex["love"][0]);
@@ -356,14 +356,14 @@ function doVoronoiSetupStuff(){
     theWorld = voronoiGetDiagram();
 
     createTheWorldSites();
-    console.log("These are the worlds' sites:");
+    //console.log("These are the worlds' sites:");
     print(theWorldSites);
-    console.log("This is one site:" + theWorldSites[0]);
+    //console.log("This is one site:" + theWorldSites[0]);
 
     //printing the voronoi diagram generated(full detailed diagram):
-    console.log("This is the world: " + theWorld);
+  //  console.log("This is the world: " + theWorld);
     print(theWorld);
-    console.log("This is the number of cells I have:" + theWorld.cells.length);
+    //console.log("This is the number of cells I have:" + theWorld.cells.length);
 
     //Get simplified cells without jitter, for more advanced use
     var normal = voronoiGetCells();
@@ -455,7 +455,7 @@ function draw() {
     let quality = "nothing"; //this used to be: "repulsor"
     let lifespan = random(500,1000);
     attractors.push(new attractor(quality, attractorX, attractorY, lifespan));
-    console.log("Made me!");
+  //  console.log("Made me!");
     //attractors[0].attractorPosition.x
     //attractors[0].attractorPosition.y
   }
@@ -567,9 +567,9 @@ if (frameCount == 150){
   //youParticle.diameter = 40;
   youParticle.lifespan = 50000;
   //youParticle.color = "white";
-  console.log("Succesfully created you");
-  console.log("You are attracted to:" + youParticle.isAttractedTo);
-  console.log("Your lifespan is:" + youParticle.lifespan);
+  //console.log("Succesfully created you");
+  //console.log("You are attracted to:" + youParticle.isAttractedTo);
+  //console.log("Your lifespan is:" + youParticle.lifespan);
   youParticle.giveInformation();
 
 }
@@ -583,7 +583,7 @@ if (frameCount == 150){
 } //close function draw
 
 function keyPressed(){
-  console.log("keypressed!");
+  //console.log("keypressed!");
     if (keyCode === LEFT_ARROW) {
       youParticle.userDirectionVector.add(-1, 0);
       //console.log("keypressed!");

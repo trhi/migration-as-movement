@@ -65,9 +65,9 @@ function  sortAudiofiles() {
             kaipuu.push(thoughts.questions[i]);
           }
   }
-  console.log("Found these:");
-  console.log(miksi, mitae, miten, missae);
-  console.log(juuret, kaipuu);
+  //console.log("Found these:");
+  //console.log(miksi, mitae, miten, missae);
+  //console.log(juuret, kaipuu);
 }
 
 function whatDidTheyAskUs(whatTheyAskedUs){
@@ -101,8 +101,8 @@ function whatDidTheyAskUs(whatTheyAskedUs){
 
 function selectRandom(array){
       let randomChoice = random(array);
-      console.log("First selection:");
-      console.log(randomChoice);
+      //console.log("First selection:");
+      //console.log(randomChoice);
       let path = 'assets/audio/fi/' + randomChoice.filename;
       let audio = createAudio( path );
       audio.addCue(3, next);
@@ -122,23 +122,23 @@ function next() {
   let randomInterjection3 = random(thoughts.interjections);
 
   let randomNext = random([randomQuestion, randomAnswer1, randomAnswer2, randomInterjection1, randomInterjection2, randomInterjection3]);
-  console.log("I chose:");
-  console.log(randomNext);
+  //console.log("I chose:");
+  //console.log(randomNext);
 
   var path = thoughts.path + randomNext.filename;
   var nextAudio = createAudio ( path );
   if(counter < 5){
-        console.log("Counter is now: " + counter + ", and I will add another cue");
-        console.log("nextAudio is now:");
-        console.log(nextAudio);
+        //console.log("Counter is now: " + counter + ", and I will add another cue");
+        //console.log("nextAudio is now:");
+        //console.log(nextAudio);
         nextAudio.addCue(2, next);
         nextAudio.play();
         counter++;
-        console.log("Counter is now: " + counter + ", I just added another cue");
-        console.log("nextAudio is now:");
-        console.log(nextAudio);
+        //console.log("Counter is now: " + counter + ", I just added another cue");
+        //console.log("nextAudio is now:");
+        //console.log(nextAudio);
   }else{
-        console.log("Counter is now: " + counter + ", and I am stopping");
+        //console.log("Counter is now: " + counter + ", and I am stopping");
         nextAudio.play();
         counter = 0;
   }

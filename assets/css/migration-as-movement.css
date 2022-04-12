@@ -79,6 +79,14 @@ video::cue{
   font-size: 18px;
 }
 
+.ahref-button:hover{
+	background: #EEE;
+}
+
+.button-download:hover{
+	background: #EEE;
+}
+
 .seekInAudio{
   font-size:26px;
   display:inline;

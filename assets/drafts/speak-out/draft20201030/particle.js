@@ -136,8 +136,8 @@ function particle(tempX, tempY) {
 
       //console.log("this.birthSpot is:" + this.birthSpot);
       //console.log("this.home is:" + this.home);
-      console.log("Made a particle!");
-      console.log("This is my positionVector:" + this.positionVector);
+      //console.log("Made a particle!");
+      //console.log("This is my positionVector:" + this.positionVector);
 
 
       //parameter to keep track of whether the particle is matched with
@@ -573,7 +573,7 @@ function particle(tempX, tempY) {
                 //console.log("There is an attractor match!");
                 //this.diameter += 1;
 
-                console.log("Going towards attractor....");
+                //console.log("Going towards attractor....");
 
                 this.towardsAttractor = p5.Vector.sub(attractors[attractorIndex].attractorPosition, this.positionVector);
                 this.towardsAttractor.normalize();

@@ -12,7 +12,7 @@ var iywstc;
 
 var frameRate = 30;
 var fpm = frameRate*60;
-console.log("fpm is: " + fpm);
+//console.log("fpm is: " + fpm);
 
 var lang = ""; // browser language -> sets language of recogniser and all texts
 var myFont; // custom font. Atm: poppins. Change also in css/speakout-interface.css
@@ -114,7 +114,7 @@ var numberOfPassports = 7;
 function changePassportMode(){
   passportMode = round(random(0, numberOfPassports-2));
   document.getElementById(passportMode).focus();
-  console.log("Changed passportMode to:" + passportMode);
+  //console.log("Changed passportMode to:" + passportMode);
 }
 
 // TO-DO: 7th passport mode: "/"
@@ -723,7 +723,7 @@ function draw() {
       //youParticle.isAttractedTo = "the impossible";
       youParticle.isAttractedTo = random(attractorQualities);
       youParticle.infoText = 'You (' + youParticle.isAttractedTo + ')';
-      console.log("Initialised: You particle is attracted to: " + youParticle.isAttractedTo);
+      //console.log("Initialised: You particle is attracted to: " + youParticle.isAttractedTo);
     }
     youParticle.lifespan = 100000; // may You have a long life
   }//close if(framecount)

@@ -496,32 +496,32 @@ function setup() {
         //console.log("Started listening");
   }).mouseReleased( () => {
         clearInterval(intervalId);
-        console.log("Mouse was released");
+        //console.log("Mouse was released");
         speak.style("background-color", "white");
         speak.style("color", "black");
         listener.stop();
         speechDetected = false;
         speechToText = "";
-        console.log(" *** Stopping listener");
-        console.log(" *** speechDetected is now: " + speechDetected);
+        //console.log(" *** Stopping listener");
+        //console.log(" *** speechDetected is now: " + speechDetected);
         //foo.stop(); //this is not a method in p5.speech...
         //speak.style("textContent", "Speak out");
   });
   speak.mouseOut( () => {
         clearInterval(intervalId);
         //speechDetected = false;
-        console.log(" *** mouseOut of button");
-        console.log(" *** speechDetected is now: " + speechDetected);
+        //console.log(" *** mouseOut of button");
+        //console.log(" *** speechDetected is now: " + speechDetected);
   });
 
 
   listener.onresult = (event) => {
       speechDetected = true;
       speechToText = event.results[0][0].transcript;
-      console.log(" *** *** " + speechToText);
+      //console.log(" *** *** " + speechToText);
       //THIS WORKS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       if(speechToText === "Eu quero ter acesso ao todo o mundo"){
-            console.log("They said the right thing!");
+            //console.log("They said the right thing!");
             for (let i = 0; i < passportButtons.length; i++) {
                 passportButtons[i].style("background-color", "white");
                 passportButtons[i].style("color", "black");
@@ -539,7 +539,7 @@ function setup() {
   */
 
   function do_something() {
-        console.log("Mouse is pressed down continually");
+        //console.log("Mouse is pressed down continually");
         //speak.class("active");
         //colors the button red while it is being held down
         //the idea here would be to "activate" speech recognition ONLY
@@ -567,7 +567,7 @@ function setup() {
   }
 
   function speakButtonPressed(){
-        console.log("Speak out button pressed!");
+        //console.log("Speak out button pressed!");
         //speak.html("Listening...");
         audioElement.pause();
         audioElement.currentTime = 0;
@@ -577,12 +577,12 @@ function setup() {
         //textSize(54);
         //text("Eu quero ter acesso ao mundo todo", canvasX-200, 4*50+30);
         listener.start();
-        console.log(" *** Starting listener");
+        //console.log(" *** Starting listener");
   }
 
   //make a nicer track for
   function infobuttonPressed(){
-        console.log("infobutton pressed!");
+        //console.log("infobutton pressed!");
         audioElement.volume(0.02);
         audioElement.loop = false;
         audioElement.play();
@@ -990,7 +990,7 @@ for (let i = 0; i < particles.length; i++) {
 if(speechDetected == true){
       //showRecognitionResults();
       //console.log("*** *** " + speechToText);
-      console.log("*** DRAW *** speechDetected is now: " + speechDetected);
+      //console.log("*** DRAW *** speechDetected is now: " + speechDetected);
       textSize(54);
       fill("black");
       text(speechToText, 20, 60);
@@ -1018,7 +1018,7 @@ if (frameCount%20 == 0) {
       if(particles.length < 200){//limit the maximum number of particles in the world:
             spawnNewParticles();
       } else {
-        console.log(" * -- max number of particles reached --*")
+        //console.log(" * -- max number of particles reached --*")
       }
 } //close if framecount
 

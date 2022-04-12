@@ -14,7 +14,7 @@ function preload() {
     listener = new SpeechRecognition;
     isSpeechRecognitionSupported = true;
   } catch (err) {
-    console.log("Speech recognition is not supported");
+    //console.log("Speech recognition is not supported");
   }
 
   if (isSpeechRecognitionSupported){

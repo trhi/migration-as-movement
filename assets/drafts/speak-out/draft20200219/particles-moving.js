@@ -31,7 +31,7 @@ function setup() {
   //at a higher frame rate: does it get smoother?
   frameRate(30);
 
-  console.log("These are the types of attractors that exist in the world:" + attractorQualities);
+  //console.log("These are the types of attractors that exist in the world:" + attractorQualities);
 
   /*
   *
@@ -80,8 +80,8 @@ function setup() {
   theWorld = voronoiGetDiagram();
 
   //printing the voronoi diagram generated(full detailed diagram):
-  console.log("This is the world: " + theWorld);
-  console.log("This is the number of cells I have:" + theWorld.cells.length);
+  //console.log("This is the world: " + theWorld);
+  //console.log("This is the number of cells I have:" + theWorld.cells.length);
 
   //Get simplified cells without jitter, for more advanced use
   var normal = voronoiGetCells();
@@ -118,7 +118,7 @@ function setup() {
 
   function createParticleAttractorIndex() {
     for (let i=0; i < attractorQualities.length; i++){
-      console.log("This is the attractor quality at i: " + attractorQualities[i]);
+      //console.log("This is the attractor quality at i: " + attractorQualities[i]);
       //let obj = {};
       //obj[]
       let keyName = attractorQualities[i];
@@ -127,15 +127,15 @@ function setup() {
   }
 
   //the difference between .forEach() and .map() is that map returns an []
-  console.table(particleAttractorIndex);
+  //console.table(particleAttractorIndex);
 
   //console.log("This is particleAttractorIndex: " + particleAttractorIndex);
   //console.log(particleAttractorIndex);
 
   //let qualityKey = "quality";
-  console.log("This is what we have at index 0, behind the quality key: " + particleAttractorIndex[0].quality);
-  console.log("This is the valueOf the object at that position in the array: " + particleAttractorIndex[0].valueOf());
-  console.log(particleAttractorIndex[0].valueOf());
+  //console.log("This is what we have at index 0, behind the quality key: " + particleAttractorIndex[0].quality);
+  //console.log("This is the valueOf the object at that position in the array: " + particleAttractorIndex[0].valueOf());
+  //console.log(particleAttractorIndex[0].valueOf());
 
 
   //  console.log("This is the first particle at the index for love:" + particleAttractorIndex["love"][0]);
@@ -199,7 +199,7 @@ function setup() {
   //foo.onEnd = restart;
 
   function restart(){
-    console.log("Restarting recognition");
+    //console.log("Restarting recognition");
     foo.start();
   }
 
@@ -210,7 +210,7 @@ function setup() {
 
   function showResult()
   {
-    console.log(foo.resultString); // log the result
+    //console.log(foo.resultString); // log the result
   }
 
 
@@ -274,7 +274,7 @@ function draw() {
     let quality = "repulsor";
     let lifespan = random(500,1000);
     attractors.push(new attractor(quality, attractorX, attractorY, lifespan));
-    console.log("Made me!");
+    //console.log("Made me!");
     //attractors[0].attractorPosition.x
     //attractors[0].attractorPosition.y
   }

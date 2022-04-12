@@ -86,7 +86,7 @@ function setup(){
 
 function muteUnmute(){
 
-  console.log("entered function and poetryLoop.isPlaying() is: " + poetryLoop.isPlaying() );
+  //console.log("entered function and poetryLoop.isPlaying() is: " + poetryLoop.isPlaying() );
 
 
   if ( samplePlaying ) {
@@ -99,7 +99,7 @@ function muteUnmute(){
     samplePlaying = true;
     toggleAudio.html(`&#128263`); // audio off
   } else {
-    console.log("something is wrong.");
+    //console.log("something is wrong.");
   }
 
 }

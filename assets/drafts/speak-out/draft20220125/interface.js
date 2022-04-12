@@ -31,7 +31,7 @@ function doInterface(){
     var listener = new SpeechRecognition;
     isSpeechRecognitionSupported = true;
   } catch (err) {
-    console.log("Speech recognition is not supported!!!");
+    //console.log("Speech recognition is not supported!!!");
     window.alert("Please view this work in Chrome if you want to speak out");
   }
 
@@ -111,7 +111,8 @@ function doInterface(){
 
   if(!isSpeechRecognitionSupported){
     speakButton.attribute("title", "[view work in Chrome to speak out]");
-    speakButton.mousePressed(() => console.log("do nothing!"));
+    speakButton.mousePressed( () => console.log("") );
+    //console.log("do nothing!"
     //$("#speak").text(" - ");
     //$("#speak").prop("disabled",true);
     //speakButton.disabled = true;
