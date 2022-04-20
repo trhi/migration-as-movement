@@ -24,10 +24,6 @@ blockquote{
   line-height: 160%;
 }
 
-#div-contents{
-  line-height: 100%;
-}
-
 .citation-name{
   text-align: right;
   margin-top: -20px;
@@ -47,7 +43,7 @@ section{
   font-family:Lora;
   font-size:14px;
   text-decoration: none;
-    line-height: 100%;
+  line-height: 100%;
 }
 
 iframe{
@@ -78,6 +74,29 @@ iframe{
 
 .iframe-load-button:hover{
   background: #EEE;
+}
+
+.contents-hyperlinked p{
+margin-block-start: 0.5em;
+margin-block-end: 0.5em;
+}
+
+.contents-hyperlinked a {
+  margin-left: 20px;
+  color: black;
+  text-decoration: none;
+  font: 14px 'Lora';
+}
+
+.contents-hyperlinked a::after{
+  /*
+    content: "\a";
+    white-space: pre;
+  */
+}
+
+.contents-hyperlinked a:hover {
+  color: #818181;
 }
 
 /* The sidebar menu */
