@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
   <title>[Dissertation] Marttila 2022 - Migration as movement</title>
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
   <link rel="stylesheet" href="assets/css/dissertation.css">
@@ -72,8 +72,13 @@
   <a href="index.html" style="left:45px;"  class="ahref-button"> &nbsp ↞ back &nbsp </a>
     <!--<a href="#contents" class="ahref-button" style="position:sticky; top:15px; right:15px; float:right;"> &nbsp ↟ contents &nbsp </a>-->
 
-  <img src="assets/img/migration-as-movement-title-img.png" style="margin-top:5cm; margin-bottom:10cm; margin-left:200px;
-  width:80%" alt="Migration as movement
+
+  <img id="mm-title-img" src="assets/img/migration-as-movement-title-img.png"
+  style="margin-top:5cm; margin-bottom:10cm;
+  display:block;
+  margin-left:auto;
+  width:80%"
+  alt="Migration as movement
    - repurposing the voice/interface to explore aspects of human migratory
     movement through artistic reserach">
 
@@ -106,7 +111,7 @@
 <br>
 <br>
 <br>
-<p style="margin-left: 100px; margin-right: 100px"><em>[ Optimized for the Desktop. Note that the main body of this dissertation exists as an audiobook (excluding front- and (most) endmatter). The audiofile appears at the bottom of the page for each chapter. You can speed up and/or download the audiofiles. press 🗣 to jump to that part of text in audiobook. ]</em></p>
+<p style="margin-left: 100px; margin-right: 100px"><em>[ Optimized for the Desktop. Note that the main body of this dissertation exists as an audiobook (excluding front- and (most) endmatter). The audiofile appears at the bottom of the page for each chapter. You can speed up as well as download the audiofiles. press 🗣 to jump to that part of text in audiobook. ]</em></p>
 <br>
 <br>
 <br>
@@ -158,11 +163,7 @@ function closeNav() {
 </script>
 
 <section id="contents" style="margin-top:3cm;">
-
-
-      <!--<p class="montserrat-section" style="margin-top:0cm; text-indent: 50px; text-align:left">Contents</p>-->
-      <!--<p style="text-indent: 100px;"><em>[press 🔗 to jump to chapter, press 🗣 to listen to chapter. Note that you can speed up the audio.]</em></p>-->
-      <br>
+<br>
 <div id="div-contents" style="margin-left: 200px;">
       <p class="p-contents"><em>[ ↞ click on Contents (on the left) to navigate the document at any time ]</em></p>
       <p style="margin-left: 50px;" class="p-contents"><em>[ ↡ click on any item below to navigate to it ]</em></p>
@@ -735,7 +736,7 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   alt="A screenshot of an email sent to Professor Joseph Carens">
   <p class="p32"><span class="s1">Figure 8: &nbsp; &nbsp; My email to Joseph Carens</span></p>
   <p class="p39"><span class="s1">I was very glad to receive his blessing for my interpretation of his thinking and for my work of fleshing out his argument in another format. Here is an excerpt of his email response, reproduced here with his consent (see figure 9 below):</span></p>
-  <img id="figure9" style="max-width:500px" src="assets/img/figure-9-Marttila-2019-we-cannot-take-them-all-CARENS-email.png"
+  <img id="figure9" style="max-width:400px" src="assets/img/figure-9-Marttila-2019-we-cannot-take-them-all-CARENS-email.png"
   alt="A screenshot of an email received from Professor Joseph Carens">
   <p class="p32"><span class="s1">Figure 9: &nbsp; &nbsp;Excerpt of email exchange with Joseph Carens</span></p>
     <p class="p27"><span class="s1">☉</span></p>
@@ -827,15 +828,15 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   alt="Screenshot of first version of voice input for We cannot take them all">
   <p class="p32"><span class="s1">Figure 13: &nbsp; &nbsp;first version of voice input for <em>We cannot take them all</em>, March 15th 2019</span></p>
   <p class="p13"><span class="s1">This version also first introduced the possibility to ask &quot;what is this?</q> which would result in a voice speaking out loud the instructions to choose a nationality to play, and then explaining that we then &quot;replace concepts in a text written by professor Joseph Carens. Carens&rsquo; text is a summary of common anti-refugee rationalisations</q> (see figure 14 below). The text that appears after selecting or speaking <em>what is this</em>, went through many modifications throughout the process.</span></p>
-  <img id="figure14" style="max-width:500px" src="assets/img/figure-14-wctta-2019-instructions-and-text-read-out-loud.png"
+  <img id="figure14" style="max-width:400px" src="assets/img/figure-14-wctta-2019-instructions-and-text-read-out-loud.png"
   alt="instructions and text read out loud after the person asks 'what is this' in We cannot take them all">
   <p class="p32"><span class="s1">Figure 14: &nbsp; &nbsp;instructions and text read out loud after the person asks <q>what is this?</q></span></p>
   <p class="p12"><span class="s1">When I showed this version to my supervisor Professor Patr&iacute;cia, a very anecdotal thing happened. At this point I had implemented the voice input such that after accepting the use of the microphone, the channel would be kept open. My reasoning was that the person would likely want to select various nationalities to listen to the reasons, and for this reason, the system should keep listening for when the person speaks. The problem with this is that one can easily switch to another browser tab, forgetting that the microphone is still on, which will result in the webpage listening to the user and transcribing anything they might say, such as in this small demo (see figure 15 below):</span></p>
-  <img id="figure15" style="max-width:500px" src="assets/img/figure-15-wctta-2019-03-15-transcribing.png"
+  <img id="figure15" style="max-width:400px" src="assets/img/figure-15-wctta-2019-03-15-transcribing.png"
   alt="We cannot take them all transcribes user audio">
   <p class="p32"><span class="s1">Figure 15: &nbsp; &nbsp;continuous microphone access can turn the site into a<span class="Apple-converted-space">&nbsp;&nbsp;</span>surveillance instrument</span></p>
   <p class="p13"><span class="s1">When I showed the work to Professor Patr&iacute;cia, she accessed the work without having her computer sound on. This also made me realise the importance of <q>priming</q> the user for the fact that the website would playback sound. In the next iteration of the piece, which I have only committed to GitHub on the 21st of August of 2019 (even though I am quite sure that I developed this feature earlier, albeit probably only locally on my computer), I have modified the <q>click me</q> button to include these instructions. This aspect of the work has also stayed uniform since (see future 16 below):</span></p>
-  <img id="figure16" style="max-width:500px" src="assets/img/figure-16-wctta-initial-button-with-instructions.png"
+  <img id="figure16" style="max-width:400px" src="assets/img/figure-16-wctta-initial-button-with-instructions.png"
   alt="We cannot take them all initial button: 'make sure your sound is on then click me to begin'">
   <p class="p32"><span class="s1">Figure 16: &nbsp; &nbsp;Screenshot of button in <em>We cannot take them all&nbsp;</em>with instructions to turn on the computer sound, 21st of August 2019</span></p>
   <p class="p27"><span class="s1">☉</span></p>
@@ -844,7 +845,7 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   alt="We cannot take them all asking for microphone permission">
   <p class="p32"><span class="s1">Figure 17: &nbsp; &nbsp;turning the microphone on again after the voice finishes speaking</span></p>
   <p class="p12"><span class="s1">The next major change to the work was committed on the 16th of March of 2020. This improvement introduced a <em>Listen to me</em>-button (see figure 18 below, next page, top of image) which would give the user control over when to turn on the microphone. A this point, recognition was no longer set to continuous, instead, the recogniser would listen for the end of an utterance and turn the microphone access off after this. This commit also introduced the transcript box (see figure 18 below, next page, below the <em>Listen to me</em> -button) into which the transcript of the persons speech would appear, but which would also communicate<em>&nbsp;the state of the speech recogniser</em> through a pulsing text, for instance <q>&hellip;listening</q> when the microphone was turned on. This was my way of attempting transparency about microphone access.</span></p>
-  <img id="figure18" style="max-width:500px" src="assets/img/figure-18-wctta-listen-to-me-and-transcript-box.png"
+  <img id="figure18" style="max-width:400px" src="assets/img/figure-18-wctta-listen-to-me-and-transcript-box.png"
   alt="We cannot take them all: listen to me -button and the transcript box">
   <p class="p32"><span class="s1">Figure 18: &nbsp; &nbsp;Listen to me button- and transcript box/recogniser state<span class="Apple-converted-space">&nbsp;&nbsp;</span>(&hellip;listening)</span></p>
   <p class="p12"><span class="s1">Another major improvement in this commit was that instead of hardcoding languages onto the list, I queried the speech synthesisers available on the users system (using the <em>getVoices()</em> method). With this approach, each user&rsquo;s list of countries to choose from will depend on the selection of synthetic voices that they have on their own system (usually operating system). Because many people will have quite many such voices, I decided to only show 6 possible countries. However, in order to give the possibility to try out many different voices, I randomly choose a new set of six between interactions (ie. after the person has listened to a set of reasons by the voice they selected). On March 20th, I added more possible languages that my system could recognise (they are listed as a json file using the bcp-47 language codes).</span></p>
@@ -919,7 +920,7 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   alt="Initial view of we cannot take them all">
   <p class="p32"><span class="s1">Figure 22: &nbsp; &nbsp; Initial view, screenshot of <em>We cannot take them all</em></span></p>
   <p class="p38"><span class="s1">After this, the initial instructions for the piece are displayed on the screen as text (see figure 23 below). This text is also heard, spoken by a synthetic voice, in english, but with a linguistic accent of the language that the user has their system configured to:</span></p>
-  <img id="figure23" style="max-width:500px" src="assets/img/figure-23-Marttila-2019-we-cannot-take-them-all-initial-instructions.png"
+  <img id="figure23" style="max-width:400px" src="assets/img/figure-23-Marttila-2019-we-cannot-take-them-all-initial-instructions.png"
   alt="Initial instructions in we cannot take them all">
   <p class="p32"><span class="s1">Figure 23: &nbsp; &nbsp; initial instructions in <em>We cannot take them all</em></span></p>
   <p class="p38"><span class="s1">After this, the program displays the options for selecting the nationality<span class="Apple-converted-space">&nbsp;&nbsp;</span>(see figure 24 below), which can sometimes include <q>what is this?</q> (not visible in figure 24 below). The list of available countries to play is determined by the synthetic voices that are available on the persons computer. From now on, this is the only screen that the user will see (see figure 24 below):</span></p>
@@ -1031,7 +1032,7 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   });
 </script>
 
-  <iframe id="if12" class="iframe-wide" height="400" width="700" allow="microphone" scrolling="no" src="about:blank" data-src="assets/drafts/speak-out/draft20220125"></iframe>
+  <iframe id="if12" class="iframe-wide" height="400" max-width="100%" allow="microphone" scrolling="no" src="about:blank" data-src="assets/drafts/speak-out/draft20220125"></iframe>
 
   <p class="p27"><span class="s1">☉</span></p>
   <p class="p12"><span class="s1">My philosophical aspiration and thematic starting point is outlined in figure 26 below which is a screenshot of my presentation slides from the Consciousness Reframed conference. It was for this conference presentation that I first formulated the idea of likening humans to particles of some sort in an organic system, and by consequence, of migratory movement as particle motion governed by natural forces. </span></p>
@@ -1150,7 +1151,7 @@ What provoked so much tension, so many emotions &ndash; varying from excitement 
   <p class="p32"><span class="s1">Figure 28: gif animation to describe osmosis by Juan Ignacio Ruiz S&aacute;ez, courtesy of https://transportekarla.blogspot.com/p/transporte-pasivo-y-transportactivo.html</span></p>
   <p class="p12"><span class="s1">However crude this animation is, what I found attractive about it was the notion of this movement of the mass of water to the other side until a balance is reached across the membrane (border) between what in my mind began to look like opportunities and humans. Initially on the left hand side there is a huge swarm of people for every opportunity and on the right there are more opportunities than humans. Osmotic pressure pushes people over the border until in the final image, there is an equal ratio of human to opportunity across both sides. Of course, this is a simplistic way of looking at human migratory movement, nevertheless, the visual poetics of this idea was attractive to me.</span></p>
   <p class="p13"><span class="s1">I also pondered whether migratory movement could be likened to the physical process of diffusion, where particles dissipate with time to cover the entire area of the container they are in (figure 29 below). </span></p>
-  <img id="figure29" style="max-width:500px" src="assets/img/figure-29-Diffusion.png"
+  <img id="figure29" style="max-width:300px" src="assets/img/figure-29-Diffusion.png"
   alt="">
   <p class="p32"><span class="s1">Figure 29: Diffusion (image courtesy of JpRol, Wikimedia commons:<br> <a href="https://commons.wikimedia.org/wiki/File:Diffusion.svg"><span class="s17">https://commons.wikimedia.org/wiki/File:Diffusion.svg</span></a></span></p>
   <p class="p12"><span class="s1">Multidisciplinary research, especially anthropological findings combined with the recent area of study of ancient DNA give us ever more accurate data on how the human species spread over the land available on planet earth (Reich 2018). This crude illustration that roughly outlines the current hypothesis of how the human species migrated over millions of years (figure 30 below, next page), again brought to my mind the notion of diffusion:</span></p>
@@ -1601,7 +1602,7 @@ alt="">
   alt="">
   <p class="p32"><span class="s1">Figure 56: colour variations (left) and as an installation (right). Photos: Terhi Marttila.</span></p>
   <p class="p12"><span class="s1">One year later, the project continues to intrigue me and I cannot help but see some form of similarity between the coloured zones of <em>Speak out&nbsp;</em>and the circles that meander about amongst those colors. This work has gotten completely out of hand, and I continue to obsessively make more, intrigued by the infinite possibilities of colour combinations (see figure 57 below, next page):</span></p>
-  <img id="figure57" style="max-width:600px" src="assets/img/figure-57-speak-out-crochet-uncontrollable.jpg"
+  <img id="figure57" style="max-width:400px" src="assets/img/figure-57-speak-out-crochet-uncontrollable.jpg"
   alt="">
   <p class="p32"><span class="s1">Figure 57: uncontrollable multiplication of small circles in early 2022. Photo: Terhi Marttila.</span></p>
   <p class="p12"><span class="s1">I envision scanning these and using them in <em>Speak out</em> instead of the coloured circles. I dream about using these as objects for time lapse, for evoking ideas of (migratory) movement. I envision installing these in a physical space, their configurations changing over time in meaningful ways. I am attracted to the idea of each one having their own smell. I have played with the idea of associating each circle to a migrant&rsquo;s story (voice only), and a scent they cherish. And so on. Making these has also been part of my methodology in the sense that I have processed my ideas and dilemmas while writing this dissertation by at times reverting to using my hands to make these, as a space of contemplation and calm. I recently introduced myself and this work on the <em>Knit&amp;Pearl</em> Discord community, which brings together people interested in code and craft practices (knitting, crochet, weaving, embroidery, quilting etc.).</span></p>
@@ -1630,7 +1631,7 @@ alt="">
   <p class="p12"><span class="s1">The discovery that rootlessness is the condition of human dignity seems to encroach on the freedom to come and go, to reduce it to a whispering of the spirit.</p>
 <p class="citation-name">(Flusser 1984-85/2003, 85)</p>
 </blockquote>
-<img id="figure58" style="max-width:500px" src="assets/img/figure-58-Marttila-2021-transplanted.png"
+<img id="figure58" style="max-width:400px" src="assets/img/figure-58-Marttila-2021-transplanted.png"
 alt="">
 <p class="p32"><span class="s1">Figure 58: screenshot of a detail of <em>Transplanted</em> (2021)</span></p>
   <p class="p13"><span class="s1">The third artwork that comprises this research process is called <em>Transplanted</em> (see figure 58 above) and was initially completed in late 2021 for a group exhibition at Galleria H&auml;m&auml;r&auml;, 8. - 25.11.2021, at the University of Lapland in Rovaniemi, Finland. The work is available either at <a href="http://terhimarttila.com"><span class="s11">terhimarttila.com</span></a> as the interactive work itself or as a video documentation of one interaction. It can also be found at github.com/trhi. A post dissertation iteration, <b>with english subtitles</b> of <em>Transplanted</em> was published on nokturno.fi in March 2022 <a href="https://nokturno.fi/en/digital-histories-of-literature/">(volume 1-2022)</a>. Nokturno is a platform for digital and experimental poetry. Information about where to find the source code for <em>Transplanted</em> is available in appendix C. You can engage with the work (as on the 25th of January 2022 at the time of submission of this dissertation) below:</span></p>
@@ -1825,11 +1826,11 @@ alt="">
   <p class="p47"><span class="s1">This is a much broader and deeper issue in the cultural context of the technologies that enable voice interaction. Having employed these tools and technologies, I could not help but stumble upon debates related to audio data, surveillance and privacy. While the temptation is large to discuss these issues at length in this dissertation, they are nevertheless outside of the scope of my argument. However, in order to acknowledge the sidestep I took into these debates, I urge any reader interested in these issues to consult the text I&rsquo;ve included in Appendix D - <em>On voice interfaces</em>.</span></p>
   <p class="p48"><span class="s1">☉</span></p>
   <p class="p47"><span class="s1">The moral of the story is that we cannot work with voice input in digital art without being very aware of when a microphone is recording speech, and who it is that has access to this recording for purposes of transcribing it to text. John Cayley playfully addresses this in <em>The Listeners</em> (2015-), a poetic take on notions of listening, service and privacy in the context of smart home speakers. We are given instructions to say <q>continue</q> or <q>go on</q> to continue listening, or we can inform the Listeners of our feelings by saying &quot;I am feeling (one of the affects)</q>. Alexa&rsquo;s voice begins to speak, speaking in the characteristic polite tone (see figure 69 below, next page):</span></p>
-  <img id="figure69" style="max-width:500px" src="assets/img/figure-69-Cayley-2015-The-Listeners-EXCERPT-from-cream-city-review-01.png"
+  <img id="figure69" style="max-width:400px" src="assets/img/figure-69-Cayley-2015-The-Listeners-EXCERPT-from-cream-city-review-01.png"
   alt="">
   <p class="p52"><span class="s1">Figure 69: screenshot of transcript of <em>The Listeners&nbsp;</em>(Cayley 2016, 180)</span></p>
   <p class="p53"><span class="s1">As in figure 69 above, Alexa gets at times interrupted by snippets of a human voice in inferior sound quality, bringing to mind that a channel has been left open and we are hearing someone else conversations, or that someone has been trapped within the speaker and is appealing to us (see figure 70 below):</span></p>
-  <img id="figure70" style="max-width:500px" src="assets/img/figure-70-Cayley-2015-The-Listeners-EXCERPT-from-cream-city-review-03.png"
+  <img id="figure70" style="max-width:400px" src="assets/img/figure-70-Cayley-2015-The-Listeners-EXCERPT-from-cream-city-review-03.png"
   alt="">
   <p class="p52"><span class="s1">Figure 70: screenshot of transcript of <em>The Listeners&nbsp;</em>(Cayley 2016, 183)</span></p>
   <p class="p47"><span class="s1">The work also makes direct reference, <em>through the very voice of Alexa,</em> to the idea that <em><q>Alexa</q></em>, as a character, is simultaneously present in millions of homes the world over, listening to many people at the same time. <q>Alexa</q> is an entity that we may easily confound with a real person exactly because this <q>Alexa</q>; communicates with us using the semblance of a human voice. In a paper that discusses <em>The Listeners</em>, Marques da Silva observes that:</span></p>
@@ -1840,7 +1841,7 @@ alt="">
 </blockquote>
   <p class="p47"><span class="s1">Cayley makes an effort to trump this illusion of Alexa as a human being with whom we are having a private conversation. The voice we hear in <em>The Listeners</em> refers to themselves as <q>we</q>, underscoring the notion that this voice that speaks to us is in fact a web-based product or service (?) that at one instance in time is receiving audio input from millions of sources / users the world over. Through scripting Alexa to refer to itself as <q>we</q>, Cayley is purposefully calling attention to the misleading sense of privacy that people may have when interacting with Alexa. In a human-to-human conversation or dialogue, we adjust our sense of privacy and which information to divulge because we know that only two people are present. The product proposition of Alexa hijacks this built-in human gage of privacy through its use of seemingly one-on-one dialogue.</span></p>
   <p class="p47"><span class="s1">In another variation of the dialogue in The Listeners, Cayley scripts Alexa to speak like this (see figure 71 below):</span></p>
-  <img id="figure71" style="max-width:500px" src="assets/img/figure-71-Cayley-2015-The-Listeners-EXCERPT-from-cream-city-review-02.png"
+  <img id="figure71" style="max-width:400px" src="assets/img/figure-71-Cayley-2015-The-Listeners-EXCERPT-from-cream-city-review-02.png"
   alt="">
   <p class="p52"><span class="s1">Figure 71: screenshot of transcript of <em>The Listeners&nbsp;</em>(Cayley 2016, 183)</span></p>
   <p class="p47"><span class="s1">In the transcript above in figure 71, Cayley makes even more direct<span class="Apple-converted-space">&nbsp;&nbsp;</span>reference to the sneaky ways in which these handsfree digital voice assistants creep into our private spaces to gather data about our lives: <em>&quot;if you let us into your homes, and your hearts</q></em>, alluding to the treacherous notion that by conceding our personal data, products like Alexa will be able to <em>&quot;help you achieve your dreams, and passions</q></em>.</span></p>
@@ -2535,7 +2536,7 @@ alt="">
   <p class="p85"><span class="s1">Figure 79: screenshot of excerpt from Google cloud services pricing information, <a href="https://cloud.google.com/speech-to-text/pricing"><span class="s35">https://cloud.google.com/speech-to-text/pricing</span></a></span></p>
   <p class="p64"><span class="s1">If we play close attention to the choice of language,<em>&nbsp;data logging&nbsp;</em>is presented as a way to help improve Googles machine learning models, and moreover, is immediately framed as an option which will <em>benefit</em> customers through lower speech-to-text pricing. The pricing information reveals that there is a discount of $0.002 per 15 seconds of audio for standard models and of $0.004 per 15 seconds of audio for enhanced models of speech recognition in the case that the developer who uses the Google Cloud speech recognition service opts-<em>in</em> to have their audio recorded, saved and used by Google. In other words, commercial clients will pay 50% less to Google in exchange for yet again contributing towards fattening up Google&rsquo;s audio data sets.</span></p>
   <p class="p66"><span class="s1">This means that if I, as a user, speak to some third party voice recognition service which in the backend is implemented using Google Cloud speech recognition, I cannot know whether the developer who implemented the system opted in to data logging or not. Google has left this decision and responsibility with the developer, and there is currently no existing regulation that would demand developers and services to be upfront about how voice recordings are processed once they are sent to third party servers for recognition. The data logging policy reads like this (see figure 80 below):</span></p>
-  <img id="figure80" style="max-width:500px" src="assets/img/figure-80-Google Cloud data logging policy 01.png"
+  <img id="figure80" style="max-width:400px" src="assets/img/figure-80-Google Cloud data logging policy 01.png"
   alt="">
   <p class="p85"><span class="s1">Figure 80: excerpt 1, screenshot of Google Cloud Services data logging policy page</span></p>
   <p class="p64"><span class="s1">For those developers that do choose to pay slightly less in exchange for having google store and use their voice data, there is yet another catch. Google Cloud Services warns developers (see figure 81 below):</span></p>
@@ -2544,8 +2545,9 @@ alt="">
   <p class="p85"><span class="s1">Figure 81: excerpt 2, screenshot of Google Cloud Services data logging policy page</span></p>
   <p class="p64"><span class="s1">Now, I ask myself, wouldn&rsquo;t it be just as easy, technically, to implement a tick in the box or a button somewhere along the project deletion sequence where the developer could inform Google of their wish to delete all the logged audio data? Because having to go through the trouble of opening an external form on a webpage, manually inputting data like the Google Cloud Project ID, Google Cloud Project Number and email address seem to suggest a purposeful design decision in which data deletion from Google servers is made a lot more cumbersome in the hopes that thus, fewer developers will choose to, or remember to, delete their users&rsquo; voice data after they decide to close their voice enabled project.</span></p>
   <p class="p66"><span class="s1">When people engage with my works, they speak and that audio recording is sent to Google&rsquo;s servers for recognition through the Web Speech API. But are my users&rsquo; audio recordings saved on Google&rsquo;s servers? Or are they deleted? It still remains unclear to me what is Google&rsquo;s data policy with respect to requests to their server which are made through the Web Speech API. The Web Speech API accesses Google cloud services speech recognition. The only information I can find is one line of text in the data logging policy of Google Cloud services, and I cannot be sure that this policy also applies to requests sent through the Web Speech API (see figure 82 below):</span></p>
-  <img id="figure82" style="max-width:500px" src="assets/img/figure-82-Google Cloud data logging policy 03.png"
+  <img id="figure82" style="max-width:400px" src="assets/img/figure-82-Google Cloud data logging policy 03.png"
   alt="">
+
   <p class="p85"><span class="s1">Figure 82: excerpt 3, screenshot ofGoogle Cloud Services data logging policy page</span></p>
   <p class="p64"><span class="s1">Googles aggressive audio data collection policies throughout the last decade or so has given it an unprecedented advantage in developing its speech recognition. By my experiments, Google seems to currently have the best quality speech recognition available, and it can also provide speech recognition for the largest selection of languages spoken. A promising direction is offline recognition on Google own Pixel phones, meaning audio data is not sent to Googles servers for analysis.</span></p>
   <p class="p84"><span class="s1">☉</span></p>
@@ -2576,14 +2578,100 @@ alt="">
 
 
 
-<section id="appendix-e">
+<section style="max-width:100vw;" id="appendix-e">
   <p class="montserrat-section">Appendix E - Critical analysis of source code <button title="listen to appendix E - critical analysis of source code" class="seekInAudio" style="border:none;" onclick='setPositionInAudio("chapter9", 0);'> 🗣 </button></p>
 
   <p class="p64"><span class="s1">In this appendix, I have included some observations on portions of the source code of the three works for those who might be interested in insights related to my code. This appendix thus includes my own commentary or justifications for certain decisions. Transplanted is so simple in terms of the code that I do not have any comments to make about it.</span></p>
   <p class="montserrat-section">We cannot take them all</p>
   <p class="p66"><span class="s1">In the code snippet which I would like to highlight for <em>We cannot take them all</em>, I replace words in the original text by Joseph Carens. I could have executed this process in a nondescript way, but instead chose to use it as an additional opportunity to critique xenophobic reasoning. In order to substitute the words in Carens&rsquo; text with a random selection of concepts, I first composed two objects, ME and REFUGEE (represented as their own .js files). ME is defined by three properties: <em>isScaredOf</em>, <em>howISeeThem</em> and <em>whatIDefineAsMineAndNotTheirs</em>. REFUGEE is defined by only two properties: <em>problem</em> and <em>obstacle</em>. I then created a for loop that randomly selects an item from each of these five categories and replaces specific words in Carens&rsquo; original text. Below is the snippet of code which replaces the words. I will comment on it in the next paragraph.</span></p>
 
-  <p class="p88"><span class="s36"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;</span></span><span class="s37">for</span><span class="s1">&nbsp;(</span><span class="s37">var</span><span class="s1">&nbsp;i&nbsp;</span><span class="s37">=</span><span class="s1">&nbsp;</span><span class="s38">0</span><span class="s1">; i&nbsp;</span><span class="s37">&lt;</span><span class="s1">&nbsp;</span><span class="s38">CARENSGENERALISATION</span><span class="s1">.</span><span class="s39">length</span><span class="s1">; i</span><span class="s37">++</span><span class="s1">) {&nbsp;<br> <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>myOpinion[i]&nbsp;</span><span class="s37">=</span><span class="s1">&nbsp;</span><span class="s38">CARENSGENERALISATION</span><span class="s1">[i].</span><span class="s40">replace</span><span class="s1">(</span><span class="s41">&quot;Jewish refugees&quot;</span><span class="s1">,&nbsp;</span><span class="s41">&quot;them&quot;</span><span class="s1">);&nbsp;<br> <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>myOpinion[i]&nbsp;</span><span class="s37">=</span><span class="s1">&nbsp;myOpinion[i].</span><span class="s40">replace</span><span class="s1">(</span><span class="s41">/Jew/g</span><span class="s1">,&nbsp;</span><span class="s38">ME</span><span class="s1">.</span><span class="s39">howISeeThem</span><span class="s1">[themIndex]);&nbsp;<br> <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>myOpinion[i]&nbsp;</span><span class="s37">=</span><span class="s1">&nbsp;myOpinion[i].</span><span class="s40">replace</span><span class="s1">(</span><span class="s41">&quot;our border&quot;</span><span class="s1">,<span class="Apple-converted-space">&nbsp;&nbsp;</span><br> <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s38">ME</span><span class="s1">.</span><span class="s39">whatIDefineAsMineAndNotTheirs</span><span class="s1">[</span><span class="s42">Math</span><span class="s1">.</span><span class="s40">floor</span><span class="s1">(</span><span class="s42">Math</span><span class="s1">.</span><span class="s40">random</span><span class="s1">()<span class="Apple-converted-space">&nbsp;&nbsp;</span><br> <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s37">*</span><span class="s1">&nbsp;</span><span class="s38">ME</span><span class="s1">.</span><span class="s39">whatIDefineAsMineAndNotTheirs</span><span class="s1">.</span><span class="s39">length</span><span class="s1">)]);&nbsp;<br> <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>myOpinion[i]&nbsp;</span><span class="s37">=</span><span class="s1">&nbsp;myOpinion[i].</span><span class="s40">replace</span><span class="s1">(</span><span class="s41">&quot;Atlantic&quot;</span><span class="s1">,<span class="Apple-converted-space">&nbsp;&nbsp;</span><br> <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s38">REFUGEE</span><span class="s1">.</span><span class="s39">obstacle</span><span class="s1">[</span><span class="s42">Math</span><span class="s1">.</span><span class="s40">floor</span><span class="s1">(</span><span class="s42">Math</span><span class="s1">.</span><span class="s40">random</span><span class="s1">()&nbsp;</span><span class="s37">*</span><span class="s1">&nbsp;</span><span class="s38">REFUGEE</span><span class="s1">.</span><span class="s39">obstacle</span><span class="s1">.</span><span class="s39">length</span><span class="s1">)]);&nbsp;<br> <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>myOpinion[i]&nbsp;</span><span class="s37">=</span><span class="s1">&nbsp;myOpinion[i].</span><span class="s40">replace</span><span class="s1">(</span><span class="s41">&quot;communists&quot;</span><span class="s1">,<span class="Apple-converted-space">&nbsp;&nbsp;</span><br> <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s38">ME</span><span class="s1">.</span><span class="s39">isScaredOf</span><span class="s1">[</span><span class="s42">Math</span><span class="s1">.</span><span class="s40">floor</span><span class="s1">(</span><span class="s42">Math</span><span class="s1">.</span><span class="s40">random</span><span class="s1">()&nbsp;</span><span class="s37">*</span><span class="s1">&nbsp;</span><span class="s38">ME</span><span class="s1">.</span><span class="s39">isScaredOf</span><span class="s1">.</span><span class="s39">length</span><span class="s1">)]);&nbsp;<br> <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>myOpinion[i]&nbsp;</span><span class="s37">=</span><span class="s1">&nbsp;myOpinion[i].</span><span class="s40">replace</span><span class="s1">(</span><span class="s41">/the problems they have at home/g</span><span class="s1">,<span class="Apple-converted-space">&nbsp;&nbsp;</span><br> <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s38">REFUGEE</span><span class="s1">.</span><span class="s39">problem</span><span class="s1">[</span><span class="s42">Math</span><span class="s1">.</span><span class="s40">floor</span><span class="s1">(</span><span class="s42">Math</span><span class="s1">.</span><span class="s40">random</span><span class="s1">()&nbsp;</span><span class="s37">*</span><span class="s1">&nbsp;</span><span class="s38">REFUGEE</span><span class="s1">.</span><span class="s39">problem</span><span class="s1">.</span><span class="s39">length</span><span class="s1">)]);&nbsp;<br> <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</span><span class="s27"><em>//end of for</em></span></p>
+  <p class="p88"><span class="s36"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;</span></span>
+    <span class="s37">for</span><span class="s1">&nbsp;(</span><span class="s37">var</span>
+    <span class="s1">&nbsp;i&nbsp;</span><span class="s37">=</span>
+    <span class="s1">&nbsp;</span><span class="s38">0</span><span class="s1">; i&nbsp;</span>
+    <span class="s37">&lt;</span><span class="s1">&nbsp;</span>
+    <span class="s38">CARENSGENERALISATION</span><span class="s1">.</span>
+    <span class="s39">length</span><span class="s1">; i</span><span class="s37">++</span>
+    <span class="s1">) {&nbsp;<br>
+      <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>myOpinion[i]&nbsp;</span>
+      <span class="s37">=</span><span class="s1">&nbsp;</span><span class="s38">CARENSGENERALISATION</span>
+      <span class="s1">[i].</span><span class="s40">replace</span><span class="s1">(</span>
+      <span class="s41">&quot;Jewish refugees&quot;</span><span class="s1">,&nbsp;</span>
+      <span class="s41">&quot;them&quot;</span><span class="s1">);&nbsp;<br>
+        <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>myOpinion[i]&nbsp;</span>
+        <span class="s37">=</span><span class="s1">&nbsp;myOpinion[i].</span>
+        <span class="s40">replace</span><span class="s1">(</span><span class="s41">/Jew/g</span>
+        <span class="s1">,&nbsp;</span><span class="s38">ME</span><span class="s1">.</span>
+        <span class="s39">howISeeThem</span><span class="s1">[themIndex]);&nbsp;<br>
+          <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>myOpinion[i]&nbsp;</span>
+          <span class="s37">=</span><span class="s1">&nbsp;myOpinion[i].</span>
+          <span class="s40">replace</span><span class="s1">(</span>
+          <span class="s41">&quot;our border&quot;</span><span class="s1">,
+            <span class="Apple-converted-space">&nbsp;&nbsp;</span><br>
+            <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+            <span class="s38">ME</span><span class="s1">.</span>
+            <span class="s39">whatIDefineAsMineAndNotTheirs</span>
+            <span class="s1">[</span><span class="s42">Math</span>
+            <span class="s1">.</span><span class="s40">floor</span>
+            <span class="s1">(</span><span class="s42">Math</span>
+            <span class="s1">.</span><span class="s40">random</span>
+            <span class="s1">()<span class="Apple-converted-space">&nbsp;&nbsp;</span><br>
+            <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+          </span><span class="s37">*</span><span class="s1">&nbsp;</span>
+          <span class="s38">ME</span><span class="s1">.</span>
+          <span class="s39">whatIDefineAsMineAndNotTheirs</span>
+          <span class="s1">.</span><span class="s39">length</span>
+          <span class="s1">)]);&nbsp;<br>
+            <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>myOpinion[i]&nbsp;</span>
+            <span class="s37">=</span><span class="s1">&nbsp;myOpinion[i].</span>
+            <span class="s40">replace</span><span class="s1">(</span>
+            <span class="s41">&quot;Atlantic&quot;</span><span class="s1">,
+              <span class="Apple-converted-space">&nbsp;&nbsp;</span><br>
+              <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+              <span class="s38">REFUGEE</span><span class="s1">.</span>
+              <span class="s39">obstacle</span><span class="s1">[</span>
+              <span class="s42">Math</span><span class="s1">.</span>
+              <span class="s40">floor</span><span class="s1">(</span>
+              <span class="s42">Math</span><span class="s1">.</span>
+              <span class="s40">random</span><span class="s1">()&nbsp;</span>
+              <span class="s37">*</span><span class="s1">&nbsp;</span>
+              <span class="s38">REFUGEE</span><span class="s1">.</span>
+              <span class="s39">obstacle</span><span class="s1">.</span>
+              <span class="s39">length</span><span class="s1">)]);&nbsp;<br>
+                <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>myOpinion[i]&nbsp;</span>
+                <span class="s37">=</span><span class="s1">&nbsp;myOpinion[i].</span>
+                <span class="s40">replace</span><span class="s1">(</span>
+                <span class="s41">&quot;communists&quot;</span><span class="s1">,
+                  <span class="Apple-converted-space">&nbsp;&nbsp;</span><br>
+                  <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+                  <span class="s38">ME</span><span class="s1">.</span>
+                  <span class="s39">isScaredOf</span><span class="s1">[</span>
+                  <span class="s42">Math</span><span class="s1">.</span>
+                  <span class="s40">floor</span><span class="s1">(</span>
+                  <span class="s42">Math</span><span class="s1">.</span>
+                  <span class="s40">random</span><span class="s1">()&nbsp;</span>
+                  <span class="s37">*</span><span class="s1">&nbsp;</span>
+                  <span class="s38">ME</span><span class="s1">.</span>
+                  <span class="s39">isScaredOf</span><span class="s1">.</span>
+                  <span class="s39">length</span><span class="s1">)]);&nbsp;<br>
+                    <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>myOpinion[i]&nbsp;</span>
+                    <span class="s37">=</span><span class="s1">&nbsp;myOpinion[i].</span>
+                    <span class="s40">replace</span><span class="s1">(</span>
+                    <span class="s41">/the problems they have at home/g</span>
+                    <span class="s1">,<span class="Apple-converted-space">&nbsp;&nbsp;</span><br>
+                    <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+                    <span class="s38">REFUGEE</span><span class="s1">.</span>
+                    <span class="s39">problem</span><span class="s1">[</span>
+                    <span class="s42">Math</span><span class="s1">.</span>
+                    <span class="s40">floor</span><span class="s1">(</span>
+                    <span class="s42">Math</span><span class="s1">.</span>
+                    <span class="s40">random</span><span class="s1">()&nbsp;</span>
+                    <span class="s37">*</span><span class="s1">&nbsp;</span>
+                    <span class="s38">REFUGEE</span><span class="s1">.</span>
+                    <span class="s39">problem</span><span class="s1">.</span>
+                    <span class="s39">length</span><span class="s1">)]);&nbsp;<br>
+                      <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</span>
+                      <span class="s27"></span></p>
 
   <p class="p64"><span class="s1">As is apparent in the verbose approach to naming my variables, I want this code to be human readable and to also serve as further commentary on the concepts that are being replaced. And so the words &quot;our border</q></span><span class="s41">&nbsp;</span><span class="s1">is replaced by selecting a random item from an array which is called <em>ME.whatIDefineAsMineAndNotTheirs</em>. Here, stress in on the idea of <em>what I define as</em>, suggesting that the notion of some territory being more mine than that of others is subjective and arbitrary.</span><span class="s39"></span></p>
   <p class="p64"><span class="s1">The words <q>Jewish refugees</q> and <q>them</q> are replaced again by a random variable from an array which is called <em>ME.howISeeThem</em>, which is intended as a commentary on the fact that there is a tendency in expressions of xenophobia to lump all individual humans into a group or category which is then cited as the group which incites fear. In wording the variable name like this, I want to emphasise the role of the xenophobe in making this categorisation.</span></p>
@@ -2591,42 +2679,170 @@ alt="">
   <p class="montserrat-section">Speak out</p>
   <p class="p66"><span class="s1">The small circles floating around in <em>Speak out</em> represent beings, who are able to move and who are looking for something in their life. The large circles are unable to move and each represent something that one might be looking for in life or <q>aspects of life</q> as one of my interviewees described them. Small circles will attempt to go to these large circles if they notice that one has appeared on screen which represents the thing they are looking for. Although I have continually modified this list of <q>aspects of life</q> as my ideas about what concepts I want to include evolve, below is an array in which I keep a record of all the concepts that I have at some point used:</span></p>
 
-  <p class="p89"><span class="s43"><br></span><span class="s37">var</span><span class="s44">&nbsp;attractorQualities&nbsp;</span><span class="s37">=&nbsp;<br></span><span class="s44">[</span><span class="s1">&quot;a good thing&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;yourself&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;the impossible&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;myself&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;my true self&quot;</span><span class="s44">,&nbsp;<br></span><span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;<br></span><span class="s1">&quot;my retirement&quot;</span><span class="s44">,&nbsp;<br></span><span class="s1">&quot;opportunity&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;love&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;shelter&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;food&quot;</span><span class="s44">,&nbsp;<br></span><span class="s1">&quot;health&quot;</span><span class="s44">,&nbsp;<br></span><span class="s1">&quot;money&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;lots of money&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;some money&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a coin&quot;</span><span class="s44">,&nbsp;<br></span><span class="s1">&quot;a home&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a house&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a shelter&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a roof over my head&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a piece of land&quot;</span><span class="s44">,&nbsp;<br></span><span class="s1">&quot;a job&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a clothing store&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a park&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;study&quot;</span><span class="s44">,&nbsp;<br></span><span class="s1">&quot;dignity&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;freedom&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;to do what I love&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;to love what I do&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a place to breathe&quot;</span><span class="s44">,&nbsp;<br></span><span class="s1">&quot;a way out&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a solution&quot;</span><span class="s44">,&nbsp;<br></span><span class="s1">&quot;peace&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;some peace of mind&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;some time for myself&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;time&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;some time&quot;</span><span class="s44">,&nbsp;<br></span><span class="s1">&quot;exploration&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a mountain&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a better life&quot;</span><span class="s44">,&nbsp;<br></span><span class="s1">&quot;a flower shop&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a supermarket&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;ikea&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;coca cola dreams</q>,</span></p>
-  <p class="p90"><span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;food&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;love&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;more love&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;even more love&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;freedom&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a way out&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;time&quot;</span><span class="s44">,&nbsp;<br> <span class="Apple-converted-space">&nbsp;&nbsp;</span></span><span class="s1">&quot;a hug&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;sleep&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;some rest&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;deep sleep&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a glass of water&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a timeout&quot;</span><span class="s44">,&nbsp;<br> <span class="Apple-converted-space">&nbsp;&nbsp;</span></span><span class="s1">&quot;entertainment&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;peace of mind&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;warmth&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a success&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a coffee&quot;</span><span class="s44">,&nbsp;<br> <span class="Apple-converted-space">&nbsp;&nbsp;</span></span><span class="s1">&quot;a bite to eat&quot;</span><span class="s44">,&nbsp;</span><span class="s1">&quot;a painkiller&quot;</span><span class="s44">];</span></p>
+  <p class="p89"><span class="s43"><br></span><span class="s37">var</span>
+    <span class="s44">&nbsp;attractorQualities&nbsp;</span>
+    <span class="s37">=&nbsp;<br></span><span class="s44">[</span>
+    <span class="s1">&quot;a good thing&quot;</span>
+    <span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;yourself&quot;</span>
+    <span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;the impossible&quot;</span>
+    <span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;myself&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;my true self&quot;</span>
+    <span class="s44">,&nbsp;<br></span>
+    <span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;work&quot;</span>
+    <span class="s44">,&nbsp;</span><span class="s1">&quot;work&quot;</span>
+    <span class="s44">,&nbsp;</span><span class="s1">&quot;work&quot;</span>
+    <span class="s44">,&nbsp;<br></span><span class="s1">&quot;my retirement&quot;</span>
+    <span class="s44">,&nbsp;<br></span>
+    <span class="s1">&quot;opportunity&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;love&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;shelter&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;food&quot;</span><span class="s44">,&nbsp;<br></span>
+    <span class="s1">&quot;health&quot;</span><span class="s44">,&nbsp;<br></span>
+    <span class="s1">&quot;money&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;lots of money&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;some money&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a coin&quot;</span><span class="s44">,&nbsp;<br></span>
+    <span class="s1">&quot;a home&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a house&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a shelter&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a roof over my head&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a piece of land&quot;</span><span class="s44">,&nbsp;<br></span>
+    <span class="s1">&quot;a job&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a clothing store&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a park&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;study&quot;</span><span class="s44">,&nbsp;<br></span>
+    <span class="s1">&quot;dignity&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;freedom&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;to do what I love&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;to love what I do&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a place to breathe&quot;</span><span class="s44">,&nbsp;<br></span>
+    <span class="s1">&quot;a way out&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a solution&quot;</span><span class="s44">,&nbsp;<br></span>
+    <span class="s1">&quot;peace&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;some peace of mind&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;some time for myself&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;time&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;some time&quot;</span><span class="s44">,&nbsp;<br></span>
+    <span class="s1">&quot;exploration&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a mountain&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a better life&quot;</span><span class="s44">,&nbsp;<br></span>
+    <span class="s1">&quot;a flower shop&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a supermarket&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;ikea&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;coca cola dreams</q>,</span></p>
+  <p class="p90"><span class="s1">&quot;work&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;food&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;love&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;more love&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;even more love&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;freedom&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;a way out&quot;</span><span class="s44">,&nbsp;</span>
+    <span class="s1">&quot;time&quot;</span><span class="s44">,&nbsp;<br>
+      <span class="Apple-converted-space">&nbsp;&nbsp;</span></span>
+      <span class="s1">&quot;a hug&quot;</span><span class="s44">,&nbsp;</span>
+      <span class="s1">&quot;sleep&quot;</span><span class="s44">,&nbsp;</span>
+      <span class="s1">&quot;some rest&quot;</span><span class="s44">,&nbsp;</span>
+      <span class="s1">&quot;deep sleep&quot;</span><span class="s44">,&nbsp;</span>
+      <span class="s1">&quot;a glass of water&quot;</span><span class="s44">,&nbsp;</span>
+      <span class="s1">&quot;a timeout&quot;</span><span class="s44">,&nbsp;<br>
+        <span class="Apple-converted-space">&nbsp;&nbsp;</span></span>
+        <span class="s1">&quot;entertainment&quot;</span><span class="s44">,&nbsp;</span>
+        <span class="s1">&quot;peace of mind&quot;</span><span class="s44">,&nbsp;</span>
+        <span class="s1">&quot;warmth&quot;</span><span class="s44">,&nbsp;</span>
+<span class="s1">&quot;a success&quot;</span><span class="s44">,&nbsp;</span>
+<span class="s1">&quot;a coffee&quot;</span><span class="s44">,&nbsp;<br>
+  <span class="Apple-converted-space">&nbsp;&nbsp;</span></span>
+  <span class="s1">&quot;a bite to eat&quot;</span><span class="s44">,&nbsp;</span>
+  <span class="s1">&quot;a painkiller&quot;</span><span class="s44">];</span></p>
 
   <p class="p66"><span class="s1">What I think is curious is the function that governs the movement of the particles, a function called this.move() which is a function within the particle object. That is, particles themselves (the small circles) are responsible for making sure that they are in a zone where they are allowed to be. Below is the code and in the next paragraph, my comments:</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp;&nbsp;</span></span><span class="s45">this</span><span class="s1">.move&nbsp;</span><span class="s46">=</span><span class="s1">&nbsp;</span><span class="s45">function</span><span class="s1">() {</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></span><span class="s45">this</span><span class="s1">.currentCellID&nbsp;</span><span class="s46">=</span><span class="s1">&nbsp;voronoiGetSite(</span><span class="s45">this</span><span class="s1">.positionVector.x, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span class="s45">this</span><span class="s1">.positionVector.y);</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></span><span class="s45">if</span><span class="s1">(</span><span class="s45">this</span><span class="s1">.amIAllowedToBeHere()){</span></p>
-  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s1">//if yes:</span></p>
-  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s1">//then ask: should I go towards an attractor?</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s45">if</span><span class="s1">(</span><span class="s45">this</span><span class="s1">.doIFeelThePullOfAnAttractor()){</span></p>
-  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s1">//if yes:</span></p>
-  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s1">//then go towards the attractor,</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s45">this</span><span class="s1">.goTowardsAttractor();</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp;&nbsp;</span></span>
+    <span class="s45">this</span><span class="s1">.move&nbsp;</span><span class="s46">=</span>
+<span class="s1">&nbsp;</span><span class="s45">function</span><span class="s1">() {</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s45">this</span><span class="s1">.currentCellID&nbsp;</span><span class="s46">=</span>
+    <span class="s1">&nbsp;voronoiGetSite(</span><span class="s45">this</span>
+    <span class="s1">.positionVector.x, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
+    <span class="s45">this</span><span class="s1">.positionVector.y);</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s45">if</span><span class="s1">(</span><span class="s45">this</span>
+    <span class="s1">.amIAllowedToBeHere()){</span></p>
+  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s1">//if yes:</span></p>
+  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s1">//then ask: should I go towards an attractor?</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s45">if</span><span class="s1">(</span><span class="s45">this</span>
+    <span class="s1">.doIFeelThePullOfAnAttractor()){</span></p>
+  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s1">//if yes:</span></p>
+  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s1">//then go towards the attractor,</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s45">this</span><span class="s1">.goTowardsAttractor();</span></p>
   <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span>}&nbsp;</span><span class="s45">else</span><span class="s1">&nbsp;{</span></p>
-  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s1">//if no, I am not allowed to be here</span></p>
-  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s1">//then, go towards the closest site that you are allowed to be at,</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s45">this</span><span class="s1">.goTowardsClosestAllowedZone();&nbsp;</span><span class="s47">//take sites of all allowed</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span>}&nbsp;</span>
+    <span class="s45">else</span><span class="s1">&nbsp;{</span></p>
+  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s1">//if no, I am not allowed to be here</span></p>
+  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s1">//then, go towards the closest site that you are allowed to be at,</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s45">this</span><span class="s1">.goTowardsClosestAllowedZone();&nbsp;</span><span class="s47">//take sites of all allowed</span></p>
   <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span>}</span></p>
-  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></span><span class="s45">this</span><span class="s27">.moveRandomly();&nbsp;</span><span class="s1">// and always, move randomly.</span></p>
-  <p class="p93"><span class="s27"><span class="Apple-converted-space">&nbsp;&nbsp;</span>}</span><span class="s1">//close this.move</span></p>
+  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s45">this</span><span class="s27">.moveRandomly();&nbsp;</span>
+    <span class="s1">// and always, move randomly.</span></p>
+  <p class="p93"><span class="s27"><span class="Apple-converted-space">&nbsp;&nbsp;</span>}</span>
+    <span class="s1">//close this.move</span></p>
   <p class="p64"><span class="s1">First this (the particle itself) checks <em>amIAllowedToBeHere()</em>, if they are, then the next question is whether there is currently a large circle somewhere on the screen that is attractive to them. This check is done by asking <em>doIFeelThePullOfAnAttractor()</em> which searches the array of attractors to see if there are any currently on the screen which match the <q>aspect of life</q> that the particle is looking for. If yes, then the particle is instructed to <em>goTowardsAttractor()</em>. If the particle is not allowed to be where they are, then they are instructed to<span class="Apple-converted-space">&nbsp;&nbsp;</span><em>goTowardsClosestAllowedZone()</em>.</span></p>
   <p class="p64"><span class="s1">Whether their movement decision leads to them going towards an attractor or back into a zone they are allowed to be in, they will always finish their movement routine with <em>moveRandomly()</em>. This <em>moveRandomly()&nbsp;</em>function is based on perlin noise for all particles, which makes all the particles move in a similar kind of random way. In future iterations it might be interesting to give various options for types of movement for the different particles. Through different types of movement it would be possible to suggest some form of personality, possibly making the activity of the floating dots as a whole look more interesting. The perlin noise makes the small circles look like they are <em>floating</em> to the detriment of giving them anthropomorphic characteristics.</span></p>
   <p class="p84"><span class="s1">☉</span></p>
   <p class="p64"><span class="s1">Before deciding on fully making the management of their movement a particles&rsquo; own responsibility (both away from not allowed zones but also towards attractors), I contemplated splitting responsibility in two: particles would only check whether they are in a zone they are allowed to be in and if not, move towards an allowed zone. In this scenario, attractors, like their name suggests, would have been responsible for <em>pulling</em> particles that matched their <q>aspect of life</q> towards them, with particles not even being aware that there was an attractor matched to them. However, if felt more relevant to structure the code to reflect the agency that we human beings have in selecting and then seeking out, through movement, the aspects of life that we want or need to go towards.</span></p>
   <p class="p84"><span class="s1">☉</span></p>
   <p class="p66"><span class="s1">At each frame refresh, each particle asks themselves <em>amIAllowedToBeHere()</em>, checking its current position against its wallet of passports or against the current border rules in place:</span></p>
-  <p class="p91"><span class="s45">this</span><span class="s1">.amIAllowedToBeHere&nbsp;</span><span class="s46">=</span><span class="s1">&nbsp;</span><span class="s45">function</span><span class="s1">(){</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></span><span class="s45">if</span><span class="s1">(</span><span class="s45">this</span><span class="s1">.positionVector.x&nbsp;</span><span class="s46">&lt;=</span><span class="s1">&nbsp;</span><span class="s48">0</span><span class="s1">&nbsp;</span><span class="s46">||</span><span class="s1">&nbsp;</span><span class="s45">this</span><span class="s1">.positionVector.y&nbsp;</span><span class="s46">&lt;=</span><span class="s1">&nbsp;</span><span class="s48">0</span><span class="s1">){</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s45">this</span><span class="s1">.goTowardsClosestAllowedZone;</span></p>
+  <p class="p91"><span class="s45">this</span><span class="s1">.amIAllowedToBeHere&nbsp;</span>
+    <span class="s46">=</span><span class="s1">&nbsp;</span><span class="s45">function</span>
+    <span class="s1">(){</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s45">if</span><span class="s1">(</span><span class="s45">this</span>
+    <span class="s1">.positionVector.x&nbsp;</span><span class="s46">&lt;=</span>
+    <span class="s1">&nbsp;</span><span class="s48">0</span><span class="s1">&nbsp;</span>
+    <span class="s46">||</span><span class="s1">&nbsp;</span><span class="s45">this</span>
+    <span class="s1">.positionVector.y&nbsp;</span><span class="s46">&lt;=</span>
+    <span class="s1">&nbsp;</span><span class="s48">0</span><span class="s1">){</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s45">this</span><span class="s1">.goTowardsClosestAllowedZone;</span></p>
   <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span>}</span></p>
-  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></span><span class="s1">// check allowed zones depending on passportMode:</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></span><span class="s45">for</span><span class="s1">(</span><span class="s45">var</span><span class="s1">&nbsp;i</span><span class="s46">=</span><span class="s48">0</span><span class="s1">; i</span><span class="s46">&lt;</span><span class="s45">this</span><span class="s1">.passports[passportMode].length; i</span><span class="s46">++</span><span class="s1">){</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s45">if</span><span class="s1">(</span><span class="s45">this</span><span class="s1">.currentCellID&nbsp;</span><span class="s46">==</span><span class="s1">&nbsp;</span><span class="s45">this</span><span class="s1">.passports[passportMode][i]){</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s45">this</span><span class="s1">.gravityOfHome&nbsp;</span><span class="s46">=</span><span class="s1">&nbsp;</span><span class="s45">this</span><span class="s1">.originalGravityOfHome;</span></p>
-  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span><span class="s45">return</span><span class="s1">&nbsp;</span><span class="s45">true</span><span class="s1">;</span></p>
+  <p class="p92"><span class="s27"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s1">// check allowed zones depending on passportMode:</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s45">for</span><span class="s1">(</span><span class="s45">var</span>
+    <span class="s1">&nbsp;i</span><span class="s46">=</span><span class="s48">0</span>
+    <span class="s1">; i</span><span class="s46">&lt;</span><span class="s45">this</span>
+    <span class="s1">.passports[passportMode].length; i</span><span class="s46">++</span>
+    <span class="s1">){</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s45">if</span><span class="s1">(</span><span class="s45">this</span>
+    <span class="s1">.currentCellID&nbsp;</span><span class="s46">==</span><span class="s1">&nbsp;</span>
+    <span class="s45">this</span><span class="s1">.passports[passportMode][i]){</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s45">this</span><span class="s1">.gravityOfHome&nbsp;</span>
+    <span class="s46">=</span><span class="s1">&nbsp;</span>
+    <span class="s45">this</span><span class="s1">.originalGravityOfHome;</span></p>
+  <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span>
+    <span class="s45">return</span><span class="s1">&nbsp;</span>
+    <span class="s45">true</span><span class="s1">;</span></p>
   <p class="p91"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</span></p>
   <p class="p94"><span class="s1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span>}</span></p>
   <p class="p66"><span class="s1">I am somewhat burdened by this approach to the code, because unlike the previous example, it does not accurately reflect a human beings relationship to places where one is not allowed to be and towards a border in particular. In fact, it would be more accurate to model the force acting on the particles as one exerted by the border. That is: <em>the border&nbsp;</em>would ask, at each encounter with a particle: <em>isThisParticleAllowedToCross()</em>. If yes, the border would let the particle pass, if the answer was no, it would not let the particle pass. This would be a more accurate procedural representation of the relationship between particles and borders.</span></p>

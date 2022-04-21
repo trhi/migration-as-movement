@@ -1,5 +1,10 @@
 @import 'migration-as-movement.css';
 
+html body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 #thesis-text{
   width: 80vw;
   max-width: 700px;
@@ -9,7 +14,7 @@
 }
 
 img{
-  width: 700px;
+  width: 100%;
 }
 
 .hidden{
@@ -50,13 +55,15 @@ section{
 
 iframe{
   border:0;
-  width: 700px;
+  width: 100%;
+  max-width: 100vw;
   margin-top: 0.5cm;
   margin-bottom: 0.5cm;
 }
 
 .iframe-wide{
   width: 100vw;
+  max-width: 100vw;
   position: relative;
   left: calc(-50vw + 50%);
   margin-right: 50px;
@@ -190,8 +197,25 @@ margin-block-end: 0.5em;
 }
  */
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+/* On smaller screens, where width is less than 700px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 700px) {
+  #div-contents{
+    margin-left: 0px !important;
+  }
+  #mm-title-img{
+    margin-left:0px;
+    margin-right:0px;
+    width:100vw;
+  }
+  #thesis-text{
+    width: 95vw;
+    margin-left: 10px !important;
+    margin-right: 5px !important;
+    line-height: 180%;
+  }
+  img{
+    max-width: 100vw;
+  }
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
