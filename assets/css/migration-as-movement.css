@@ -1,21 +1,68 @@
 @font-face {
 	font-family: 'Lora';
 	src: url('../font/Lora-VF.woff2') format('woff2-variations'),
-  src: url('../font/Lora-Regular.woff2') format('woff2'),
-	src: url('../font/lora-v23-latin-regular.woff') format('woff'),
-	src: url('../font/lora-v23-latin-regular.ttf') format('truetype');
-  font-weight: 400;
+	url('../font/Lora-Regular.woff2') format('woff2'),
+	url('../font/lora-v23-latin-regular.woff') format('woff'),
+	url('../font/lora-v23-latin-regular.ttf') format('truetype');
+  font-weight: 500;
 	line-height: 180%;
 }
+/*
+
+@font-face {
+	font-family: 'Lora';
+	src:
+url('../font/Lora-VF.woff2') format('woff2-variations'),
+	url('../font/Lora-Regular.woff2') format('woff2'),
+	url('../font/lora-v23-latin-regular.woff') format('woff'),
+	url('../font/lora-v23-latin-regular.ttf') format('truetype');
+	font-weight: 400;
+	line-height: 180%;
+}
+/*
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('../font/Montserrat-VF.woff2') format('woff2-variations'),
-  src: url('../font/Montserrat-Regular.woff2') format('woff2'),
-	src: url('../font/Montserrat-Regular.woff') format('woff'),
-	src: url('../font/Montserrat-Regular.ttf') format('truetype');
+	src:
+	/*
+	url('../font/Montserrat-VF.woff2') format('woff2-variations'),
+
+  	url('../font/Montserrat-Regular.woff2') format('woff2'),
+
+		url('../font/Montserrat-Regular.woff') format('woff'),
+		url('../font/Montserrat-Regular.ttf') format('truetype');
   font-weight: 400;
 }
+*/
+
+@font-face {
+font-family: 'Montserrat';
+src:
+url('../font/Montserrat-Regular.woff2') format('woff2'),
+url('../font/Montserrat-Regular.woff') format('woff'),
+url('../font/Montserrat-Regular.ttf') format('truetype');
+font-weight: 100;
+}
+
+/*
+
+@font-face {
+font-family: 'Montserrat';
+src: url('../font/Montserrat-VF.woff2') format('woff2-variations'),
+url('../font/Montserrat-Regular.woff2') format('woff2'),
+url('../font/Montserrat-Regular.woff') format('woff'),
+url('../font/Montserrat-Regular.ttf') format('truetype');
+font-weight: 100;
+}
+
+*/
+
+/*
+src: url('../font/Montserrat-VF.woff2') format('woff2-variations'),
+src: url('../font/Montserrat-Regular.woff2') format('woff2'),
+src: url('../font/Montserrat-Regular.woff') format('woff'),
+src: url('../font/Montserrat-Regular.ttf') format('truetype');
+*/
 
 @font-face {
   font-family: "Poppins";
