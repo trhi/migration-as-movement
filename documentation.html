@@ -4,17 +4,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="assets/css/migration-as-movement.css">
+  <link rel="stylesheet" href="assets/css/dissertation.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 <body>
   <a href="index.html" style="left:45px;"  class="ahref-button"> &nbsp ↞ back &nbsp </a>
   <p style="margin-top:0cm; margin-bottom:2cm; text-indent: 50px; font-family:Montserrat;   font-variant-caps:
-  small-caps; font-size:40px; text-align:center">Documentation of the works</p>
+  small-caps; font-size:40px; text-align:center">The works</p>
 
   <div id="videodocumentation">
 
       <p style="margin-top:1cm; margin-bottom:1cm; text-indent: 50px;
       font-family:Montserrat; font-variant-caps:
       small-caps; font-size:26px; text-align:center">We cannot take them all (2019)</p>
+
+      <button id="iframe-20" class="iframe-load-button">Click here to explore <em>We cannot take them all</em> below ↡</button>
+      <script>
+        $("#iframe-20").click(function(){
+        var iframe = $("#if20");
+        iframe.attr("src", iframe.data("src"));
+        });
+      </script>
+
+    <iframe id="if20" style="" max-width="400" height="600" src="about:blank" data-src="assets/drafts/we-cannot-take-them-all/draft20220125"></iframe>
+
+
     <!--  <video class="videodocumentation" src="https://github.com/trhi/migration-as-movement/blob/main/assets/video/Marttila-2019-we-cannot-take-them-all.mov?raw=true" controls width="500" controlsList="nodownload">
       </video>-->
       <iframe width="560" height="315" src="https://www.youtube.com/embed/iL4V4eEyHBY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
