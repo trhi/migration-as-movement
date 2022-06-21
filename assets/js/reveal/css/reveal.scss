@@ -14,6 +14,10 @@
  * GLOBAL STYLES
  *********************************************/
 
+.white-background{
+	background-color: white;
+}
+
 html.reveal-full-page {
 	width: 100%;
 	height: 100%;
@@ -1824,4 +1828,3 @@ $notesWidthPercent: 25%;
 
 @import 'print/pdf.scss';
 @import 'print/paper.scss';
-
