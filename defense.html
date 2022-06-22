@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="assets/js/reveal/dist/reset.css">
 		<link rel="stylesheet" href="assets/js/reveal/dist/reveal.css">
 		<link rel="stylesheet" href="assets/js/reveal/dist/theme/simple.css">
+		<link rel="stylesheet" href="assets/css/defense.css">
+
+		<script language="javascript" type="text/javascript" src="assets/js/p5.min.js"></script>
+		<script language="javascript" type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+
 
 		<!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="assets/js/reveal/plugin/highlight/monokai.css">
@@ -25,21 +30,459 @@
 	</head>
 
 	<body>
+
 		<div class="reveal">
 			<div class="slides">
 
-        <section>
-        <h1>Migration as movement</h1>
-        <h3 class="fragment">repurposing the voice/interface </h3>
-        <h3 class="fragment">to explore aspects of </h3>
-        <h3 class="fragment">human migratory movement</h3>
-        <p class="fragment">
-          <small>Dissertation defense XX.XX.2022<a href="http://www.terhimarttila.com"> Terhi Marttila</a></small>
-        </p></section>
+<!-- slides illustrate the things you speak about using circle/movement/animations -->
+
+<!-- 0: title slide-->
+        <section data-background-iframe="assets/drafts/circles"><!--data-background-interactive-->
+        <h2><span style="background-color: white">Migration as movement</span></h2>
+        <p><span style="background-color: white">- repurposing the voice/interface </span>
+        <span style="background-color: white">to explore aspects of </span>
+        <span style="background-color: white">human migratory movement </span></p>
+        <p>
+          <small style="background-color: white">Dissertation defense 27.6.2022<a href="http://www.terhimarttila.com"> Terhi Marttila</a></small>
+        </p>
+				<!-- you can either interact with the data background iframe or with an element/button in the section.. -->
+				<div style="position: absolute; top: 400px; right:0px;">
+					<audio class="fragment" controls src="assets/audio/marttila-2022-defense-title-slide.mp3"></audio>
+				</div>
+<!--				<div style="position:absolute; width: 200px; height: 100px; background-color:white; top:600px; right:-200px;"></div>-->
+			</section>
+
+<!-- 1: story about a park bench (with circles, one moving everywhere, one only moving in left half of screen)
+TO DO: data-background circles but animation of one circle moving everywhere and the other getting stuck on left half-->
+        <section data-background-iframe="assets/drafts/circles"><!--data-background-interactive-->
+					<h2><span style="background-color: white">Motivation</span></h2>
+
+				<div style="position: absolute; top: 400px; right:0px;">
+					<audio class="fragment" controls src="assets/audio/marttila-2022-intro-motivation-prequel-to-park-bench.mp3"></audio>
+				</div>
+<!--				<div style="position:absolute; width: 200px; height: 100px; background-color:white; top:600px; right:-200px;"></div>-->
+			</section>
+
+<!-- 1: poem about a park bench -->
+				<section data-background-size="contain" data-background-image="assets/img/figure-1000-Marttila-2022-park-bench-10-11-2016.png">
+
+					<div style="position: absolute; top: 400px; right:0px;"><audio class="fragment" controls src="assets/audio/marttila-2016-we-sat-on-a-park-bench.mp3"></audio></div>
+			<!--<img style="height: 500px;" src="assets/img/figure-000-Marttila-2022-park-bench-10-11-2016.png"></img>-->
+		</section>
+
+<!-- 2: so what is going on in that situation? -->
+		<section>
+		<p><span id="#context"> ? </span></p>
+		<p style="cursor:pointer" style="font-size: 200px;background-color: white"><span><button title="click" style="font-size: 30px; cursor:pointer; background:none; border:none;" onclick='contextualise("#context", ["?", "privilege", "class", "race", "migration laws", "==", "privilege", "==", "class", "==", "race", "==", "migration laws", "==", "motivation for this research ☉"])'>  ☉  &nbsp</button></span></p>
+		<div style="position: absolute; top: 400px; right:0px;">
+			<audio class="fragment" controls src="assets/audio/marttila-2022-intro-motivation-park-bench-analysis.mp3"></audio>
+		</div>
+	</section>
+
+<!-- Carens quote that inspired my thinking in general: migration laws as protecting birthright privilege-->
+<!-- of course we can argue that nations have a right to formulate this type of laws -->
+<!-- however, we need to acknowledge that they contribute to inequality -->
+
+<!-- 3: Carens quote 1: -->
+<section>
+	<p>"In many ways, </span><span class="fragment">
+		citizenship in Western democracies </span><span class="fragment">is the modern equivalent </span>
+		<span class="fragment">of feudal class privilege — </span> <span class="fragment">
+			an inherited status that greatly enhances one’s life chances" </span>
+			<span class="fragment"> (Carens 2015, 226). </span></p>
+</section>
+
+<!-- 3: Carens quote 2: -->
+<section>
+	<p class="fragment"><span class="fragment">"you have to be able to move, </span><span class="fragment">
+		to where the opportunities are </span><span class="fragment">in order to take
+		advantage of them. </span>
+		<span class="fragment">So, freedom of movement </span><span class="fragment">
+			is an essential prerequisite </span><span class="fragment">for equality of opportunity"</span>
+			<span class="fragment"> (Carens 2015, 228). </span></p>
+</section>
+
+<section>
+	<p><span id="#objective"> ? </span></p>
+<p style="cursor:pointer" style="font-size: 200px;background-color: white"><span><button title="click" style="font-size: 30px; cursor:pointer; background:none; border:none;" onclick='contextualise("#objective", ["objective", "==", "explore", "the phenomenon", "of", "human", "migratory", "movement", "through", "artistic research", "and", "voice/interaction"])'>  ☉  &nbsp</button></span></p>
+</section>
+
+
+<!-- X: Initial research question: -->
+<section>
+				<p>
+				<span class="fragment">Original research question: </span>
+				<span class="fragment">"In primarily voice-based digital art, </span>
+				<span class="fragment">what are the main design considerations  </span>
+				<span class="fragment">that lead to a playful and engaging experience  </span>
+				<span class="fragment">which simultaneously raises awareness  </span>
+				<span class="fragment">about the issues inherent in the work" </span>
+</section>
+
+<!--
+In primarily voice-based digital art,
+what are the main design considerations
+that lead to a playful and engaging experience
+which simultaneously raises awareness
+about the issues inherent in the work
+-->
+
+<!-- X: Final research questions: -->
+<section>
+				<p>
+				<span class="fragment">Research questions evolved into: </span>
+				<span class="fragment">“What are some of the worlds of meanings </span>
+				<span class="fragment">contained within voice, language, and voice interaction </span>
+				<span class="fragment">with computers </span>
+				<span class="fragment">that I as an artist can leverage </span>
+				<span class="fragment">to talk about the topic of migration?” </span></p>
+				<p>
+					<span class="fragment">And:</span>
+					<span class="fragment">“What are some of the transdisciplinary perspectives </span>
+					<span class="fragment">on human migratory movement </span>
+					<span class="fragment">that could truly enable us </span>
+					<span class="fragment">as artists and thinkers </span>
+					<span class="fragment">to depoliticise and to reconceptualise </span>
+					<span class="fragment">migration as <b>movement</b>?“ </span>
+</section>
+
+<!--
+“What are some of the worlds of meanings
+contained within voice, language, and voice interaction
+with computers
+that I as an artist can leverage
+to talk about the topic of migration?”
+“What are some of the transdisciplinary perpectives
+on human migratory movement
+that could truly enable us
+as artists and thinkers
+to depoliticise and to reconceptualise
+migration as movement?“
+-->
+
+<!-- X: pause -->
+<section>
+<h3> ☉ </h3>
+</section>
+
+<section data-background-size="contain" data-background-image="assets/img/marttila-2022-frontpoem.png">
+	<div style="position: absolute; top: 300px; right:0px;">
+		<audio class="fragment" controls src="assets/audio/marttila-2022-frontpoem.mp3"></audio>
+	</div>
+</section>
+
+<!-- X: End intro: motivation, context, research questions, methodology -->
+<section>
+<h3> ☉ </h3>
+</section>
+
+
+
+	<section>
+	<h2><span style="background-color: white">We cannot take them all</span></h2>
+</section>
+
+<!-- X: Carens (2015) Ethics of Immigration -->
+		<section>
+		<img src="assets/img/figure-1001-carens-2015-ethics-of-immigration.jpg"></img>
+		</section>
+
+<!-- X: Carens email -->
+		<section>
+			<img src="assets/img/figure-9-Marttila-2019-we-cannot-take-them-all-CARENS-email.png"></img>
+		</section>
+
+		<!-- X: listen -->
+		<section>
+		<h3> ? </h3>
+		</section>
+
+<!-- X: Carens reasons -->
+		<section>
+			<img height="500" src="assets/img/figure-1002-carens-2015-imaginary-reasons.png"></img>
+		</section>
+
+		<!-- X: pause -->
+		<section>
+		<h3> ☉ </h3>
+		</section>
+
+<!-- X: Xenophobia -->
+<section>
+			<p>
+				<span class="fragment">Xenophobia “is an ideology: </span>
+				<span class="fragment">a set of beliefs and ideas </span>
+				<span class="fragment">based on the premise </span>
+				<span class="fragment">that foreigners are threats </span>
+				<span class="fragment">to the nation and its people. </span>
+				<span class="fragment">It promotes an irrational fear </span>
+				<span class="fragment">and hatred </span>
+				<span class="fragment">of immigrants and demonizes foreigners </span>
+				<span class="fragment">(and, crucially, people considered to be “foreign”). </span>
+				<span class="fragment">It defines immigration as a crisis, </span>
+				<span class="fragment">likening the movement of peoples </span>
+				<span class="fragment">to an invasion </span>
+			  <span class="fragment">of hostile forces </span>
+				<span class="fragment">requiring a military-like response.</span>
+					<span class="fragment"> (Lee 2019, 24) </span></p>
+</section>
+
+
+
+<!-- X: Always same reasons, only language changing: -->
+	<section data-background-opacity="0.1" data-background-size="contain" data-background-image="assets/img/figure-1002-carens-2015-imaginary-reasons.png">
+			<p>
+				<span class="fragment">🇩🇯 </span>
+				<span class="fragment">🗣️ </span>
+				<span class="fragment">🇱🇦 </span>
+				<span class="fragment">🗣️ </span>
+				<span class="fragment">🇬🇦 </span>
+				<span class="fragment">🗣️ </span>
+				<span class="fragment">🇰🇿 </span>
+				<span class="fragment">🗣️ </span>
+				<span class="fragment">🇰🇵 </span>
+				<span class="fragment">🗣️ </span>
+				<span class="fragment">🇽🇰 </span>
+				<span class="fragment">🗣️ </span>
+			  <span class="fragment">🇲🇱 </span>
+				<span class="fragment">🗣️</span>
+					<span class="fragment"></span></p>
+</section>
+
+<!-- X: We cannot take them all video -->
+<section>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iL4V4eEyHBY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+
+<!-- X: We cannot take them all exhibition-->
+<section>
+<p>Exhibited at Art of Research in Helsinki, Finland - 12/2020</p>
+<p>(Was accepted for presentation in Bergen, Norway - 11/2019, participation cancelled)</p>
+</section>
+
+<!-- X: End we cannot take them all -->
+<section>
+<h3> ☉ </h3>
+</section>
+
+
+
+<!-- *************************** SPEAK OUT ********************************* -->
+<section>
+<h2><span style="background-color: white">Speak out</span></h2>
+</section>
+
+<!-- X: - migration as osmosis: people move over border to balance opportunity:people -->
+<section>
+	<img src="assets/img/figure-28-Osmosis.gif"></img>
+</section>
+
+<!-- The role of desires and needs with movement -->
+<section>
+	<br><br><br><br>
+	<p>(Marttila 2022, 119 - 120)</p>
+	<div style="position: absolute; top: 400px; right:0px;"><audio class="fragment" controls src="assets/audio/marttila-2022-speak-out-desire-and-movement.mp3"></audio></div>
+	<!--<audio src="assets/audio/"></audio>-->
+<!--<img style="height: 500px;" src="assets/img/figure-000-Marttila-2022-park-bench-10-11-2016.png"></img>-->
+</section>
+
+<!-- Live demo of Speak out -->
+<section data-background-iframe="https://terhimarttila.com/speak-out"><!--data-background-interactive-->
+</section>
+
+<!-- Link to Speak out -->
+<section>
+<a target="_blank" href="https://terhimarttila.com/speak-out">☉</a>
+</section>
+
+<!-- brief narrated snap demo of Speak out: it can be the latest version! -->
+<section>
+<iframe width="700" height="500" src="https://www.youtube.com/embed/4yiguCAoX_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+
+<!-- X: Speak out exhibition-->
+<section>
+<p>Published on <a href="raum.pt">raum.pt</a> - 12/2020 [ with Patrícia Gouveia (curator) and João Sousa (graphic design) ]</p>
+<p>Lightning talk at <a href="https://dac.siggraph.org/sparks-mar2022/">SPARKS Artists' games (ACMSIGGRAPH Digital Arts Committee)</a> - 3/2022 </p>
+<p>Exhibited at ELO2022 in Como, Italy - 05/2022</p>
+<p>To be published on <a target="_blank" href="https://www.nokturno.fi">nokturno.fi</a> - late 2022</p>
+</section>
+
+<!-- X: End Speak out -->
+<section>
+<h3> ☉ </h3>
+</section>
+
+
+
+<!-- *************************** TRANSPLANTED ****************************** -->
+<section>
+<h2><span style="background-color: white">Transplanted</span></h2>
+<div style="position: absolute; top: 400px; right:0px;"><audio class="fragment" controls src="assets/audio/marttila-2022-transplanted-01.mp3"></audio></div>
+</section>
+
+<!-- X: Flusser about expellees -->
+	<section>
+			<p>
+				<span class="fragment">"Expellees are uprooted people </span>
+				<span class="fragment">who try to uproot everything around them </span>
+				<span class="fragment">so that they may strike roots. </span>
+				<span class="fragment">And they do this spontaneously,  </span>
+				<span class="fragment">simply because they were expelled.  </span>
+				<span class="fragment">This is the same process that occurs with vegetables, </span>
+				<span class="fragment">which one may observe when one replants a tree. </span>
+				<span class="fragment">Occasionally the expellee will become conscious </span>
+				<span class="fragment">of the vegetable/vegetative aspect of his exile. </span>
+				<span class="fragment">He may discover that a human being is not a tree.  </span>
+				<span class="fragment">And that human dignity may consists precisely in not having roots. </span>
+				<span class="fragment">That the human being becomes human </span>
+			  <span class="fragment">only when he hacks off </span>
+				<span class="fragment">the vegetable roots that tie him down."</span>
+					<span class="fragment">(Flusser 2003/1984-85, 84 — 85)</span></p>
+					<div style="position: absolute; top: 400px; right:0px;"><audio class="fragment" controls src="assets/audio/marttila-2022-transplanted-02-commentary-on-Flusser.mp3"></audio></div>
+</section>
+
+<!--
+“Expellees54 are uprooted people
+who try to uproot everything around them
+so that they may strike roots.
+And they do this spontaneously,
+simply because they were expelled.
+This is the same process that occurs with vegetables,
+which one may observe when one replants a tree.
+Occasionally the expellee will become conscious
+of the vegetable/vegetative aspect of his exile.
+He may discover that a human being is not a tree.
+And that human dignity may consists precisely in not having roots.
+That the human being becomes human
+only when he hacks off
+the vegetable roots that tie him down. “ (Flusser 2003/1984-85, 84 — 85)
+-->
+
+<section>
+	<img style="opacity:1" src="assets/img/h-ear-t.png"></img>
+<div style="position: absolute; top: 400px; right:0px;"><audio class="fragment" controls src="assets/audio/marttila-2022-transplanted-03-explaining-transplanted.mp3"></audio></div>
+</section>
+
+<section>
+	<iframe width="800" height="500" data-src="https://terhimarttila.com/transplanted" allow="microphone"></iframe>
+</section>
+
+<!-- Link to Speak out -->
+<section>
+<a target="_blank" href="https://terhimarttila.com/transplanted">☉</a>
+</section>
+
+<!-- X: Transplanted exhibition-->
+<section>
+<p>Exhibited in Rovaniemi, Finland - 11/2021</p>
+<p>Published on <a target="_blank" href="https://www.nokturno.fi">nokturno.fi</a> - 04/2022</p>
+</section>
+
+<!-- X: End Transplanted -->
+<section>
+<h3> ☉ </h3>
+</section>
+
+
+<!-- *************************** KEY CONTRIBUTIONS ********************************* -->
+<section>
+<h2><span style="background-color: white">Key contributions</span></h2>
+</section>
+
+<!-- X: End Transplanted -->
+<section>
+<h3> ☉ </h3>
+</section>
+
+<!-- *************************** FUTURE WORK ********************************* -->
+<section>
+<h2><span style="background-color: white">Future work</span></h2>
+</section>
+
+<!-- X: End Transplanted -->
+<section>
+<h3> ☉ </h3>
+</section>
+
+<!-- *************************** FINAL SLIDES ********************************* -->
+<section data-background-iframe="assets/drafts/circles"
+	data-background-interactive>
+<p><span style="background-color: white">Thesis and audiobook available at <a href="https://www.terhimarttila.com/migration-as-movement">https://www.terhimarttila.com/migration-as-movement</a> </span></p>
+</section>
+
+<section>
+	<p>References</p>
+<small>Carens, J. (2015) The Ethics of Immigration. Oxford University Press.</small>
+<small>Cayley, J. (2017) The advent of aurature and the end of (electronic) literature. In Tabbi, J. (Ed.), The Bloomsbury Handbook of Electronic Literature (pp. 73 — 92). Bloomsbury Publishing. </small>
+<small>Lee, E. (2019) America for Americans - A history of xenophobia in the United States. Basic Books.</small>
+<small>Montfort, N. (2021) Exploratory programming. MIT Press. https://mitpress.ublish.com/ereader/12629?preview</small>
+</section>
+
+
+
+
+
+<!-- X: CUT OUTS: -->
+<!--
+			<section>
+			<h2><span style="background-color: white">Motivation</span>
+				<button title="read out loud" style="font-size: 30px; cursor:pointer;
+				background:none; border:none;" onclick='speakThis( "motivation", "de-DE" )'> &nbsp ☉ </button></h2>
+		</section>
 
 
       </div>
     </div>
+
+		<button class="shuffle fragment" style="cursor:pointer" title="click" onclick='speakThis( $("#speakOut")[0].innerText )'>↬</button>
+-->
+
+
+<script>
+
+//var context = ["?", "privilege", "class", "race", "migration laws", "==", "privilege", "==", "class", "==", "race", "==", "migration laws", "==", "motivation for this research ☉"];
+var index = 0;
+
+function contextualise( id, context ){
+
+	//console.log("contextualising: ", index);
+	document.getElementById(id).textContent = context[index];
+	if(index < context.length){
+		index++;
+		//$('#context').text("privilige");
+	} else {
+		index = 0;
+	}
+
+}
+
+var artificialDefender = window.speechSynthesis;
+artificialDefender.lang = "fi-FI";
+var sayThis = new SpeechSynthesisUtterance("test");
+sayThis.lang = "fi-FI";
+
+//function preload(){}
+function setup(){}
+//function draw(){}
+
+function speakThis(text, lang){
+	//artificialDefender.speak(sayThis);
+	sayThis.text = text;
+	if(lang){
+		sayThis.lang = lang;
+	}
+	artificialDefender.speak(sayThis);
+
+}
+
+
+	function doSomething() {
+		document.body.style.backgroundColor = random(["white", "red", "blue", "green", "cyan"]);
+	}
+
+
+</script>
 
 <!-- reveal related scripts below -->
   <script src="assets/js/reveal/dist/reveal.js"></script>

@@ -1,0 +1,15 @@
+.shuffle{
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    background: #FFF;
+    color: #000;
+    border-radius: 50px;
+    border: 2px solid DarkTurquoise;
+    z-index: 1000;
+    width: 45px;
+    height: 45px;
+    line-height: 0.2;
+    font-size: 40px;
+    font-weight: bold;
+}
