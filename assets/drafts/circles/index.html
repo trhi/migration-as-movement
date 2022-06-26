@@ -14,6 +14,24 @@
 
 </head>
 <body>
-  <button style="cursor:pointer" title="click to change mode, click and drag circles to play" onclick="nextCircles()" class="shuffle">↬</button> <!-- ⇝ -->
+  <button id="#shuffleButton" style="cursor:pointer; visibility:hidden;" title="click to change mode, click and drag circles to play" onclick="nextCircles()" class="shuffle">↬</button> <!-- ⇝ -->
 </body>
+
+<script>
+
+  console.log("This is what document.search gives:" + document.location.search);
+  if ( document.location.search.match(/border/ig) ){
+    console.log("I read border: ", document.location.search );
+    scene = 'border';
+    //document.getElementById("#shuffleButton").visibility = "visible";
+  } else if ( document.location.search.match(/title/ig) ) {
+    console.log("I read title: ", document.location.search );
+    scene = 'title';
+  } else if ( document.location.search.match(/phd/ig) ){
+    console.log("I read title: ", document.location.search );
+    scene = 'phd';
+  }
+
+</script>
+
 </html>

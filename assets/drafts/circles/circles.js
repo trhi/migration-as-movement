@@ -1,6 +1,8 @@
 let context, gain, gains = [], audios = [], audio, cnv, change, speed;
 var circles = [], numberOfCircles = 7, mes = [], thisIsYouAUDIO = [], happyface, landscape;
- var index, moves, chosenMove, drawingWithCircles = false;
+var index, moves, chosenMove, drawingWithCircles = false;
+var scene, terhi, refugee;
+var phdX, phdY;
 
 // TODO:
 // what else do I want to change between the various modes?
@@ -42,27 +44,56 @@ function preload(){
 
 function setup() {
 
-  moves = Object.values(variations.moves); //make array of all maps available
-  console.log(moves);
-  chosenMove = random(moves); //choose random one
-  index = moves.indexOf(chosenMove);
-  //console.log(moves.indexOf(chosenMove));
-
   cursor(HAND);
   cnv = createCanvas(windowWidth, windowHeight, P2D);
   //noLoop();
+
+  phdX = width-200;
+  phdY = 200;
+
+
+  console.log("Scene is:", scene);
+
+  if(scene === 'border' || scene === 'title'){
+    //document.getElementById("#shuffleButton").visibility = 'visible';
+  }
+
+  moves = Object.values(variations.moves); //make array of all maps available
+  console.log(moves);
+
+  if(scene === 'title'){
+    chosenMove = moves[8]; //on title slide, make them move with perlin
+  } else {
+    chosenMove = random(moves); //choose random one
+    index = moves.indexOf(chosenMove);
+  }
+  //make lots of mes
+  for(let i=0; i<7; i++){
+    let me = new Circle ( random(width), random(height), 100, circles[i] );
+    me.move = chosenMove;
+    //console.log("width and height are:", width, height);
+    mes.push(me);
+  }
+
+  if(scene === 'border'){
+      terhi = new Circle( width/3 + 200, height/2, 100, circles[0] );
+      terhi.move = moves[8]; //choose random one
+      refugee = new Circle( width/3 - 50, height/2, 100, circles[2] );
+      refugee.move = moves[0];
+  }
+  //console.log(moves.indexOf(chosenMove));
+
+  if(scene === 'phd'){
+      terhi = new Circle( 50, height - 10, 100, circles[0] );
+      terhi.move = moves[9]; //choose one that goes from bottom left to top right
+  }
+
 
   background(0, 0, 0);
   //image(happyface, width/3, 1*height/6, 400, 600);
   //image(landscape, width/2, 7*height/8, width, height);
 
-  //make lots of mes
-  for(let i=0; i<7; i++){
-    let me = new Circle ( random(width), random(height), 200, circles[i] );
-    me.move = chosenMove;
-    //console.log("width and height are:", width, height);
-    mes.push(me);
-  }
+
 
 }
 
@@ -71,14 +102,33 @@ function draw(){
   //let toMoveOrNotToMove = mes[0].move();
   //problem is that it is always false in the first moment!
   //console.log("to move or not is:", toMoveOrNotToMove);
-    if ( chosenMove() === "solitaire" ){
+    if(scene === 'phd'){
+      background(0, 0, 0);
+      strokeWeight(3);
+      fill('white');
+      ellipse(phdX, phdY, 200, 200);
+
+      strokeWeight(10);
+      stroke('white');
+      line(width/2.5, 0, width/3, height);
+
+      textSize(20);
+      noStroke();
+      text("PhD", phdX-100, phdY+100);
+
+    } else if ( scene === 'border' ) {
+      background(0, 0, 0);
+      strokeWeight(10);
+      stroke('white');
+      line(width/2.5, 0, width/3, height);
+  } else if ( chosenMove() === "solitaire" ){
       //draw with the circles
     } else if ( chosenMove() === "drawing" ) {
       background(0, 0, 0);
       image(happyface, 500, 400, 400, 600);
       //image(landscape, width/2, 7*height/8, width, height);
-    } else  { //update background
-      background(0, 0, 0);
+    }  else {
+      background(0, 0, 0); //update background
     }
 
     //background(200, 50, 50);
@@ -93,19 +143,20 @@ function draw(){
     //image(happyface, width/3, 1*height/6, 400, 600);
     //image(circles[0], 0, 0);
 
+if(scene === 'border'){
+    terhi.move();
+    terhi.display();
+    refugee.move();
+    refugee.display();
+} else if (scene === 'phd'){
+  terhi.move();
+  terhi.display();
+} else {
     for(let i=0; i < mes.length; i ++){
-
-//console.log("chosen move is:" + chosenMove);
-      //mes[i].move = chosenMove;
       mes[i].move();
-      //mes[i].[moves[index]()];
-      //mes[i].move();
-      //mes[i].movePerlin();
-      //mes[i].moveJitter();
-      //mes[i].moveRight();
-
       mes[i].display();
     }
+}
 
 }
 
@@ -121,6 +172,13 @@ class Circle {
     this.yoff = random(0, 10000);
     this.factor = 0.4; // constant...
   }
+
+  display(){
+    imageMode(CENTER);
+    image(this.img, this.x, this.y, 2*this.r, 2*this.r);
+  }
+
+  move () {}
 
   clicked( px, py ){
     let d = dist(px, py, this.x, this.y);
@@ -170,14 +228,7 @@ class Circle {
     }
   }
 
-  move () {
 
-  }
-
-  display(){
-    imageMode(CENTER);
-    image(this.img, this.x, this.y, this.r, this.r);
-  }
 
 }
 
