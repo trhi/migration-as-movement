@@ -148,7 +148,7 @@ var variations = {
         let attractorDistance = createVector();
         attractorDistance = p5.Vector.dist(terhi, phd);
 
-        towardsAttractor.mult(this.factor); // try 0.3
+        towardsAttractor.mult(2); // try 0.3
         terhi.add(towardsAttractor);
 
         this.x = terhi.x;
